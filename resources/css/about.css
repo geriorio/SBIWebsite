@@ -1,0 +1,625 @@
+/* ========================================
+   ABOUT PAGE - LIGHT MODERN THEME
+   Class prefix: about-, intro-, vm-, team- (TIDAK AKAN AFFECT HOMEPAGE)
+   ======================================== */
+
+/* About Hero Section - Dark with Image */
+.about-hero-modern {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: linear-gradient(135deg, #0A0E27 0%, #1a1f3a 50%, #0f1729 100%);
+}
+
+.hero-image-background {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.about-hero-modern .hero-bg-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    opacity: 0.4;
+}
+
+.about-hero-modern .image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(10, 14, 39, 0.85) 0%, rgba(26, 31, 58, 0.75) 50%, rgba(15, 23, 41, 0.85) 100%);
+    z-index: 1;
+}
+
+.about-hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    max-width: 900px;
+    padding: 0 2rem;
+    margin: 0 auto;
+}
+
+.about-hero-modern .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background: rgba(0, 229, 255, 0.1);
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #00E5FF;
+    margin-bottom: 1.5rem;
+}
+
+.about-hero-modern .badge-dot {
+    width: 8px;
+    height: 8px;
+    background: #00E5FF;
+    border-radius: 50%;
+    animation: aboutPulse 2s infinite;
+}
+
+@keyframes aboutPulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.2); }
+}
+
+.about-hero-modern .hero-heading {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0 auto 1.5rem;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.about-hero-modern .text-gradient {
+    background: linear-gradient(135deg, #00E5FF 0%, #00B8D4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.about-hero-modern .hero-description {
+    font-size: 1.25rem;
+    color: #B8C5D6;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+    text-align: center;
+}
+
+/* Company Introduction - WHITE/LIGHT THEME */
+.about-intro-section {
+    padding: 7rem 0;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFB 100%);
+    position: relative;
+}
+
+.about-intro-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, rgba(0, 229, 255, 0.3) 50%, transparent 100%);
+}
+
+.intro-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.intro-text-large {
+    font-size: 1.625rem;
+    line-height: 1.8;
+    color: #1A202C;
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.text-gradient-inline {
+    background: linear-gradient(135deg, #0EA5E9 0%, #0284C7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+}
+
+.intro-text {
+    font-size: 1.125rem;
+    line-height: 1.9;
+    color: #475569;
+    text-align: center;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+/* Section Headers for Light Theme */
+.about-intro-section .section-container,
+.team-section-modern .section-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.team-section-modern .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.team-section-modern .section-tag {
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.1) 0%, rgba(2, 132, 199, 0.1) 100%);
+    border: 1px solid rgba(14, 165, 233, 0.2);
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #0EA5E9;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+}
+
+.team-section-modern .section-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    color: #1A202C;
+    line-height: 1.2;
+}
+
+.team-section-modern .text-gradient {
+    background: linear-gradient(135deg, #0EA5E9 0%, #0284C7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Vision & Mission - DARK SECTION (Stays Dark) */
+.vm-section-modern {
+    padding: 7rem 0;
+    background: linear-gradient(135deg, #0A0E27 0%, #1a1f3a 50%, #0f1729 100%);
+    position: relative;
+}
+
+.vm-section-modern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, rgba(0, 229, 255, 0.3) 50%, transparent 100%);
+}
+
+.vm-section-modern .section-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.vm-section-modern .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.vm-section-modern .section-tag {
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    background: rgba(0, 229, 255, 0.1);
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #00E5FF;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+}
+
+.vm-section-modern .section-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    color: #FFFFFF;
+    line-height: 1.2;
+}
+
+.vm-section-modern .text-gradient {
+    background: linear-gradient(135deg, #00E5FF 0%, #00B8D4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Vision & Mission - DARK SECTION (Stays Dark) */
+.vm-section-modern {
+    padding: 7rem 0;
+    background: linear-gradient(135deg, #0A0E27 0%, #1a1f3a 50%, #0f1729 100%);
+    position: relative;
+}
+
+.vm-section-modern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, rgba(0, 229, 255, 0.3) 50%, transparent 100%);
+}
+
+.vm-section-modern .section-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.vm-section-modern .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.vm-section-modern .section-tag {
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    background: rgba(0, 229, 255, 0.1);
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #00E5FF;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+}
+
+.vm-section-modern .section-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    color: #FFFFFF;
+    line-height: 1.2;
+}
+
+.vm-section-modern .text-gradient {
+    background: linear-gradient(135deg, #00E5FF 0%, #00B8D4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.vm-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin-top: 4rem;
+}
+
+.vm-card-modern {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 3rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.vm-card-modern::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0, 229, 255, 0.05) 0%, transparent 100%);
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.vm-card-modern:hover {
+    transform: translateY(-10px);
+    border-color: rgba(0, 229, 255, 0.3);
+    box-shadow: 0 20px 60px rgba(0, 229, 255, 0.15);
+}
+
+.vm-card-modern:hover::before {
+    opacity: 1;
+}
+
+.vm-icon {
+    margin-bottom: 2rem;
+}
+
+.vm-title-modern {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #00E5FF;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+}
+
+.vm-text-modern {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #B8C5D6;
+}
+
+.mission-list-modern {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.mission-item-modern {
+    display: flex;
+    gap: 1rem;
+    align-items: start;
+}
+
+.mission-icon {
+    color: #00E5FF;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    margin-top: 0.25rem;
+}
+
+.mission-item-modern p {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: #B8C5D6;
+}
+
+/* Team Section - WHITE/LIGHT THEME */
+.team-section-modern {
+    padding: 7rem 0;
+    background: linear-gradient(180deg, #F8FAFB 0%, #FFFFFF 50%, #F8FAFB 100%);
+    position: relative;
+}
+
+.team-section-modern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, rgba(0, 229, 255, 0.3) 50%, transparent 100%);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-top: 4rem;
+    align-items: start; /* Ensures cards stay at top, not stretched */
+}
+
+.team-card-modern {
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 24px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    height: fit-content; /* Card height adjusts to content */
+}
+
+.team-card-modern:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 60px rgba(14, 165, 233, 0.15);
+    border-color: rgba(14, 165, 233, 0.2);
+}
+
+.team-card-inner {
+    position: relative;
+}
+
+.team-image-container {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #F1F5F9 0%, #E2E8F0 100%);
+}
+
+.team-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-card-modern:nth-child(2) .team-image {
+    object-position: center 5%;
+}
+
+.team-card-modern:hover .team-image {
+    transform: scale(1.05);
+}
+
+.team-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.4) 100%);
+    display: flex;
+    align-items: flex-end;
+    padding: 1.5rem;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-card-modern:hover .team-overlay {
+    opacity: 1;
+}
+
+.team-role-badge {
+    background: linear-gradient(135deg, #0EA5E9 0%, #0284C7 100%);
+    color: #FFFFFF;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+}
+
+.team-content {
+    padding: 2rem;
+}
+
+.team-name-modern {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #1A202C;
+    margin-bottom: 0.5rem;
+}
+
+.team-position {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #0EA5E9;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+}
+
+.team-quote-modern {
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.08) 0%, rgba(2, 132, 199, 0.05) 100%);
+    border-left: 3px solid #0EA5E9;
+    border-radius: 0 12px 12px 0;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.quote-icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: #0EA5E9;
+    opacity: 0.2;
+}
+
+.team-quote-modern p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #334155;
+    font-style: italic;
+}
+
+.team-bio-modern p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: #64748B;
+}
+
+.bio-content {
+    margin-bottom: 1rem;
+}
+
+.bio-preview {
+    margin-bottom: 0;
+}
+
+.bio-full {
+    margin-top: 1rem;
+}
+
+.bio-full p {
+    margin-bottom: 1rem;
+}
+
+.bio-full p:last-child {
+    margin-bottom: 0;
+}
+
+.read-more-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.1) 0%, rgba(2, 132, 199, 0.1) 100%);
+    border: 1px solid rgba(14, 165, 233, 0.2);
+    border-radius: 20px;
+    color: #0EA5E9;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.15) 0%, rgba(2, 132, 199, 0.15) 100%);
+    border-color: rgba(14, 165, 233, 0.3);
+    transform: translateY(-2px);
+}
+
+.read-more-icon {
+    transition: transform 0.3s ease;
+}
+
+.read-more-btn.expanded .read-more-icon {
+    transform: rotate(180deg);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .vm-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero-modern {
+        height: 80vh;
+    }
+    
+    .about-intro-section,
+    .vm-section-modern,
+    .team-section-modern {
+        padding: 4rem 0;
+    }
+    
+    .intro-text-large {
+        font-size: 1.25rem;
+    }
+    
+    .vm-card-modern {
+        padding: 2rem 1.5rem;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .team-image-container {
+        height: 280px;
+    }
+}
