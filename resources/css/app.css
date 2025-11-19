@@ -2,6 +2,9 @@
 @import './home.css';
 @import './about.css';
 @import './services.css';
+@import './insights.css';
+@import './career.css';
+@import './contact.css';
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';

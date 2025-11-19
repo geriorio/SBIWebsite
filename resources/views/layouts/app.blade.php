@@ -18,6 +18,8 @@
                 body{font-family:Instrument Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;}
             </style>
         @endif
+        {{-- Allow views to push page-specific styles (example: career.css) --}}
+        @stack('styles')
     </head>
     <body>
         @include('components.navbar')

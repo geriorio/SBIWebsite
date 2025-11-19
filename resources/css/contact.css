@@ -1,0 +1,1045 @@
+/* ========================================
+   CONTACT PAGE - ULTRA MODERN DESIGN
+   SEMUA CLASS PAKAI PREFIX "contact-"
+   ======================================== */
+
+/* Contact Hero Section */
+.contact-hero-modern {
+    position: relative;
+    min-height: auto;
+    display: flex;
+    align-items: center;
+    padding: 8rem 0;
+    background: #0A0E27;
+    overflow: hidden;
+}
+
+.contact-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.contact-animated-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(0, 229, 255, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(118, 255, 3, 0.1) 0%, transparent 50%),
+        linear-gradient(135deg, #0A0E27 0%, #1a1f3a 50%, #0f1729 100%);
+    animation: contactBgPulse 15s ease-in-out infinite;
+}
+
+@keyframes contactBgPulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+
+.contact-hero-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 2.5rem;
+    align-items: start;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-hero-left {
+    position: relative;
+}
+
+.contact-hero-left .hero-heading {
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 1rem 0;
+    letter-spacing: -0.02em;
+    animation: contactTitleReveal 1s ease-out;
+    color: #FFFFFF;
+}
+
+@keyframes contactTitleReveal {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact-hero-left .hero-description {
+    font-size: 1rem;
+    color: #B8C5D6;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    animation: contactFadeIn 1s ease-out 0.2s both;
+}
+
+@keyframes contactFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Contact Info Cards */
+.contact-info-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    animation: contactCardsStagger 0.8s ease-out 0.4s both;
+}
+
+@keyframes contactCardsStagger {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.contact-info-cards .info-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-info-cards .info-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 229, 255, 0.1), transparent);
+    transition: left 0.6s ease;
+}
+
+.contact-info-cards .info-card:hover::before {
+    left: 100%;
+}
+
+.contact-info-cards .info-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #00E5FF;
+    transform: translateX(12px) scale(1.02);
+    box-shadow: 0 12px 40px rgba(0, 229, 255, 0.25);
+}
+
+.contact-info-cards .info-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(0, 229, 255, 0.15) 0%, rgba(0, 184, 212, 0.15) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00E5FF;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.contact-info-cards .info-card:hover .info-icon {
+    background: linear-gradient(135deg, #00E5FF 0%, #00B8D4 100%);
+    color: #0A0E27;
+    transform: scale(1.15) rotate(360deg);
+}
+
+.contact-info-cards .info-content {
+    flex: 1;
+}
+
+.contact-info-cards .info-label {
+    font-size: 0.875rem;
+    color: #6B7B93;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+    transition: color 0.3s ease;
+}
+
+.contact-info-cards .info-card:hover .info-label {
+    color: #00E5FF;
+}
+
+.contact-info-cards .info-value {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    transition: transform 0.3s ease;
+}
+
+.contact-info-cards .info-card:hover .info-value {
+    transform: translateX(4px);
+}
+
+/* Contact Form Card */
+.contact-form-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 24px;
+    padding: 2rem;
+    position: relative;
+    overflow: visible;
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.4);
+}
+
+.contact-form-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #00E5FF, #76FF03, transparent);
+    opacity: 0.6;
+    z-index: 0;
+}
+
+.contact-form-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-form-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #00E5FF 0%, #76FF03 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.05em;
+}
+
+.contact-form-subtitle {
+    font-size: 0.95rem;
+    color: #B8C5D6;
+}
+
+/* Contact Form Modern */
+.contact-form-modern {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-form-group {
+    position: relative;
+}
+
+.contact-form-label {
+    position: absolute;
+    top: -8px;
+    left: 0;
+    font-size: 0.875rem;
+    color: #00E5FF;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.contact-form-group.focused .contact-form-label,
+.contact-form-group:has(.contact-form-input:not(:placeholder-shown)) .contact-form-label,
+.contact-form-group:has(.contact-form-textarea:not(:placeholder-shown)) .contact-form-label {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.contact-form-input,
+.contact-form-textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+    padding: 0.75rem 0;
+    font-size: 0.95rem;
+    color: #FFFFFF;
+    font-family: 'Instrument Sans', sans-serif;
+    transition: all 0.4s ease;
+    outline: none;
+}
+
+.contact-form-input::placeholder,
+.contact-form-textarea::placeholder {
+    color: #6B7B93;
+    opacity: 0.7;
+}
+
+.contact-form-input:focus,
+.contact-form-textarea:focus {
+    border-bottom-color: #00E5FF;
+}
+
+.contact-form-textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.contact-input-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background: linear-gradient(90deg, #00E5FF, #76FF03);
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 10px #00E5FF;
+}
+
+.contact-form-group.focused .contact-input-line,
+.contact-form-input:focus ~ .contact-input-line,
+.contact-form-textarea:focus ~ .contact-input-line {
+    width: 100%;
+}
+
+/* Submit Button Modern */
+.contact-btn-submit {
+    position: relative;
+    width: 100%;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #00E5FF 0%, #00B8D4 100%);
+    border: none;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #0A0E27;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-top: 0.5rem;
+    box-shadow: 0 4px 20px rgba(0, 229, 255, 0.3);
+}
+
+.contact-btn-submit::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.contact-btn-submit:hover::before {
+    left: 100%;
+}
+
+.contact-btn-submit:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 12px 40px rgba(0, 229, 255, 0.5);
+}
+
+.contact-btn-submit:active {
+    transform: translateY(-2px) scale(1.01);
+}
+
+.contact-btn-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.contact-btn-submit:hover .contact-btn-glow {
+    opacity: 1;
+}
+
+.contact-btn-icon {
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.contact-btn-submit:hover .contact-btn-icon {
+    transform: translateX(6px) scale(1.2);
+}
+
+/* Loading & Success States */
+.contact-btn-submit.loading {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.contact-btn-submit.loading .contact-btn-text::after {
+    content: '';
+    animation: contactEllipsis 1.5s infinite;
+}
+
+@keyframes contactEllipsis {
+    0%, 20% { content: ''; }
+    40% { content: '.'; }
+    60% { content: '..'; }
+    80%, 100% { content: '...'; }
+}
+
+.contact-btn-submit.success {
+    background: linear-gradient(135deg, #76FF03 0%, #64DD17 100%);
+}
+
+/* ========================================
+   TESTIMONIALS SECTION
+   ======================================== */
+
+/* Section Headers - Untuk semua section */
+.contact-testimonials-section .section-header,
+.contact-careers-section .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.contact-testimonials-section .section-tag,
+.contact-careers-section .section-tag {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background: rgba(0, 229, 255, 0.1);
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    border-radius: 50px;
+    color: #00E5FF;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+}
+
+.contact-testimonials-section .section-title,
+.contact-careers-section .section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+    letter-spacing: 0.02em;
+}
+
+.contact-testimonials-section .text-gradient,
+.contact-careers-section .text-gradient {
+    background: linear-gradient(135deg, #00E5FF 0%, #76FF03 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.contact-testimonials-section .section-subtitle,
+.contact-careers-section .section-subtitle {
+    font-size: 1.125rem;
+    color: #B8C5D6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-testimonials-section {
+    padding: 8rem 0;
+    background: #050816;
+    position: relative;
+    overflow: hidden;
+    margin-top: 0;
+    clear: both;
+    z-index: 10;
+}
+
+.contact-testimonials-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #00E5FF, transparent);
+    opacity: 0.3;
+}
+
+.contact-testimonials-carousel {
+    position: relative;
+    max-width: 900px;
+    margin: 4rem auto 0;
+}
+
+.contact-testimonial-track {
+    position: relative;
+    height: 500px;
+}
+
+.contact-testimonial-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 24px;
+    padding: 3rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: visible;
+}
+
+/* LED Border Effect - Bergerak Melingkar di Sekeliling Kartu */
+.contact-testimonial-card::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: 24px;
+    padding: 3px;
+    background: linear-gradient(
+        var(--angle, 0deg),
+        transparent 0%,
+        transparent 40%,
+        #00E5FF 50%,
+        #00B8D4 55%,
+        transparent 60%,
+        transparent 100%
+    );
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    animation: contactRotateBorder 3s linear infinite;
+}
+
+.contact-testimonial-card::after {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: 24px;
+    padding: 3px;
+    background: linear-gradient(
+        calc(var(--angle, 0deg) + 180deg),
+        transparent 0%,
+        transparent 40%,
+        #76FF03 50%,
+        #64DD17 55%,
+        transparent 60%,
+        transparent 100%
+    );
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    animation: contactRotateBorder 3s linear infinite;
+}
+
+.contact-testimonial-card:hover::before,
+.contact-testimonial-card:hover::after {
+    opacity: 1;
+}
+
+@keyframes contactRotateBorder {
+    0% {
+        --angle: 0deg;
+    }
+    100% {
+        --angle: 360deg;
+    }
+}
+
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.contact-testimonial-card.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    position: relative;
+}
+
+.contact-testimonial-content {
+    margin-bottom: 2.5rem;
+}
+
+.contact-quote-icon {
+    margin-bottom: 1.5rem;
+    opacity: 0.3;
+}
+
+.contact-testimonial-text {
+    font-size: 1.375rem;
+    line-height: 1.8;
+    color: #FFFFFF;
+    font-style: italic;
+    margin: 0;
+}
+
+.contact-testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-author-image {
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #00E5FF;
+    box-shadow: 0 8px 24px rgba(0, 229, 255, 0.3);
+}
+
+.contact-author-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contact-author-info {
+    flex: 1;
+}
+
+.contact-author-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 0.25rem;
+    letter-spacing: 0.05em;
+}
+
+.contact-author-role {
+    font-size: 0.95rem;
+    color: #00E5FF;
+    margin-bottom: 0.25rem;
+}
+
+.contact-author-tenure {
+    font-size: 0.875rem;
+    color: #B8C5D6;
+}
+
+/* Carousel Navigation */
+.contact-carousel-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.contact-carousel-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #00E5FF;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+
+.contact-carousel-btn:hover {
+    background: #00E5FF;
+    color: #0A0E27;
+    transform: scale(1.1);
+    box-shadow: 0 8px 24px rgba(0, 229, 255, 0.3);
+}
+
+.contact-carousel-dots {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.contact-carousel-dots .contact-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.contact-carousel-dots .contact-dot.active {
+    background: #00E5FF;
+    width: 32px;
+    border-radius: 6px;
+}
+
+.contact-carousel-dots .contact-dot:hover {
+    background: #00E5FF;
+}
+
+/* ========================================
+   CAREERS SECTION
+   ======================================== */
+
+.contact-careers-section {
+    padding: 8rem 0;
+    background: #0A0E27;
+    position: relative;
+    overflow: hidden;
+    z-index: 11;
+}
+
+.contact-careers-gradient-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(0, 229, 255, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.contact-careers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 2rem;
+    margin: 4rem 0;
+}
+
+.contact-career-card {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    height: 450px;
+    will-change: transform;
+}
+
+.contact-career-card:hover {
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.4);
+    border-color: #00E5FF;
+}
+
+.contact-career-image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.contact-career-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease-out;
+    will-change: transform;
+}
+
+.contact-career-card:hover .contact-career-image-container img {
+    transform: scale(1.1);
+}
+
+.contact-career-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, transparent 0%, rgba(10, 14, 39, 0.6) 50%, rgba(10, 14, 39, 0.95) 100%);
+    transition: all 0.6s ease;
+}
+
+.contact-career-card:hover .contact-career-overlay {
+    background: linear-gradient(180deg, rgba(10, 14, 39, 0.3) 0%, rgba(10, 14, 39, 0.7) 50%, rgba(10, 14, 39, 0.98) 100%);
+}
+
+.contact-overlay-gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(180deg, transparent 0%, #00E5FF 100%);
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.contact-career-card:hover .contact-overlay-gradient {
+    opacity: 0.1;
+}
+
+.contact-career-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2.5rem;
+    z-index: 2;
+}
+
+.contact-career-title {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #FFFFFF;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.contact-career-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: rgba(0, 229, 255, 0.1);
+    border: 1px solid #00E5FF;
+    border-radius: 8px;
+    color: #00E5FF;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.4s ease;
+}
+
+.contact-career-link:hover {
+    background: #00E5FF;
+    color: #0A0E27;
+    transform: translateX(8px);
+}
+
+.contact-career-link svg {
+    transition: transform 0.4s ease;
+}
+
+.contact-career-link:hover svg {
+    transform: translate(4px, -4px);
+}
+
+/* Careers CTA */
+.contact-careers-cta {
+    text-align: center;
+    margin-top: 6rem;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, rgba(0, 229, 255, 0.05) 0%, rgba(118, 255, 3, 0.05) 100%);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-careers-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #00E5FF, transparent);
+}
+
+.contact-cta-content {
+    position: relative;
+    z-index: 1;
+}
+
+.contact-cta-title {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #00E5FF 0%, #76FF03 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.1em;
+}
+
+.contact-cta-subtitle {
+    font-size: 1.125rem;
+    color: #B8C5D6;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 1rem;
+}
+
+.contact-cta-email {
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-bottom: 3px solid #00E5FF;
+    transition: all 0.4s ease;
+    letter-spacing: 0.02em;
+}
+
+.contact-cta-email:hover {
+    color: #00E5FF;
+    transform: translateY(-4px);
+    text-shadow: 0 8px 24px rgba(0, 229, 255, 0.4);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 1200px) {
+    .contact-hero-wrapper {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .contact-hero-left {
+        position: static;
+    }
+
+    .contact-hero-left .hero-heading {
+        font-size: 2.75rem;
+    }
+
+    .contact-careers-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-hero-modern {
+        padding: 6rem 0 3rem;
+    }
+
+    .contact-hero-left .hero-heading {
+        font-size: 2rem;
+    }
+
+    .contact-form-card {
+        padding: 2rem;
+    }
+
+    .contact-form-title {
+        font-size: 1.5rem;
+    }
+
+    .contact-testimonial-card {
+        padding: 2rem;
+    }
+
+    .contact-testimonial-text {
+        font-size: 1.125rem;
+    }
+
+    .contact-author-image {
+        width: 60px;
+        height: 60px;
+        min-width: 60px;
+    }
+
+    .contact-career-card {
+        height: 400px;
+    }
+
+    .contact-career-title {
+        font-size: 1.5rem;
+    }
+
+    .contact-cta-title {
+        font-size: 2rem;
+    }
+
+    .contact-cta-email {
+        font-size: 1.25rem;
+    }
+
+    .contact-careers-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-hero-left .hero-heading {
+        font-size: 1.75rem;
+    }
+
+    .contact-form-card {
+        padding: 1.5rem;
+    }
+
+    .contact-info-cards .info-card {
+        padding: 1rem;
+    }
+
+    .contact-testimonial-card {
+        padding: 1.5rem;
+    }
+
+    .contact-testimonial-text {
+        font-size: 1rem;
+    }
+
+    .contact-carousel-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .contact-career-content {
+        padding: 1.5rem;
+    }
+
+    .contact-career-title {
+        font-size: 1.25rem;
+    }
+}

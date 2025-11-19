@@ -23,29 +23,28 @@
             </div>
             
             <h1 class="hero-heading" data-aos="fade-right" data-aos-delay="100">
-                <span class="text-gradient">Transform</span> Your Business
+                <span class="text-gradient">Transform</span> Today.
                 <br/>
-                <span class="typing-text">Navigate Digital Excellence</span>
+                <span class="typing-text">Lead Tomorrow.</span>
             </h1>
             
             <p class="hero-description" data-aos="fade-up" data-aos-delay="200">
-                Empowering Indonesian industries with cutting-edge technology solutions,
-                innovative process transformation, and sustainable growth strategies for the digital age.
+                Samudera Biru Internasional (SBI) helps organizations modernize operations, strengthen digital capabilities, and compete with confidence—through practical transformation, integrated systems, and data-driven intelligence.
             </p>
             
             <div class="hero-ctas" data-aos="fade-up" data-aos-delay="300">
-                <a href="#services" class="btn-primary">
-                    <span>Explore Solutions</span>
+                <a href="{{ route('contact') }}" class="btn-primary">
+                    <span>Talk to Our Experts</span>
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <path d="M7 13L13 7M13 7H7M13 7V13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                     </svg>
                 </a>
-                <a href="#contact" class="btn-secondary">
+                <a href="#services" class="btn-secondary">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="2"/>
                         <path d="M10 6V10L13 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                     </svg>
-                    <span>Book Consultation</span>
+                    <span>Explore Our Services</span>
                 </a>
             </div>
 
@@ -69,26 +68,125 @@
 
         <div class="hero-visual">
             <div class="floating-card card-1">
-                <div class="card-icon">📊</div>
-                <div class="card-text">Data Analytics</div>
+                <div class="card-icon">🎯</div>
+                <div class="card-text">Strategic</div>
             </div>
             <div class="floating-card card-2">
-                <div class="card-icon">⚡</div>
-                <div class="card-text">Fast Delivery</div>
+                <div class="card-icon">⚙️</div>
+                <div class="card-text">Practical</div>
             </div>
             <div class="floating-card card-3">
-                <div class="card-icon">🔒</div>
-                <div class="card-text">Secure Systems</div>
+                <div class="card-icon">💡</div>
+                <div class="card-text">Human-Centered</div>
             </div>
         </div>
+    </section>
+
+    <!-- Why SBI Exists Section -->
+    <section class="why-sbi-section">
+        <div class="why-sbi-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+            <div class="grid-pattern"></div>
+        </div>
+        
+        <div class="section-container">
+            <div class="why-sbi-content">
+                <div class="why-sbi-header" data-aos="fade-up">
+                    <div class="header-line"></div>
+                    <h2 class="why-sbi-title">
+                        Why <span class="text-gradient-alt">SBI</span> Exists
+                    </h2>
+                    <div class="header-line"></div>
+                </div>
+                
+                <div class="why-sbi-main" data-aos="fade-up" data-aos-delay="100">
+                    <p class="why-sbi-statement">
+                        Technology changes fast. Your business needs <span class="highlight-text">clarity</span>—not <span class="highlight-text">complexity</span>.
+                    </p>
+                    
+                    <p class="why-sbi-description">
+                        SBI partners with companies across industries to redesign processes, implement the right systems, 
+                        and build data maturity that lasts.
+                    </p>
+                </div>
+                
+                <div class="why-sbi-approach" data-aos="fade-up" data-aos-delay="200">
+                    <div class="approach-label">Our approach is simple:</div>
+                    <div class="approach-grid">
+                        <div class="approach-card" data-aos="flip-left" data-aos-delay="300">
+                            <div class="approach-icon">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                    <path d="M20 5L35 12.5V27.5L20 35L5 27.5V12.5L20 5Z" stroke="url(#gradient-purple)" stroke-width="2"/>
+                                    <circle cx="20" cy="20" r="8" fill="url(#gradient-purple)" opacity="0.3"/>
+                                </svg>
+                            </div>
+                            <h3 class="approach-title">Transform with Purpose</h3>
+                            <div class="approach-accent"></div>
+                        </div>
+                        
+                        <div class="approach-card" data-aos="flip-left" data-aos-delay="400">
+                            <div class="approach-icon">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                    <path d="M12 20L18 26L28 14" stroke="url(#gradient-cyan)" stroke-width="3" stroke-linecap="round"/>
+                                    <rect x="5" y="5" width="30" height="30" rx="5" stroke="url(#gradient-cyan)" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <h3 class="approach-title">Deliver Results</h3>
+                            <div class="approach-accent"></div>
+                        </div>
+                        
+                        <div class="approach-card" data-aos="flip-left" data-aos-delay="500">
+                            <div class="approach-icon">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                    <path d="M20 10V20L26 26" stroke="url(#gradient-green)" stroke-width="3" stroke-linecap="round"/>
+                                    <circle cx="20" cy="20" r="14" stroke="url(#gradient-green)" stroke-width="2"/>
+                                    <path d="M20 5V8M20 32V35M35 20H32M8 20H5" stroke="url(#gradient-green)" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <h3 class="approach-title">Build Capabilities</h3>
+                            <p class="approach-subtitle">—not dependence</p>
+                            <div class="approach-accent"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="why-sbi-cta" data-aos="zoom-in" data-aos-delay="600">
+                    <a href="{{ route('about') }}" class="btn-why-sbi">
+                        <span>Discover Our Story</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M7 13L13 7M13 7H7M13 7V13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <svg width="0" height="0">
+            <defs>
+                <linearGradient id="gradient-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#AA00FF"/>
+                    <stop offset="100%" stop-color="#6200EA"/>
+                </linearGradient>
+                <linearGradient id="gradient-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#00E5FF"/>
+                    <stop offset="100%" stop-color="#00B8D4"/>
+                </linearGradient>
+                <linearGradient id="gradient-green" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#76FF03"/>
+                    <stop offset="100%" stop-color="#64DD17"/>
+                </linearGradient>
+            </defs>
+        </svg>
     </section>
 
     <!-- Services Section -->
     <section id="services" class="services-modern">
         <div class="section-container">
             <div class="section-header" data-aos="fade-up">
-                <span class="section-tag">What We Offer</span>
-                <h2 class="section-title">Our <span class="text-gradient">Services</span></h2>
+                <span class="section-tag">What We Do</span>
+                <h2 class="section-title"> <span class="text-gradient">Our Services</span></h2>
                 <p class="section-subtitle">Comprehensive solutions tailored to accelerate your digital transformation journey</p>
             </div>
 
@@ -100,9 +198,8 @@
                             <path d="M16 24L22 30L32 18" stroke="url(#gradient1)" stroke-width="2" stroke-linecap="round"/>
                         </svg>
                     </div>
-                    <h3 class="service-title">Business Process Transformation</h3>
-                    <p class="service-desc">Streamline operations with intelligent automation and optimized workflows</p>
-                    <a href="#" class="service-link">Learn More →</a>
+                    <h3 class="service-title">Digital Transformation Advisory</h3>
+                    <p class="service-desc">We help organizations reimagine how work gets done—from strategy, governance, and change readiness to full transformation roadmaps.</p>
                 </div>
 
                 <div class="service-card" data-tilt data-aos="fade-up" data-aos-delay="200">
@@ -112,9 +209,8 @@
                             <path d="M24 12V24L30 30" stroke="url(#gradient2)" stroke-width="2" stroke-linecap="round"/>
                         </svg>
                     </div>
-                    <h3 class="service-title">Renewable Energy Alternatives</h3>
-                    <p class="service-desc">Sustainable energy solutions for a greener, more efficient future</p>
-                    <a href="#" class="service-link">Learn More →</a>
+                    <h3 class="service-title">ERP Consulting & Enterprise Systems</h3>
+                    <p class="service-desc">From ERP selection to EPICOR implementation, we guide businesses through the entire lifecycle of system modernization.</p>
                 </div>
 
                 <div class="service-card" data-tilt data-aos="fade-up" data-aos-delay="300">
@@ -124,9 +220,8 @@
                             <circle cx="24" cy="36" r="6" stroke="url(#gradient3)" stroke-width="2"/>
                         </svg>
                     </div>
-                    <h3 class="service-title">Employee Talent Management</h3>
-                    <p class="service-desc">Develop and retain top talent with modern HR solutions</p>
-                    <a href="#" class="service-link">Learn More →</a>
+                    <h3 class="service-title">System Integration Services</h3>
+                    <p class="service-desc">We unify platforms into one connected ecosystem—through secure, scalable, API-driven integrations.</p>
                 </div>
 
                 <div class="service-card" data-tilt data-aos="fade-up" data-aos-delay="400">
@@ -136,22 +231,18 @@
                             <path d="M18 20L24 26L30 20" stroke="url(#gradient4)" stroke-width="2" stroke-linecap="round"/>
                         </svg>
                     </div>
-                    <h3 class="service-title">Business Process Optimization</h3>
-                    <p class="service-desc">Maximize efficiency and reduce costs through smart optimization</p>
-                    <a href="#" class="service-link">Learn More →</a>
+                    <h3 class="service-title">Data Enablement & Intelligence</h3>
+                    <p class="service-desc">We turn data into clarity with dashboards, process intelligence, and enterprise data governance.</p>
                 </div>
+            </div>
 
-                <div class="service-card" data-tilt data-aos="fade-up" data-aos-delay="500">
-                    <div class="service-icon">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                            <path d="M24 8L36 16V32L24 40L12 32V16L24 8Z" stroke="url(#gradient5)" stroke-width="2"/>
-                            <circle cx="24" cy="24" r="6" stroke="url(#gradient5)" stroke-width="2"/>
-                        </svg>
-                    </div>
-                    <h3 class="service-title">Asset Management System</h3>
-                    <p class="service-desc">Track, manage, and optimize your assets with intelligent systems</p>
-                    <a href="#" class="service-link">Learn More →</a>
-                </div>
+            <div class="services-cta" data-aos="fade-up" data-aos-delay="500">
+                <a href="{{ route('services') }}" class="btn-services">
+                    <span>View All Services</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M7 13L13 7M13 7H7M13 7V13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </a>
             </div>
 
             <svg width="0" height="0">
@@ -181,54 +272,520 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about-modern">
+    <!-- Why Companies Choose SBI Section -->
+    <section class="why-choose-section">
+        <div class="choose-background">
+            <div class="animated-grid"></div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+            </div>
+            <div class="gradient-overlay"></div>
+        </div>
+
         <div class="section-container">
-            <div class="about-content">
-                <div class="about-left" data-aos="fade-right">
-                    <span class="section-tag">Who We Are</span>
-                    <h2 class="section-title">Leading Indonesia's <span class="text-gradient">Digital Revolution</span></h2>
-                    <p class="about-text">
-                        Samudera Biru Internasional stands at the forefront of technological innovation, 
-                        partnering with Indonesian industries to navigate the complexities of Industry 4.0. 
-                        Our expertise spans digital transformation, sustainable solutions, and strategic 
-                        process optimization.
+            <div class="choose-header" data-aos="fade-up">
+                <h2 class="choose-title">
+                    Why Companies Choose <span class="text-gradient">SBI</span>
+                </h2>
+                <div class="title-underline">
+                    <div class="underline-animated"></div>
+                </div>
+            </div>
+
+            <div class="choose-grid">
+                <div class="choose-card" data-aos="fade-right" data-aos-delay="100">
+                    <div class="card-glow"></div>
+                    <div class="card-number">01</div>
+                    <div class="card-icon-wrapper">
+                        <div class="icon-bg icon-bg-1"></div>
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" class="card-main-icon">
+                            <path d="M24 8L40 16L24 24L8 16L24 8Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M8 24L24 32L40 24" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M8 32L24 40L40 32" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-heading">Built for Impact</h3>
+                    <p class="card-description">
+                        Our work focuses on outcomes that improve speed, accuracy, and performance across your business.
                     </p>
-                    <p class="about-text">
-                        We believe in creating lasting impact through technology that empowers businesses 
-                        to thrive in an ever-evolving digital landscape.
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="choose-card" data-aos="fade-left" data-aos-delay="200">
+                    <div class="card-glow"></div>
+                    <div class="card-number">02</div>
+                    <div class="card-icon-wrapper">
+                        <div class="icon-bg icon-bg-2"></div>
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" class="card-main-icon">
+                            <circle cx="24" cy="14" r="6" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 38C12 31 17 26 24 26C31 26 36 31 36 38" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M16 20C16 20 14 22 14 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M32 20C32 20 34 22 34 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-heading">Human-Centered Transformation</h3>
+                    <p class="card-description">
+                        We align your people, processes, and technology—ensuring the change is practical, usable, and sustainable.
                     </p>
-                    <div class="about-features">
-                        <div class="feature-item">
-                            <div class="feature-icon">✓</div>
-                            <span>Certified Excellence</span>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="choose-card" data-aos="fade-right" data-aos-delay="300">
+                    <div class="card-glow"></div>
+                    <div class="card-number">03</div>
+                    <div class="card-icon-wrapper">
+                        <div class="icon-bg icon-bg-3"></div>
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" class="card-main-icon">
+                            <rect x="8" y="12" width="32" height="28" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M16 12V8C16 6 17 5 19 5H29C31 5 32 6 32 8V12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M16 22H32M16 28H28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="24" cy="34" r="2" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-heading">End-to-End Expertise</h3>
+                    <p class="card-description">
+                        From advisory to execution, we support your organization at every stage of the transformation journey.
+                    </p>
+                    <div class="card-shine"></div>
+                </div>
+
+                <div class="choose-card" data-aos="fade-left" data-aos-delay="400">
+                    <div class="card-glow"></div>
+                    <div class="card-number">04</div>
+                    <div class="card-icon-wrapper">
+                        <div class="icon-bg icon-bg-4"></div>
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" class="card-main-icon">
+                            <path d="M8 36L16 28L22 34L32 20L40 28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="16" cy="28" r="3" fill="currentColor" opacity="0.5"/>
+                            <circle cx="22" cy="34" r="3" fill="currentColor" opacity="0.5"/>
+                            <circle cx="32" cy="20" r="3" fill="currentColor" opacity="0.5"/>
+                            <rect x="6" y="10" width="36" height="30" rx="2" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-heading">Clear, Measurable Results</h3>
+                    <p class="card-description">
+                        Every workflow, dashboard, and integration we deliver is backed by KPIs and operational gains.
+                    </p>
+                    <div class="card-shine"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries We Serve Section -->
+    <section class="industries-section">
+        <div class="industries-background">
+            <div class="hexagon-pattern"></div>
+            <div class="light-beams">
+                <div class="beam beam-1"></div>
+                <div class="beam beam-2"></div>
+                <div class="beam beam-3"></div>
+            </div>
+        </div>
+
+        <div class="section-container">
+            <div class="industries-header" data-aos="fade-up">
+                <h2 class="industries-title">
+                    Industries <span class="text-gradient">We Serve</span>
+                </h2>
+                <p class="industries-subtitle">Trusted by companies across:</p>
+            </div>
+
+            <div class="industries-grid">
+                <div class="industry-item" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="industry-card">
+                        <div class="industry-icon-bg">
+                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" class="industry-icon">
+                                <rect x="8" y="20" width="48" height="32" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M16 28H24M16 36H24M32 28H48M32 36H40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M20 12L32 8L44 12V20H20V12Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                                <circle cx="40" cy="44" r="4" stroke="currentColor" stroke-width="2"/>
+                                <path d="M28 52L32 48L36 52" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
                         </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">✓</div>
-                            <span>24/7 Support</span>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">✓</div>
-                            <span>Proven Track Record</span>
-                        </div>
+                        <h3 class="industry-name">Manufacturing</h3>
+                        <div class="industry-overlay"></div>
                     </div>
                 </div>
-                <div class="about-right" data-aos="fade-left" data-aos-delay="200">
-                    <div class="about-image-wrapper">
-                        <div class="about-image-bg"></div>
-                        <div class="stats-overlay">
-                            <div class="overlay-stat">
-                                <div class="overlay-number">15+</div>
-                                <div class="overlay-label">Years</div>
-                            </div>
-                            <div class="overlay-stat">
-                                <div class="overlay-number">150+</div>
-                                <div class="overlay-label">Projects</div>
-                            </div>
+
+                <div class="industry-item" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="industry-card">
+                        <div class="industry-icon-bg">
+                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" class="industry-icon">
+                                <rect x="12" y="24" width="40" height="24" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M20 32H44M20 40H36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="20" cy="20" r="4" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="44" cy="20" r="4" stroke="currentColor" stroke-width="2"/>
+                                <path d="M20 24V28M44 24V28" stroke="currentColor" stroke-width="2"/>
+                                <path d="M28 48L32 52L36 48" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
                         </div>
+                        <h3 class="industry-name">Logistics & Distribution</h3>
+                        <div class="industry-overlay"></div>
+                    </div>
+                </div>
+
+                <div class="industry-item" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="industry-card">
+                        <div class="industry-icon-bg">
+                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" class="industry-icon">
+                                <path d="M16 28C16 20 20 16 28 16H36C44 16 48 20 48 28V36C48 44 44 48 36 48H28C20 48 16 44 16 36V28Z" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="28" cy="28" r="4" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="36" cy="36" r="4" stroke="currentColor" stroke-width="2"/>
+                                <path d="M24 40L32 32L40 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="industry-name">FMCG</h3>
+                        <div class="industry-overlay"></div>
+                    </div>
+                </div>
+
+                <div class="industry-item" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="industry-card">
+                        <div class="industry-icon-bg">
+                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" class="industry-icon">
+                                <rect x="12" y="12" width="40" height="40" rx="4" stroke="currentColor" stroke-width="2"/>
+                                <path d="M12 24H52M24 12V52" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="32" cy="36" r="6" stroke="currentColor" stroke-width="2"/>
+                                <path d="M38 30L42 26M38 42L42 46" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="industry-name">Retail</h3>
+                        <div class="industry-overlay"></div>
+                    </div>
+                </div>
+
+                <div class="industry-item" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="industry-card">
+                        <div class="industry-icon-bg">
+                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" class="industry-icon">
+                                <circle cx="32" cy="32" r="20" stroke="currentColor" stroke-width="2"/>
+                                <path d="M32 12V32L44 38" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M32 8V12M32 52V56M56 32H52M12 32H8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="32" cy="32" r="4" fill="currentColor"/>
+                                <path d="M20 20L24 24M44 44L40 40M44 20L40 24M20 44L24 40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="industry-name">Energy & Utilities</h3>
+                        <div class="industry-overlay"></div>
                     </div>
                 </div>
             </div>
+
+            <div class="industries-cta" data-aos="fade-up" data-aos-delay="600">
+                <a href="{{ route('insights') }}" class="btn-industries">
+                    <span>Explore Industry Expertise</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M7 13L13 7M13 7H7M13 7V13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real Results Section -->
+    <section class="results-section">
+        <div class="results-background">
+            <div class="data-stream">
+                <div class="stream-line line-1"></div>
+                <div class="stream-line line-2"></div>
+                <div class="stream-line line-3"></div>
+                <div class="stream-line line-4"></div>
+            </div>
+            <div class="pulse-rings">
+                <div class="pulse-ring ring-1"></div>
+                <div class="pulse-ring ring-2"></div>
+                <div class="pulse-ring ring-3"></div>
+            </div>
+        </div>
+
+        <div class="section-container">
+            <!-- Header -->
+            <div class="results-header" data-aos="fade-up">
+                <div class="header-tag">Insight Into Your Operations</div>
+                <h2 class="results-title">
+                    Real Results. <span class="text-gradient">Delivered</span>
+                </h2>
+                <p class="results-intro">
+                    You can't improve what you can't see.<br/>
+                    <strong>SBI gives leaders real-time visibility into performance</strong>—so decisions can be faster, smarter, and aligned with strategy.
+                </p>
+            </div>
+
+            <!-- Results Grid -->
+            <div class="results-grid">
+                <!-- Left Side - Animated Dashboard Mockup -->
+                <div class="dashboard-preview" data-aos="fade-right" data-aos-delay="100">
+                    <div class="dashboard-wrapper">
+                        <div class="dashboard-header">
+                            <div class="dash-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="dash-title">Performance Dashboard</div>
+                        </div>
+                        
+                        <div class="dashboard-content">
+                            <!-- Animated Charts -->
+                            <div class="chart-row">
+                                <div class="chart-card">
+                                    <div class="chart-label">Cycle Time Reduction</div>
+                                    <div class="chart-value-large">
+                                        <span class="percentage-number">45</span>
+                                        <span class="percentage-symbol">%</span>
+                                    </div>
+                                    <div class="progress-ring">
+                                        <svg width="120" height="120" viewBox="0 0 120 120">
+                                            <circle cx="60" cy="60" r="50" stroke="rgba(255,255,255,0.1)" stroke-width="8" fill="none"/>
+                                            <circle cx="60" cy="60" r="50" class="progress-circle" stroke="url(#progressGradient)" stroke-width="8" fill="none" 
+                                                    stroke-linecap="round" stroke-dasharray="314" stroke-dashoffset="172"/>
+                                            <defs>
+                                                <linearGradient id="progressGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                    <stop offset="0%" stop-color="#00E5FF"/>
+                                                    <stop offset="100%" stop-color="#76FF03"/>
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
+                                        <div class="ring-icon">⚡</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="chart-card">
+                                    <div class="chart-label">Performance Trend</div>
+                                    <div class="trend-indicator positive">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M7 17L12 12L17 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                            <path d="M17 13V7H11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        </svg>
+                                        <span>Improving</span>
+                                    </div>
+                                    <div class="mini-area-chart">
+                                        <svg viewBox="0 0 200 80" class="area-svg">
+                                            <defs>
+                                                <linearGradient id="areaGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                                    <stop offset="0%" stop-color="rgba(0, 229, 255, 0.3)"/>
+                                                    <stop offset="100%" stop-color="rgba(0, 229, 255, 0)"/>
+                                                </linearGradient>
+                                            </defs>
+                                            <path d="M 0 60 L 25 55 L 50 50 L 75 45 L 100 35 L 125 30 L 150 25 L 175 15 L 200 10 L 200 80 L 0 80 Z" 
+                                                  fill="url(#areaGradient)" class="area-path"/>
+                                            <polyline points="0,60 25,55 50,50 75,45 100,35 125,30 150,25 175,15 200,10" 
+                                                      stroke="#00E5FF" stroke-width="2" fill="none" class="area-line"/>
+                                            <circle cx="200" cy="10" r="4" fill="#00E5FF" class="pulse-dot"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="chart-row">
+                                <div class="chart-card wide">
+                                    <div class="chart-label">Key Performance Indicators</div>
+                                    <div class="kpi-grid">
+                                        <div class="kpi-item">
+                                            <div class="kpi-icon">📊</div>
+                                            <div class="kpi-value">Real-Time</div>
+                                            <div class="kpi-label">Visibility</div>
+                                        </div>
+                                        <div class="kpi-item">
+                                            <div class="kpi-icon">⚡</div>
+                                            <div class="kpi-value">Faster</div>
+                                            <div class="kpi-label">Decisions</div>
+                                        </div>
+                                        <div class="kpi-item">
+                                            <div class="kpi-icon">✓</div>
+                                            <div class="kpi-value">Higher</div>
+                                            <div class="kpi-label">Accuracy</div>
+                                        </div>
+                                        <div class="kpi-item">
+                                            <div class="kpi-icon">📈</div>
+                                            <div class="kpi-value">Measurable</div>
+                                            <div class="kpi-label">Results</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="dashboard-glow"></div>
+                    </div>
+                </div>
+
+                <!-- Right Side - Results List -->
+                <div class="results-list" data-aos="fade-left" data-aos-delay="200">
+                    <div class="result-item" data-aos="fade-left" data-aos-delay="250">
+                        <div class="result-icon">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2"/>
+                                <path d="M16 8V16L22 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <div class="result-content">
+                            <h3 class="result-title">Reduced operational cycle time up to 45%</h3>
+                        </div>
+                        <div class="result-badge">✓</div>
+                    </div>
+
+                    <div class="result-item" data-aos="fade-left" data-aos-delay="300">
+                        <div class="result-icon">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                <path d="M8 20C8 16 10 14 14 14C18 14 20 16 20 20" stroke="currentColor" stroke-width="2"/>
+                                <path d="M16 20C16 16 18 14 22 14C26 14 28 16 28 20" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="14" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="22" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="result-content">
+                            <h3 class="result-title">Improved teamwork efficiency across multiple branches</h3>
+                        </div>
+                        <div class="result-badge">✓</div>
+                    </div>
+
+                    <div class="result-item" data-aos="fade-left" data-aos-delay="350">
+                        <div class="result-icon">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                <rect x="6" y="6" width="20" height="20" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M6 14H26M14 6V26" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="16" cy="16" r="4" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="result-content">
+                            <h3 class="result-title">Enhanced visibility through custom dashboards</h3>
+                        </div>
+                        <div class="result-badge">✓</div>
+                    </div>
+
+                    <div class="result-item" data-aos="fade-left" data-aos-delay="400">
+                        <div class="result-icon">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                <path d="M10 16L14 20L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <rect x="6" y="6" width="20" height="20" rx="2" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="result-content">
+                            <h3 class="result-title">Faster, standardized approvals and workflows</h3>
+                        </div>
+                        <div class="result-badge">✓</div>
+                    </div>
+
+                    <div class="result-item" data-aos="fade-left" data-aos-delay="450">
+                        <div class="result-icon">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                <circle cx="10" cy="16" r="4" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="22" cy="16" r="4" stroke="currentColor" stroke-width="2"/>
+                                <path d="M14 16H18" stroke="currentColor" stroke-width="2"/>
+                                <path d="M10 12V8H22V12M10 20V24H22V20" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="result-content">
+                            <h3 class="result-title">Integrated systems across supply chain, HR, and finance</h3>
+                        </div>
+                        <div class="result-badge">✓</div>
+                    </div>
+
+                    <div class="result-item" data-aos="fade-left" data-aos-delay="500">
+                        <div class="result-icon">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                <path d="M6 26L12 20L16 24L26 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="12" cy="20" r="2" fill="currentColor"/>
+                                <circle cx="16" cy="24" r="2" fill="currentColor"/>
+                                <circle cx="26" cy="10" r="2" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="result-content">
+                            <h3 class="result-title">Stronger accuracy and traceability using real-time data</h3>
+                        </div>
+                        <div class="result-badge">✓</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="clients-section">
+        <div class="clients-background">
+            <div class="shine-overlay"></div>
+        </div>
+
+        <div class="section-container">
+            <div class="clients-header" data-aos="fade-up">
+                <h2 class="clients-title">
+                    Trusted by businesses across <span class="text-gradient">Indonesia</span> and <span class="text-gradient">Southeast Asia</span>
+                </h2>
+            </div>
+
+            <div class="clients-logos" data-aos="fade-up" data-aos-delay="100">
+                <div class="logo-track">
+                    <!-- First Set -->
+                    <div class="logo-item">
+                        <div class="logo-card">
+                            <img src="/images/partners/sgi.png" alt="Samator Gas Industri" class="company-logo">
+                        </div>
+                        <div class="company-name">Samator Gas Industri</div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-card">
+                            <img src="/images/partners/sig.png" alt="Samator Indo Gas" class="company-logo">
+                        </div>
+                        <div class="company-name">Samator Indo Gas</div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-card">
+                            <img src="/images/partners/ame.png" alt="Aneka Mega Energi" class="company-logo">
+                        </div>
+                        <div class="company-name">Aneka Mega Energi</div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-card">
+                            <img src="/images/partners/sbm.png" alt="Samabayu Mandala" class="company-logo">
+                        </div>
+                        <div class="company-name">Samabayu Mandala</div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-card">
+                            <img src="/images/partners/smt.png" alt="Samator Group" class="company-logo">
+                        </div>
+                        <div class="company-name">Samator Group</div>
+                    </div>
+                    
+                    <!-- Duplicate Set for Seamless Loop -->
+                    <div class="logo-item">
+                        <div class="logo-card">
+                            <img src="/images/partners/sgi.png" alt="Samator Gas Industri" class="company-logo">
+                        </div>
+                        <div class="company-name">Samator Gas Industri</div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-card">
+                            <img src="/images/partners/sig.png" alt="Samator Indo Gas" class="company-logo">
+                        </div>
+                        <div class="company-name">Samator Indo Gas</div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-card">
+                            <img src="/images/partners/ame.png" alt="Aneka Mega Energi" class="company-logo">
+                        </div>
+                        <div class="company-name">Aneka Mega Energi</div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-card">
+                            <img src="/images/partners/sbm.png" alt="Samabayu Mandala" class="company-logo">
+                        </div>
+                        <div class="company-name">Samabayu Mandala</div>
+                    </div>
+                    <div class="logo-item">
+                        <div class="logo-card">
+                            <img src="/images/partners/smt.png" alt="Samator Group" class="company-logo">
+                        </div>
+                        <div class="company-name">Samator Group</div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -238,12 +795,14 @@
             <div class="cta-content" data-aos="zoom-in">
                 <h2 class="cta-title">Ready to Transform Your Business?</h2>
                 <p class="cta-subtitle">Let's discuss how we can help you achieve your digital transformation goals</p>
-                <a href="#contact" class="btn-primary large">
-                    <span>Start Your Journey</span>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <div class="clients-cta" data-aos="fade-up" data-aos-delay="200">
+                <a href="{{ route('contact') }}" class="btn-secondary">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M3 8L10 13L17 8M3 8L10 3L17 8M3 8V16L10 21L17 16V8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
+                    <span>Contact Our Team</span>
                 </a>
+            </div>
             </div>
         </div>
     </section>

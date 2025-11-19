@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initCounterAnimation();
     initCardTilt();
     initScrollAnimations();
+    initTypingAnimation(); // Add typing animation
 });
 
 // Video background handler
@@ -183,6 +184,54 @@ function initScrollAnimations() {
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(el);
     });
+}
+
+// Typing Animation for Homepage Hero - Looping Effect
+function initTypingAnimation() {
+    console.log('🏠 initTypingAnimation called');
+    
+    const typingElement = document.querySelector('.hero-heading .typing-text');
+    
+    console.log('Homepage Typing Element:', typingElement);
+    
+    if (!typingElement) {
+        console.log('❌ Typing element not found on homepage');
+        return;
+    }
+    
+    const text = typingElement.textContent.trim();
+    console.log('Original Text:', text);
+    
+    typingElement.textContent = '';
+    
+    let charIndex = 0;
+    let isDeleting = false;
+    
+    function typeEffect() {
+        if (!isDeleting && charIndex < text.length) {
+            // Typing forward
+            typingElement.textContent += text.charAt(charIndex);
+            charIndex++;
+            setTimeout(typeEffect, 100);
+        } else if (!isDeleting && charIndex === text.length) {
+            // Pause at end before deleting
+            isDeleting = true;
+            setTimeout(typeEffect, 2000);
+        } else if (isDeleting && charIndex > 0) {
+            // Deleting backward
+            typingElement.textContent = text.substring(0, charIndex - 1);
+            charIndex--;
+            setTimeout(typeEffect, 50);
+        } else if (isDeleting && charIndex === 0) {
+            // Pause at start before typing again
+            isDeleting = false;
+            setTimeout(typeEffect, 500);
+        }
+    }
+    
+    // Start typing after animations settle
+    console.log('⏰ Homepage typing will start in 1.5 seconds');
+    setTimeout(typeEffect, 1500);
 }
 
 // Newsletter form submission

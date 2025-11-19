@@ -3,9 +3,11 @@
 @section('content')
     <!-- About Hero Section -->
     <section class="about-hero-modern">
-        <div class="hero-image-background">
-            <img src="{{ asset('images/about-hero.jpg') }}" alt="About Hero Background" class="hero-bg-image">
-            <div class="image-overlay"></div>
+        <div class="hero-video-background">
+            <video autoplay muted loop playsinline class="hero-bg-video">
+                <source src="{{ asset('videos/about-hero.mp4') }}" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
         </div>
         <div class="particles-bg"></div>
         <div class="hero-gradient"></div>
@@ -16,7 +18,7 @@
                 Our Story
             </div>
             <h1 class="hero-heading">
-                <span class="text-gradient">Fighting</span> For A Change
+                Built for the  <span class="text-gradient">Blue Ocean</span>
             </h1>
             <p class="hero-description">
                 Bringing Indonesian Industries an inch closer to international competition
@@ -24,20 +26,268 @@
         </div>
     </section>
 
-    <!-- Company Introduction -->
-    <section class="about-intro-section">
+    <!-- Our Story Section -->
+    <section class="story-section">
+        <div class="story-background">
+            <div class="wave-decoration wave-1"></div>
+            <div class="wave-decoration wave-2"></div>
+            <div class="floating-dots">
+                <span class="dot dot-1"></span>
+                <span class="dot dot-2"></span>
+                <span class="dot dot-3"></span>
+                <span class="dot dot-4"></span>
+                <span class="dot dot-5"></span>
+            </div>
+        </div>
+        
         <div class="section-container">
-            <div class="intro-wrapper" data-aos="fade-up">
-                <p class="intro-text-large">
-                    At <span class="text-gradient-inline">Samudera Biru Internasional</span>, we focus our resources on increasing the competitiveness of 
-                    Indonesian companies across all industries. Ranging from Finance to Manufacturing, we strive to create 
-                    stronger business ecosystems.
-                </p>
-                <p class="intro-text">
-                    Working together with our clients in each and every step of their transformation process, we implement 
-                    digital analytics and modern technological instruments tailored to achieve operational excellence and 
-                    stronger execution capabilities.
-                </p>
+            <div class="story-content" data-aos="fade-up">
+                <!-- Opening Statement with Visual -->
+                <div class="story-hero">
+                    <div class="story-hero-visual" data-aos="zoom-in">
+                        <div class="ocean-icon">
+                            <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
+                                <circle cx="60" cy="60" r="50" stroke="#0284C7" stroke-width="2" opacity="0.2"/>
+                                <circle cx="60" cy="60" r="40" stroke="#0284C7" stroke-width="2" opacity="0.4"/>
+                                <circle cx="60" cy="60" r="30" stroke="#0284C7" stroke-width="2" opacity="0.6"/>
+                                <path d="M30 60C30 43.4315 43.4315 30 60 30C76.5685 30 90 43.4315 90 60" stroke="url(#oceanGradient)" stroke-width="3" stroke-linecap="round"/>
+                                <circle cx="60" cy="60" r="15" fill="url(#oceanGradient)"/>
+                                <defs>
+                                    <linearGradient id="oceanGradient" x1="30" y1="30" x2="90" y2="90">
+                                        <stop offset="0%" stop-color="#0284C7"/>
+                                        <stop offset="100%" stop-color="#0369A1"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="story-hero-text">
+                        <h2 class="story-lead-title" data-aos="fade-up">SBI was born from a simple belief:</h2>
+                        <p class="story-statement" data-aos="fade-up" data-aos-delay="100">
+                            <span class="highlight-blue">Every company deserves the chance to break free from constraints and compete in a space of its own—its blue ocean.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Section -->
+                <div class="story-timeline" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-header">
+                        <div class="timeline-badge">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="#0284C7" stroke-width="2"/>
+                                <path d="M12 6V12L16 14" stroke="#0284C7" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            <span>A Decade Ago</span>
+                        </div>
+                    </div>
+                    
+                    <p class="timeline-text" data-aos="fade-up" data-aos-delay="250">
+                        Long before "digital transformation" became a buzzword, we saw Indonesian companies struggling with the same patterns:
+                    </p>
+                    
+                    <div class="challenges-grid">
+                        <div class="challenge-card" data-aos="flip-left" data-aos-delay="300">
+                            <div class="challenge-icon">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                    <path d="M10 20L14 16M14 16L10 12M14 16H6M30 20L26 24M26 24L30 28M26 24H34M20 10L24 14M24 14L28 10M24 14V6M20 30L16 26M16 26L12 30M16 26V34" stroke="#0284C7" stroke-width="2" stroke-linecap="round"/>
+                                    <circle cx="20" cy="20" r="3" fill="#0284C7"/>
+                                </svg>
+                            </div>
+                            <h4>Complex Processes</h4>
+                            <p>that slowed decisions</p>
+                        </div>
+                        
+                        <div class="challenge-card" data-aos="flip-left" data-aos-delay="350">
+                            <div class="challenge-icon">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                    <rect x="6" y="6" width="12" height="12" rx="2" stroke="#0369A1" stroke-width="2"/>
+                                    <rect x="22" y="6" width="12" height="12" rx="2" stroke="#0369A1" stroke-width="2"/>
+                                    <rect x="6" y="22" width="12" height="12" rx="2" stroke="#0369A1" stroke-width="2"/>
+                                    <rect x="22" y="22" width="12" height="12" rx="2" stroke="#0369A1" stroke-width="2"/>
+                                    <path d="M18 12H22M12 18V22M28 18V22M18 28H22" stroke="#0369A1" stroke-width="2" stroke-dasharray="2 2"/>
+                                </svg>
+                            </div>
+                            <h4>Disconnected Systems</h4>
+                            <p>creating data silos</p>
+                        </div>
+                        
+                        <div class="challenge-card" data-aos="flip-left" data-aos-delay="400">
+                            <div class="challenge-icon">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                    <rect x="8" y="8" width="24" height="24" rx="3" stroke="#075985" stroke-width="2"/>
+                                    <path d="M14 20L18 24L26 16" stroke="#075985" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M18 24L14 28" stroke="#075985" stroke-width="2" stroke-linecap="round"/>
+                                    <circle cx="28" cy="28" r="3" stroke="#075985" stroke-width="2"/>
+                                    <line x1="25" y1="25" x2="22" y2="22" stroke="#075985" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <h4>Mismatched Tech</h4>
+                            <p>never fit business needs</p>
+                        </div>
+                        
+                        <div class="challenge-card" data-aos="flip-left" data-aos-delay="450">
+                            <div class="challenge-icon">
+                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                    <circle cx="20" cy="20" r="14" stroke="#0C4A6E" stroke-width="2"/>
+                                    <path d="M20 12V20L26 23" stroke="#0C4A6E" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M12 8L8 12M28 8L32 12M8 28L12 32M28 32L32 28" stroke="#0C4A6E" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <h4>Firefighting Mode</h4>
+                            <p>instead of building the future</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Turning Point -->
+                <div class="story-pivot" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="pivot-content-wrapper">
+                        <div class="pivot-text-content">
+                            <div class="pivot-icon">
+                                <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                                    <path d="M30 10L35 25L50 30L35 35L30 50L25 35L10 30L25 25L30 10Z" fill="url(#pivotGradient)" stroke="#0284C7" stroke-width="2"/>
+                                    <circle cx="30" cy="30" r="8" fill="white"/>
+                                    <defs>
+                                        <linearGradient id="pivotGradient" x1="10" y1="10" x2="50" y2="50">
+                                            <stop offset="0%" stop-color="#0284C7" stop-opacity="0.3"/>
+                                            <stop offset="100%" stop-color="#0369A1" stop-opacity="0.6"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <h3 class="pivot-title">SBI was created to change that.</h3>
+                            <p class="pivot-text">
+                                Our name is a reminder of the philosophy that built us—<strong>to help organizations step out of crowded, competitive waters and into a new space defined by clarity, efficiency, and possibility.</strong>
+                            </p>
+                        </div>
+                        <div class="pivot-image" data-aos="fade-left" data-aos-delay="600">
+                            <div class="image-wrapper">
+                                <img src="{{ asset('images/sbigroup.jpg') }}" alt="SBI Team" class="team-photo">
+                                <div class="image-overlay"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10 Years Journey - Creative Layout -->
+                <div class="story-milestone-modern" data-aos="fade-up" data-aos-delay="550">
+                    <!-- Top Section: Title + Badge Split -->
+                    <div class="milestone-header">
+                        <div class="milestone-header-content" data-aos="fade-right" data-aos-delay="575">
+                            <span class="milestone-tag">Our Journey</span>
+                            <h3>A Decade of Transformation</h3>
+                            <p class="milestone-subtitle">Building the future, one solution at a time</p>
+                        </div>
+                        <div class="milestone-badge-wrapper" data-aos="zoom-in" data-aos-delay="600">
+                            <div class="badge-ring"></div>
+                            <div class="badge-ring-2"></div>
+                            <div class="year-badge-creative">
+                                <span class="year-number">10</span>
+                                <span class="year-label">Years</span>
+                                <div class="badge-shine"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Intro Text -->
+                    <p class="milestone-intro-text" data-aos="fade-up" data-aos-delay="650">
+                        Today, after <strong>10 years</strong> of building, fixing, and transforming, we've refined what we do into a simple promise:
+                    </p>
+
+                    <!-- Promise Box - Refined Design -->
+                    <div class="promise-box-refined" data-aos="fade-up" data-aos-delay="700">
+                        <div class="promise-box-inner">
+                            <div class="promise-content-main">
+                                <p class="promise-statement-big">
+                                    We help you <span class="text-highlight">grow faster</span> and 
+                                    <span class="text-highlight">operate smarter</span> by marrying 
+                                    business insight with the right technology.
+                                </p>
+                            </div>
+                            <div class="promise-principles">
+                                <div class="promise-principle-item">
+                                    <div class="promise-principle-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                            <path d="M5 13l4 4L19 7"/>
+                                        </svg>
+                                    </div>
+                                    <span>No jargon</span>
+                                </div>
+                                <div class="promise-principle-divider"></div>
+                                <div class="promise-principle-item">
+                                    <div class="promise-principle-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                            <path d="M5 13l4 4L19 7"/>
+                                        </svg>
+                                    </div>
+                                    <span>No complexity</span>
+                                </div>
+                                <div class="promise-principle-divider"></div>
+                                <div class="promise-principle-item">
+                                    <div class="promise-principle-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                            <path d="M5 13l4 4L19 7"/>
+                                        </svg>
+                                    </div>
+                                    <span>Only solutions</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="promise-decoration-dots">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Full Width Image with Overlay Text -->
+                    <div class="milestone-image-creative" data-aos="fade-up" data-aos-delay="750">
+                        <img src="{{ asset('images/sbigroup2.jpg') }}" alt="SBI Transformation Journey" class="journey-photo-creative">
+                        <div class="image-overlay-gradient"></div>
+                        <div class="image-caption">
+                            <svg class="caption-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            </svg>
+                            <p>SBI's 10th Anniversary</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Final Statement with Visual Split -->
+                <div class="story-closing-modern" data-aos="fade-up" data-aos-delay="700">
+                    <div class="closing-visual">
+                        <div class="closing-icon-grid">
+                            <div class="icon-item" data-aos="zoom-in" data-aos-delay="700">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                    <rect x="4" y="4" width="24" height="24" rx="3" stroke="#0284C7" stroke-width="2"/>
+                                    <path d="M10 16L14 20L22 12" stroke="#0284C7" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                                <span>Systems</span>
+                            </div>
+                            <div class="arrow-divider">→</div>
+                            <div class="icon-item" data-aos="zoom-in" data-aos-delay="750">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                    <path d="M6 20L12 14L16 18L26 8" stroke="#0284C7" stroke-width="2" stroke-linecap="round"/>
+                                    <circle cx="12" cy="14" r="2" fill="#0284C7"/>
+                                    <circle cx="16" cy="18" r="2" fill="#0284C7"/>
+                                    <circle cx="26" cy="8" r="2" fill="#0284C7"/>
+                                </svg>
+                                <span>Growth</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="closing-text">
+                        <p class="closing-line">We don't just implement systems.</p>
+                        <p class="closing-statement">
+                            <span class="text-gradient-blue">We elevate organizations</span>
+                        </p>
+                        <div class="closing-tags">
+                            <span class="tag">Digitally</span>
+                            <span class="tag">Operationally</span>
+                            <span class="tag">Strategically</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -59,10 +309,14 @@
                         </svg>
                     </div>
                     <h3 class="vm-title-modern">VISION</h3>
-                    <p class="vm-text-modern">
-                        Helping Indonesian companies across various industries achieve sustainable competitive advantages 
-                        in domestic and international markets, while sparking a culture of continuous improvement
-                    </p>
+                    <div class="vision-content-modern">
+                        <p class="vision-headline">
+                            To become the most trusted transformation partner for companies seeking operational excellence, data clarity, and long-term digital capability.
+                        </p>
+                        <p class="vision-description">
+                            A future where Indonesian and regional companies don't just "catch up," but lead—with technology that empowers people, simplifies decisions, and opens new opportunities.
+                        </p>
+                    </div>
                 </div>
 
                 <div class="vm-card-modern" data-aos="fade-left" data-aos-delay="200">
@@ -73,23 +327,13 @@
                         </svg>
                     </div>
                     <h3 class="vm-title-modern">MISSION</h3>
-                    <div class="mission-list-modern">
-                        <div class="mission-item-modern">
-                            <span class="mission-icon">▸</span>
-                            <p>Be the catalyst for nation-wide energy transformation towards sustainable solar energy</p>
-                        </div>
-                        <div class="mission-item-modern">
-                            <span class="mission-icon">▸</span>
-                            <p>Provide 4.0 Tech consultancy and implementation assistance for operational excellence</p>
-                        </div>
-                        <div class="mission-item-modern">
-                            <span class="mission-icon">▸</span>
-                            <p>Enhance Indonesia's human capital for knowledge-based economy transition</p>
-                        </div>
-                        <div class="mission-item-modern">
-                            <span class="mission-icon">▸</span>
-                            <p>Assist business ecosystem creation with ERP and critical systems consultancy</p>
-                        </div>
+                    <div class="mission-content-modern">
+                        <p class="mission-headline">
+                            To accelerate organizations through practical, human-centered digital transformation—so technology becomes an engine, not an obstacle.
+                        </p>
+                        <p class="mission-description">
+                            We believe transformation isn't only about tools. It's about clarity, discipline, and a willingness to redesign how work gets done. Our mission is to help companies reach that point faster, with solutions that are built to last.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -109,12 +353,282 @@
         </div>
     </section>
 
+    <!-- How We Work: SBI Principles Section -->
+    <section class="principles-section">
+        <div class="section-container">
+            <!-- Section Header -->
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag-light">How We Work</span>
+                <h2 class="section-title-light">The SBI<span class="text-gradient-light"> Principles</span></h2>
+                <p class="section-subtitle-light">
+                    These principles guide how we work internally—but they also shape the experience we bring to every client.
+                </p>
+            </div>
+
+            <!-- Principles Grid - Interactive Cards -->
+            <div class="principles-grid">
+                <!-- Principle 1 -->
+                <div class="principle-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="principle-card-inner">
+                        <div class="principle-number">01</div>
+                        <div class="principle-icon-wrapper">
+                            <div class="icon-glow"></div>
+                            <svg class="principle-icon" viewBox="0 0 64 64" fill="none">
+                                <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="2"/>
+                                <path d="M20 32L28 40L44 24" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="32" cy="32" r="20" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+                            </svg>
+                        </div>
+                        <h3 class="principle-title">Transformation is Our Business</h3>
+                        <p class="sbi-principle-description">
+                            We exist to unlock change. We help you remove complexity, upgrade operations, and step into a more efficient, future-ready way of working.
+                        </p>
+                        <div class="principle-line"></div>
+                    </div>
+                </div>
+
+                <!-- Principle 2 -->
+                <div class="principle-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="principle-card-inner">
+                        <div class="principle-number">02</div>
+                        <div class="principle-icon-wrapper">
+                            <div class="icon-glow"></div>
+                            <svg class="principle-icon" viewBox="0 0 64 64" fill="none">
+                                <path d="M16 48L24 32L32 40L40 24L48 32L56 16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="24" cy="32" r="3" fill="currentColor"/>
+                                <circle cx="32" cy="40" r="3" fill="currentColor"/>
+                                <circle cx="40" cy="24" r="3" fill="currentColor"/>
+                                <circle cx="48" cy="32" r="3" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3 class="principle-title">Results Rule</h3>
+                        <p class="sbi-principle-description">
+                            Every recommendation, workflow, and dashboard must drive impact. If it doesn't deliver measurable results, it doesn't make it into your system.
+                        </p>
+                        <div class="principle-line"></div>
+                    </div>
+                </div>
+
+                <!-- Principle 3 -->
+                <div class="principle-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="principle-card-inner">
+                        <div class="principle-number">03</div>
+                        <div class="principle-icon-wrapper">
+                            <div class="icon-glow"></div>
+                            <svg class="principle-icon" viewBox="0 0 64 64" fill="none">
+                                <path d="M32 8V32M32 32L48 48M32 32L16 48" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="32" cy="32" r="6" stroke="currentColor" stroke-width="2" fill="none"/>
+                                <circle cx="16" cy="48" r="4" fill="currentColor"/>
+                                <circle cx="48" cy="48" r="4" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3 class="principle-title">Fix the Root, Not the Symptom</h3>
+                        <p class="sbi-principle-description">
+                            We dig deep into the real source of inefficiency. Not assumptions. Not surface-level issues. Just solutions that last.
+                        </p>
+                        <div class="principle-line"></div>
+                    </div>
+                </div>
+
+                <!-- Principle 4 -->
+                <div class="principle-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="principle-card-inner">
+                        <div class="principle-number">04</div>
+                        <div class="principle-icon-wrapper">
+                            <div class="icon-glow"></div>
+                            <svg class="principle-icon" viewBox="0 0 64 64" fill="none">
+                                <rect x="12" y="12" width="40" height="40" rx="4" stroke="currentColor" stroke-width="2"/>
+                                <path d="M24 32H40M32 24V40" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                                <circle cx="32" cy="32" r="16" stroke="currentColor" stroke-width="1" opacity="0.2"/>
+                            </svg>
+                        </div>
+                        <h3 class="principle-title">Simplify Relentlessly</h3>
+                        <p class="sbi-principle-description">
+                            We delete unnecessary steps, remove noise, and streamline processes—before automation. Faster cycle times come from simplification, not layering more tools.
+                        </p>
+                        <div class="principle-line"></div>
+                    </div>
+                </div>
+
+                <!-- Principle 5 -->
+                <div class="principle-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="principle-card-inner">
+                        <div class="principle-number">05</div>
+                        <div class="principle-icon-wrapper">
+                            <div class="icon-glow"></div>
+                            <svg class="principle-icon" viewBox="0 0 64 64" fill="none">
+                                <path d="M32 8L40 24L56 28L44 40L48 56L32 48L16 56L20 40L8 28L24 24L32 8Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                                <circle cx="32" cy="32" r="8" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>
+                            </svg>
+                        </div>
+                        <h3 class="principle-title">Impact Above All Else</h3>
+                        <p class="sbi-principle-description">
+                            We focus on what creates real movement for your business. Your goals become our compass.
+                        </p>
+                        <div class="principle-line"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Decorative Elements -->
+            <div class="principles-decoration">
+                <div class="deco-circle deco-1"></div>
+                <div class="deco-circle deco-2"></div>
+                <div class="deco-line deco-line-1"></div>
+                <div class="deco-line deco-line-2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Clients Trust Us Section -->
+    <section class="trust-section">
+        <div class="trust-container">
+            <!-- Animated Background -->
+            <div class="trust-bg-animated">
+                <div class="trust-gradient-orb orb-1"></div>
+                <div class="trust-gradient-orb orb-2"></div>
+                <div class="trust-gradient-orb orb-3"></div>
+                <div class="trust-grid-pattern"></div>
+            </div>
+
+            <!-- Content -->
+            <div class="trust-content">
+                <!-- Header -->
+                <div class="trust-header" data-aos="fade-down">
+                    <div class="trust-badge">
+                        <div class="trust-badge-glow"></div>
+                        <span class="trust-badge-text">OUR COMMITMENT</span>
+                    </div>
+                    <h2 class="trust-title">
+                        Why Clients <span class="trust-title-highlight">Trust Us</span>
+                    </h2>
+                </div>
+
+                <!-- Opening Statement -->
+                <div class="trust-opening" data-aos="fade-up" data-aos-delay="100">
+                    <div class="trust-statement-card">
+                        <div class="statement-glow-effect"></div>
+                        <p class="trust-statement-main">
+                            Because we've lived through the complexity and refined the path forward.
+                        </p>
+                        <p class="trust-statement-secondary">
+                            Because our decade of experience means we know where implementation goes wrong—and how to make it right.
+                        </p>
+                        <p class="trust-statement-tertiary">
+                            And because transformation is never accidental; it's engineered through clarity, discipline, and design.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- What We Give You -->
+                <div class="trust-benefits">
+                    <div class="trust-benefits-header" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="trust-benefits-title">What SBI Gives You</h3>
+                    </div>
+
+                    <div class="trust-benefits-grid">
+                        <!-- Benefit 1 -->
+                        <div class="trust-benefit-item" data-aos="zoom-in" data-aos-delay="250">
+                            <div class="benefit-icon-circle">
+                                <div class="benefit-icon-pulse"></div>
+                                <svg class="benefit-icon" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <span class="benefit-text">a seasoned transformation partner</span>
+                            <div class="benefit-line"></div>
+                        </div>
+
+                        <!-- Benefit 2 -->
+                        <div class="trust-benefit-item" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="benefit-icon-circle">
+                                <div class="benefit-icon-pulse"></div>
+                                <svg class="benefit-icon" viewBox="0 0 24 24" fill="none">
+                                    <path d="M9 11L12 14L22 4M21 12V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <span class="benefit-text">a battle-tested methodology</span>
+                            <div class="benefit-line"></div>
+                        </div>
+
+                        <!-- Benefit 3 -->
+                        <div class="trust-benefit-item" data-aos="zoom-in" data-aos-delay="350">
+                            <div class="benefit-icon-circle">
+                                <div class="benefit-icon-pulse"></div>
+                                <svg class="benefit-icon" viewBox="0 0 24 24" fill="none">
+                                    <path d="M17 21V19C17 16.7909 15.2091 15 13 15H5C2.79086 15 1 16.7909 1 19V21M23 21V19C23 17.1362 21.7252 15.5701 20 15.126M16 3.12601C17.7252 3.57004 19 5.13616 19 7C19 8.86384 17.7252 10.43 16 10.874M13 7C13 9.20914 11.2091 11 9 11C6.79086 11 5 9.20914 5 7C5 4.79086 6.79086 3 9 3C11.2091 3 13 4.79086 13 7Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <span class="benefit-text">a team that solves both business and technical challenges</span>
+                            <div class="benefit-line"></div>
+                        </div>
+
+                        <!-- Benefit 4 -->
+                        <div class="trust-benefit-item" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="benefit-icon-circle">
+                                <div class="benefit-icon-pulse"></div>
+                                <svg class="benefit-icon" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <span class="benefit-text">solutions built on real operations</span>
+                            <div class="benefit-line"></div>
+                        </div>
+
+                        <!-- Benefit 5 -->
+                        <div class="trust-benefit-item" data-aos="zoom-in" data-aos-delay="450">
+                            <div class="benefit-icon-circle">
+                                <div class="benefit-icon-pulse"></div>
+                                <svg class="benefit-icon" viewBox="0 0 24 24" fill="none">
+                                    <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <span class="benefit-text">results that are measurable, sustainable, and scalable</span>
+                            <div class="benefit-line"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Closing Statement -->
+                <div class="trust-closing" data-aos="fade-up" data-aos-delay="500">
+                    <div class="trust-closing-card">
+                        <div class="closing-shine-effect"></div>
+                        <div class="closing-content">
+                            <p class="closing-statement-primary">
+                                You aren't buying a system.
+                            </p>
+                            <p class="closing-statement-secondary">
+                                You're gaining a partner who understands where you want to go—and knows how to get you there faster.
+                            </p>
+                        </div>
+                        <div class="closing-corner-accent top-left"></div>
+                        <div class="closing-corner-accent top-right"></div>
+                        <div class="closing-corner-accent bottom-left"></div>
+                        <div class="closing-corner-accent bottom-right"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Floating Decorative Elements -->
+            <div class="trust-floating-elements">
+                <div class="trust-float-circle circle-1"></div>
+                <div class="trust-float-circle circle-2"></div>
+                <div class="trust-float-circle circle-3"></div>
+                <div class="trust-float-dot dot-1"></div>
+                <div class="trust-float-dot dot-2"></div>
+                <div class="trust-float-dot dot-3"></div>
+            </div>
+        </div>
+    </section>
+
     <!-- Team Section -->
     <section class="team-section-modern">
         <div class="section-container">
             <div class="section-header" data-aos="fade-up">
                 <span class="section-tag">Leadership</span>
-                <h2 class="section-title">Meet The <span class="text-gradient">Blue Ocean Thinkers</span></h2>
+                <h2 class="section-title">Board of <span class="text-gradient">Directors</span></h2>
             </div>
 
             <!-- Team Grid -->
@@ -234,6 +748,162 @@
                                 </button>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Let's Talk CTA Section -->
+    <section class="lets-talk-section">
+        <div class="lets-talk-container">
+            <!-- Animated Background Elements -->
+            <div class="lets-talk-bg">
+                <div class="talk-gradient-orb orb-1"></div>
+                <div class="talk-gradient-orb orb-2"></div>
+                <div class="talk-particles"></div>
+            </div>
+
+            <div class="lets-talk-content">
+                <!-- Left Side - CTA Text -->
+                <div class="lets-talk-left" data-aos="fade-right">
+                    <div class="talk-badge">
+                        <div class="talk-badge-pulse"></div>
+                        <span class="talk-badge-text">Ready to Transform?</span>
+                    </div>
+                    
+                    <h2 class="talk-heading">
+                        Let's discuss how we can help 
+                        <span class="talk-highlight">accelerate your company's growth</span> 
+                        through digital transformation.
+                    </h2>
+
+                    <div class="talk-features">
+                        <div class="talk-feature-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="feature-check">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M16.6667 5L7.50004 14.1667L3.33337 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <span>Free consultation & assessment</span>
+                        </div>
+                        <div class="talk-feature-item" data-aos="fade-up" data-aos-delay="150">
+                            <div class="feature-check">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M16.6667 5L7.50004 14.1667L3.33337 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <span>Tailored transformation roadmap</span>
+                        </div>
+                        <div class="talk-feature-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="feature-check">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M16.6667 5L7.50004 14.1667L3.33337 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <span>Expert guidance from day one</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side - Form -->
+                <div class="lets-talk-right" data-aos="fade-left" data-aos-delay="200">
+                    <div class="talk-form-card">
+                        <div class="talk-form-header">
+                            <div class="form-icon-wrapper">
+                                <svg class="form-icon" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                    <path d="M28 22C28 22.5304 27.7893 23.0391 27.4142 23.4142C27.0391 23.7893 26.5304 24 26 24H8L4 28V6C4 5.46957 4.21071 4.96086 4.58579 4.58579C4.96086 4.21071 5.46957 4 6 4H26C26.5304 4 27.0391 4.21071 27.4142 4.58579C27.7893 4.96086 28 5.46957 28 6V22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <div class="form-icon-glow"></div>
+                            </div>
+                            <h3 class="talk-form-title">Start Your Transformation</h3>
+                            <p class="talk-form-subtitle">We'll respond within 24 hours</p>
+                        </div>
+
+                        <form class="talk-form" id="talkForm">
+                            <div class="talk-form-row">
+                                <div class="talk-form-group">
+                                    <label for="talkFullName" class="talk-form-label">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                            <path d="M13.3333 14V12.6667C13.3333 11.9594 13.0524 11.2811 12.5523 10.781C12.0522 10.281 11.3739 10 10.6667 10H5.33333C4.62609 10 3.94781 10.281 3.44772 10.781C2.94762 11.2811 2.66667 11.9594 2.66667 12.6667V14M10.6667 4.66667C10.6667 6.13943 9.47276 7.33333 8 7.33333C6.52724 7.33333 5.33333 6.13943 5.33333 4.66667C5.33333 3.19391 6.52724 2 8 2C9.47276 2 10.6667 3.19391 10.6667 4.66667Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        Full Name
+                                    </label>
+                                    <input 
+                                        type="text" 
+                                        id="talkFullName" 
+                                        name="fullName" 
+                                        class="talk-form-input" 
+                                        placeholder="John Doe"
+                                        required
+                                    >
+                                    <div class="talk-input-glow"></div>
+                                </div>
+
+                                <div class="talk-form-group">
+                                    <label for="talkEmail" class="talk-form-label">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                            <path d="M2.66667 4L7.92667 7.50667C7.95646 7.52583 7.99023 7.53799 8.02532 7.54218C8.06042 7.54637 8.09591 7.54248 8.12933 7.53083C8.16276 7.51918 8.19324 7.50007 8.21853 7.47493C8.24382 7.44979 8.26329 7.41926 8.27556 7.38556C8.28782 7.35186 8.29258 7.31581 8.28949 7.28015C8.2864 7.24449 8.27554 7.21006 8.25763 7.17907C8.23973 7.14809 8.21523 7.12126 8.18579 7.10042C8.15635 7.07958 8.12267 7.06522 8.08733 7.05833L2.66667 4ZM2.66667 4V10.6667C2.66667 11.0203 2.80714 11.3594 3.05719 11.6095C3.30724 11.8595 3.64638 12 4 12H12C12.3536 12 12.6928 11.8595 12.9428 11.6095C13.1929 11.3594 13.3333 11.0203 13.3333 10.6667V4M2.66667 4L8 7.33333M13.3333 4L8 7.33333" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        Email
+                                    </label>
+                                    <input 
+                                        type="email" 
+                                        id="talkEmail" 
+                                        name="email" 
+                                        class="talk-form-input" 
+                                        placeholder="john@company.com"
+                                        required
+                                    >
+                                    <div class="talk-input-glow"></div>
+                                </div>
+                            </div>
+
+                            <div class="talk-form-group">
+                                <label for="talkSubject" class="talk-form-label">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M14 7.33333V4.66667C14 4.31305 13.8595 3.97391 13.6095 3.72386C13.3594 3.47381 13.0203 3.33333 12.6667 3.33333H3.33333C2.97971 3.33333 2.64057 3.47381 2.39052 3.72386C2.14048 3.97391 2 4.31305 2 4.66667V11.3333C2 11.687 2.14048 12.0261 2.39052 12.2761C2.64057 12.5262 2.97971 12.6667 3.33333 12.6667H8.66667" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M2 4.66667L8 8.66667L14 4.66667M11.3333 10H14.6667M13 8.66667V11.3333" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    Subject
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="talkSubject" 
+                                    name="subject" 
+                                    class="talk-form-input" 
+                                    placeholder="Digital Transformation Consultation"
+                                    required
+                                >
+                                <div class="talk-input-glow"></div>
+                            </div>
+
+                            <div class="talk-form-group">
+                                <label for="talkMessage" class="talk-form-label">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M14 10C14 10.3536 13.8595 10.6928 13.6095 10.9428C13.3594 11.1929 13.0203 11.3333 12.6667 11.3333H5.33333L2 14V3.33333C2 2.97971 2.14048 2.64057 2.39052 2.39052C2.64057 2.14048 2.97971 2 3.33333 2H12.6667C13.0203 2 13.3594 2.14048 13.6095 2.39052C13.8595 2.64057 14 2.97971 14 3.33333V10Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    Message
+                                </label>
+                                <textarea 
+                                    id="talkMessage" 
+                                    name="message" 
+                                    class="talk-form-textarea" 
+                                    placeholder="Tell us about your business goals and transformation needs..."
+                                    rows="4"
+                                    required
+                                ></textarea>
+                                <div class="talk-input-glow"></div>
+                            </div>
+
+                            <button type="submit" class="talk-submit-btn">
+                                <span class="talk-btn-text">Send Message</span>
+                                <div class="talk-btn-shine"></div>
+                                <svg class="talk-btn-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M4.16667 10H15.8333M15.8333 10L10.8333 5M15.8333 10L10.8333 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>

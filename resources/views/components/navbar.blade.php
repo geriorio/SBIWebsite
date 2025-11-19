@@ -23,8 +23,9 @@
             <li><a href="/" class="nav-link {{ Request::is('/') ? 'active' : '' }}">Home</a></li>
             <li><a href="/about" class="nav-link {{ Request::is('about') ? 'active' : '' }}">About</a></li>
             <li><a href="/services" class="nav-link {{ Request::is('services') ? 'active' : '' }}">Services</a></li>
-            <li><a href="#insights" class="nav-link">Insights</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
+            <li><a href="/insights" class="nav-link {{ Request::is('insights') ? 'active' : '' }}">Insights</a></li>
+            <li><a href="/career" class="nav-link {{ Request::is('career') ? 'active' : '' }}">Career</a></li>
+            <li><a href="/contact" class="nav-link {{ Request::is('contact') ? 'active' : '' }}">Contact</a></li>
         </ul>
 
         <button class="nav-cta">
