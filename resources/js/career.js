@@ -3,16 +3,29 @@
 // ========================================
 import AOS from 'aos';
 
-document.addEventListener('DOMContentLoaded', () => {
+// Initialize page
+function initCareerPage() {
     // Initialize modals
     initModals();
     
     // Refresh AOS to detect all elements on this page
-    setTimeout(() => {
-        if (typeof AOS !== 'undefined' && AOS.refresh) {
-            AOS.refresh();
-        }
-    }, 100);
+    if (typeof AOS !== 'undefined' && AOS.refresh) {
+        AOS.refresh();
+    }
+}
+
+// Initialize on DOM ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCareerPage);
+} else {
+    initCareerPage();
+}
+
+// Also refresh on load event
+window.addEventListener('load', () => {
+    if (typeof AOS !== 'undefined' && AOS.refresh) {
+        AOS.refresh();
+    }
 });
 
 // Modal functions

@@ -8,17 +8,17 @@
             <div class="career-hero-overlay"></div>
         </div>
         
-        <div class="career-hero-content" data-aos="fade-up">
-            <div class="career-hero-badge" data-aos="fade-down">
+        <div class="career-hero-content" data-aos="fade-up" data-aos-delay="0">
+            <div class="career-hero-badge" data-aos="fade-down" data-aos-delay="100">
                 <span class="career-badge-pulse"></span>
                 Join Our Team
             </div>
-            <h1 class="career-hero-title" data-aos="fade-right" data-aos-delay="100">
+            <h1 class="career-hero-title" data-aos="fade-up" data-aos-delay="200">
                 <span class="career-title-line">JOIN SBI</span>
                 <span class="career-title-line">GROW, BUILD, AND</span>
                 <span class="career-title-line career-title-gradient">SHAPE THE FUTURE</span>
             </h1>
-            <p class="career-hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+            <p class="career-hero-subtitle" data-aos="fade-up" data-aos-delay="300">
                 Of Intelligent Operations
             </p>
         </div>
@@ -35,7 +35,7 @@
                 </div>
                 <div class="career-about-content" data-aos="fade-left" data-aos-delay="200">
                     <p>
-                        We work with organizations that want to evolveâ€”and we're looking for individuals who share the same hunger for progress.
+                        We work with organizations that want to evolve — and we're looking for individuals who share the same hunger for progress.
                     </p>
                     <p>
                         Whether you come from a <strong>technical background</strong> or a <strong>business discipline</strong>, if you are curious, analytical, adaptable, and excited about the future of intelligent automation, you can thrive here.
@@ -69,7 +69,7 @@
                     </div>
                     <h3 class="career-why-title">A Place to Grow Faster</h3>
                     <p class="career-why-text">
-                        You'll work closely with industry experts, real clients, and real systemsâ€”from day one.
+                        You'll work closely with industry experts, real clients, and real systems—from day one.
                     </p>
                 </div>
 
@@ -109,7 +109,7 @@
                     </div>
                     <h3 class="career-why-title">Build the Future of Intelligent Operations</h3>
                     <p class="career-why-text">
-                        You'll contribute directly to how companies modernizeâ€”designing better processes, improving digital tools, and supporting system transformations.
+                        You'll contribute directly to how companies modernize—designing better processes, improving digital tools, and supporting system transformations.
                     </p>
                 </div>
 
@@ -155,7 +155,7 @@
                         <div class="career-opp-number">01</div>
                         <h3 class="career-opp-title">Business Analyst</h3>
                         <p class="career-opp-summary">
-                            Help clients rethink how their organizations runâ€”from operations and data to digital tools and integrated systems.
+                            Help clients rethink how their organizations - from operations and data to digital tools and integrated systems.
                         </p>
                         <div class="career-opp-tags">
                             <span class="career-opp-tag">IE</span>
@@ -384,7 +384,7 @@
                 <div class="career-modal-section">
                     <h4>What You'll Do:</h4>
                     <p>
-                        As a Business Analyst at SBI, you will help clients rethink how their organizations runâ€”from operations and data to digital tools and integrated systems. You'll map processes, analyze pain points, design better workflows, and work with technical teams to bring those improvements to life.
+                        As a Business Analyst at SBI, you will help clients rethink how their organizations - from operations and data to digital tools and integrated systems. You'll map processes, analyze pain points, design better workflows, and work with technical teams to bring those improvements to life.
                     </p>
                 </div>
 
@@ -452,7 +452,7 @@
 
                 <div class="career-modal-section">
                     <p class="career-modal-highlight">
-                        You won't be treated as "just an intern"â€”you'll be part of our team, contributing to real deliverables and learning skills that truly matter.
+                        You won't be treated as "just an intern" - you'll be part of our team, contributing to real deliverables and learning skills that truly matter.
                     </p>
                 </div>
             </div>
@@ -469,10 +469,6 @@
     </div>
 
 @endsection
-
-@push('styles')
-@vite(['resources/css/career.css'])
-@endpush
 
 @push('scripts')
 @vite(['resources/js/career.js'])
