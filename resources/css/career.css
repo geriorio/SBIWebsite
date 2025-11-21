@@ -637,12 +637,13 @@
 }
 
 .career-cta-title {
-    font-size: 4rem;
+    font-size: 2.75rem;
     font-weight: 700;
     background: linear-gradient(135deg, #00E5FF 0%, #00B8D4 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    letter-spacing: 0.1em;
+    letter-spacing: -0.02em;
+    text-transform: none;
 }
 
 .career-cta-grid {
@@ -661,26 +662,27 @@
 }
 
 .career-cta-subtitle {
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: #00E5FF;
     text-transform: uppercase;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.05em;
     margin-bottom: 1rem;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .career-cta-text {
     font-size: 1.125rem;
     color: #9CA3AF;
     margin-bottom: 2rem;
+    line-height: 1.7;
 }
 
 .career-cta-email {
     display: inline-flex;
     align-items: center;
     gap: 1rem;
-    font-size: 1.75rem;
-    font-weight: 700;
+    font-size: 1.375rem;
+    font-weight: 600;
     color: #00E5FF;
     text-decoration: none;
     padding: 1.25rem 2.5rem;
@@ -701,12 +703,12 @@
 }
 
 .career-cta-include-title {
-    font-size: 1.375rem;
+    font-size: 1.125rem;
     color: #00E5FF;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+    text-transform: none;
+    letter-spacing: normal;
 }
 
 .career-cta-include-list {
@@ -739,9 +741,9 @@
 }
 
 .career-include-item span {
-    font-size: 1.125rem;
+    font-size: 1rem;
     color: #D1D5DB;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 1.6;
 }
 

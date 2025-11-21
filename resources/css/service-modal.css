@@ -1,0 +1,354 @@
+/* Service Contact Modal */
+.service-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.service-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.service-modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 14, 39, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.service-modal-container {
+    position: relative;
+    z-index: 1;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.service-modal.active .service-modal-container {
+    transform: translateY(0);
+}
+
+.service-modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.service-modal-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(90deg);
+}
+
+.service-modal-content {
+    padding: 1rem;
+}
+
+.service-form-card {
+    background: linear-gradient(135deg, rgba(26, 31, 58, 0.95), rgba(15, 23, 41, 0.95));
+    border: 1px solid rgba(0, 229, 255, 0.2);
+    border-radius: 24px;
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.service-form-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(0, 229, 255, 0.1), transparent 50%);
+    pointer-events: none;
+}
+
+.service-form-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.form-icon-wrapper {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(0, 229, 255, 0.2), rgba(0, 184, 212, 0.1));
+    border: 2px solid rgba(0, 229, 255, 0.3);
+    border-radius: 16px;
+    position: relative;
+}
+
+.form-icon {
+    color: #00E5FF;
+    position: relative;
+    z-index: 1;
+}
+
+.form-icon-glow {
+    position: absolute;
+    inset: -20px;
+    background: radial-gradient(circle, rgba(0, 229, 255, 0.3), transparent 70%);
+    animation: glowPulse 3s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+    0%, 100% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.1); }
+}
+
+.service-form-title {
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #FFFFFF, #E0E0E0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.service-form-subtitle {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9375rem;
+}
+
+.service-form {
+    position: relative;
+    z-index: 1;
+}
+
+.service-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.service-form-group {
+    position: relative;
+    margin-bottom: 1.25rem;
+}
+
+.service-form-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #00E5FF;
+    margin-bottom: 0.625rem;
+}
+
+.service-form-label svg {
+    width: 16px;
+    height: 16px;
+}
+
+.service-form-input,
+.service-form-textarea {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    border-radius: 12px;
+    color: #00e5ff !important;
+    font-size: 0.9375rem;
+    font-family: 'Instrument Sans', sans-serif;
+    transition: all 0.3s ease;
+    outline: none;
+    -webkit-text-fill-color: #00e5ff !important;
+    position: relative;
+    z-index: 1;
+}
+
+/* Force autofill to stay cyan blue */
+.service-form-input:-webkit-autofill,
+.service-form-input:-webkit-autofill:hover,
+.service-form-input:-webkit-autofill:focus,
+.service-form-input:-webkit-autofill:active,
+.service-form-textarea:-webkit-autofill,
+.service-form-textarea:-webkit-autofill:hover,
+.service-form-textarea:-webkit-autofill:focus,
+.service-form-textarea:-webkit-autofill:active {
+    -webkit-text-fill-color: #00e5ff !important;
+    -webkit-box-shadow: 0 0 0 1000px rgba(255, 255, 255, 0.05) inset !important;
+    box-shadow: 0 0 0 1000px rgba(255, 255, 255, 0.05) inset !important;
+    border: 1px solid rgba(0, 229, 255, 0.5) !important;
+    transition: background-color 5000s ease-in-out 0s !important;
+}
+
+.service-form-input::placeholder,
+.service-form-textarea::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Ensure placeholder stays white/gray, not blue */
+.service-form-input::-webkit-input-placeholder,
+.service-form-textarea::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.4);
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.4);
+}
+
+.service-form-input::-moz-placeholder,
+.service-form-textarea::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.4);
+    opacity: 1;
+}
+
+.service-form-input:-ms-input-placeholder,
+.service-form-textarea:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.service-form-input:focus,
+.service-form-textarea:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(0, 229, 255, 0.5);
+}
+
+.service-form-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.service-input-glow {
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    opacity: 0;
+    background: radial-gradient(circle at center, rgba(0, 229, 255, 0.2), transparent 70%);
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.service-form-input:focus ~ .service-input-glow,
+.service-form-textarea:focus ~ .service-input-glow {
+    opacity: 1;
+}
+
+.service-submit-btn {
+    width: 100%;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #00E5FF, #00B8D4);
+    border: none;
+    border-radius: 12px;
+    color: var(--bg-dark);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin-top: 1.5rem;
+}
+
+.service-submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 229, 255, 0.4);
+}
+
+.service-submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.service-btn-shine {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.service-submit-btn:hover .service-btn-shine {
+    transform: translateX(100%);
+}
+
+.service-btn-text {
+    position: relative;
+    z-index: 1;
+}
+
+.service-btn-arrow {
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.service-submit-btn:hover .service-btn-arrow {
+    transform: translateX(4px);
+}
+
+.service-form-message {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 0.9375rem;
+    text-align: center;
+}
+
+.service-form-message.success {
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    color: #4ADE80;
+}
+
+.service-form-message.error {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: #F87171;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .service-form-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .service-form-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .service-form-title {
+        font-size: 1.5rem;
+    }
+
+    .service-modal-close {
+        top: 0.5rem;
+        right: 0.5rem;
+    }
+}

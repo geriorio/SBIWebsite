@@ -68,15 +68,88 @@
 
         <div class="hero-visual">
             <div class="floating-card card-1">
-                <div class="card-icon">🎯</div>
+                <div class="card-icon-wrapper">
+                    <svg class="card-icon-svg" width="40" height="40" viewBox="0 0 48 48" fill="none">
+                        <defs>
+                            <linearGradient id="stratGrad" x1="0" y1="0" x2="48" y2="48">
+                                <stop offset="0%" stop-color="#00E5FF"/>
+                                <stop offset="100%" stop-color="#0099CC"/>
+                            </linearGradient>
+                            <filter id="glow1">
+                                <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+                        <circle cx="24" cy="24" r="18" stroke="url(#stratGrad)" stroke-width="2" opacity="0.3" class="pulse-ring"/>
+                        <circle cx="24" cy="24" r="14" stroke="url(#stratGrad)" stroke-width="2" opacity="0.5"/>
+                        <circle cx="24" cy="24" r="6" fill="url(#stratGrad)" filter="url(#glow1)"/>
+                        <line x1="24" y1="6" x2="24" y2="12" stroke="url(#stratGrad)" stroke-width="2.5" stroke-linecap="round"/>
+                        <line x1="24" y1="36" x2="24" y2="42" stroke="url(#stratGrad)" stroke-width="2.5" stroke-linecap="round"/>
+                        <line x1="6" y1="24" x2="12" y2="24" stroke="url(#stratGrad)" stroke-width="2.5" stroke-linecap="round"/>
+                        <line x1="36" y1="24" x2="42" y2="24" stroke="url(#stratGrad)" stroke-width="2.5" stroke-linecap="round"/>
+                        <line x1="11" y1="11" x2="15" y2="15" stroke="url(#stratGrad)" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+                        <line x1="33" y1="33" x2="37" y2="37" stroke="url(#stratGrad)" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+                        <line x1="33" y1="11" x2="37" y2="15" stroke="url(#stratGrad)" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+                        <line x1="11" y1="33" x2="15" y2="37" stroke="url(#stratGrad)" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+                    </svg>
+                </div>
                 <div class="card-text">Strategic</div>
             </div>
             <div class="floating-card card-2">
-                <div class="card-icon">⚙️</div>
+                <div class="card-icon-wrapper">
+                    <svg class="card-icon-svg" width="40" height="40" viewBox="0 0 48 48" fill="none">
+                        <defs>
+                            <linearGradient id="practGrad" x1="0" y1="0" x2="48" y2="48">
+                                <stop offset="0%" stop-color="#00E5FF"/>
+                                <stop offset="50%" stop-color="#00BCD4"/>
+                                <stop offset="100%" stop-color="#0099CC"/>
+                            </linearGradient>
+                        </defs>
+                        <circle cx="24" cy="24" r="20" stroke="url(#practGrad)" stroke-width="1.5" opacity="0.2"/>
+                        <path d="M24 8 C28 8 32 10 34 14" stroke="url(#practGrad)" stroke-width="2.5" stroke-linecap="round" class="rotate-gear"/>
+                        <path d="M40 24 C40 28 38 32 34 34" stroke="url(#practGrad)" stroke-width="2.5" stroke-linecap="round" class="rotate-gear"/>
+                        <path d="M24 40 C20 40 16 38 14 34" stroke="url(#practGrad)" stroke-width="2.5" stroke-linecap="round" class="rotate-gear"/>
+                        <path d="M8 24 C8 20 10 16 14 14" stroke="url(#practGrad)" stroke-width="2.5" stroke-linecap="round" class="rotate-gear"/>
+                        <circle cx="24" cy="24" r="8" stroke="url(#practGrad)" stroke-width="2" fill="rgba(0, 229, 255, 0.1)"/>
+                        <path d="M24 20 L24 24 L27 27" stroke="url(#practGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="18" cy="12" r="2" fill="url(#practGrad)" opacity="0.8"/>
+                        <circle cx="36" cy="18" r="2" fill="url(#practGrad)" opacity="0.8"/>
+                        <circle cx="36" cy="30" r="2" fill="url(#practGrad)" opacity="0.8"/>
+                        <circle cx="18" cy="36" r="2" fill="url(#practGrad)" opacity="0.8"/>
+                        <circle cx="12" cy="18" r="2" fill="url(#practGrad)" opacity="0.8"/>
+                        <circle cx="30" cy="12" r="2" fill="url(#practGrad)" opacity="0.8"/>
+                        <circle cx="30" cy="36" r="2" fill="url(#practGrad)" opacity="0.8"/>
+                        <circle cx="12" cy="30" r="2" fill="url(#practGrad)" opacity="0.8"/>
+                    </svg>
+                </div>
                 <div class="card-text">Practical</div>
             </div>
             <div class="floating-card card-3">
-                <div class="card-icon">💡</div>
+                <div class="card-icon-wrapper">
+                    <svg class="card-icon-svg" width="40" height="40" viewBox="0 0 48 48" fill="none">
+                        <defs>
+                            <linearGradient id="humanGrad" x1="0" y1="0" x2="48" y2="48">
+                                <stop offset="0%" stop-color="#00E5FF"/>
+                                <stop offset="100%" stop-color="#00B8D4"/>
+                            </linearGradient>
+                        </defs>
+                        <circle cx="24" cy="14" r="6" stroke="url(#humanGrad)" stroke-width="2" fill="rgba(0, 229, 255, 0.1)"/>
+                        <path d="M24 22 C24 22 16 24 14 28 C12 32 12 40 12 40" stroke="url(#humanGrad)" stroke-width="2.5" stroke-linecap="round" class="bounce-line"/>
+                        <path d="M24 22 C24 22 32 24 34 28 C36 32 36 40 36 40" stroke="url(#humanGrad)" stroke-width="2.5" stroke-linecap="round" class="bounce-line"/>
+                        <path d="M24 20 L24 28" stroke="url(#humanGrad)" stroke-width="2.5" stroke-linecap="round"/>
+                        <circle cx="24" cy="24" r="21" stroke="url(#humanGrad)" stroke-width="1.5" opacity="0.2" class="pulse-ring-2"/>
+                        <circle cx="18" cy="13" r="1.5" fill="url(#humanGrad)"/>
+                        <circle cx="30" cy="13" r="1.5" fill="url(#humanGrad)"/>
+                        <path d="M19 16 Q24 18 29 16" stroke="url(#humanGrad)" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.6"/>
+                        <circle cx="10" cy="20" r="2" fill="url(#humanGrad)" opacity="0.5" class="float-dot"/>
+                        <circle cx="38" cy="20" r="2" fill="url(#humanGrad)" opacity="0.5" class="float-dot"/>
+                        <circle cx="14" cy="10" r="1.5" fill="url(#humanGrad)" opacity="0.4" class="float-dot"/>
+                        <circle cx="34" cy="10" r="1.5" fill="url(#humanGrad)" opacity="0.4" class="float-dot"/>
+                    </svg>
+                </div>
                 <div class="card-text">Human-Centered</div>
             </div>
         </div>
@@ -198,8 +271,8 @@
                             <path d="M16 24L22 30L32 18" stroke="url(#gradient1)" stroke-width="2" stroke-linecap="round"/>
                         </svg>
                     </div>
-                    <h3 class="service-title">Digital Transformation Advisory</h3>
-                    <p class="service-desc">We help organizations reimagine how work gets done—from strategy, governance, and change readiness to full transformation roadmaps.</p>
+                    <h3 class="service-title">Operational Efficiency & Process Redesign</h3>
+                    <p class="service-desc">We streamline workflows, remove bottlenecks, and redesign processes so your teams can work faster and more consistently. </p>
                 </div>
 
                 <div class="service-card" data-tilt data-aos="fade-up" data-aos-delay="200">
@@ -209,8 +282,8 @@
                             <path d="M24 12V24L30 30" stroke="url(#gradient2)" stroke-width="2" stroke-linecap="round"/>
                         </svg>
                     </div>
-                    <h3 class="service-title">ERP Consulting & Enterprise Systems</h3>
-                    <p class="service-desc">From ERP selection to EPICOR implementation, we guide businesses through the entire lifecycle of system modernization.</p>
+                    <h3 class="service-title">Digital Transformation & System Integration</h3>
+                    <p class="service-desc">We help you choose, implement, and integrate the right digital tools — from ERP to business platforms — into one connected ecosystem. </p>
                 </div>
 
                 <div class="service-card" data-tilt data-aos="fade-up" data-aos-delay="300">
@@ -220,8 +293,8 @@
                             <circle cx="24" cy="36" r="6" stroke="url(#gradient3)" stroke-width="2"/>
                         </svg>
                     </div>
-                    <h3 class="service-title">System Integration Services</h3>
-                    <p class="service-desc">We unify platforms into one connected ecosystem—through secure, scalable, API-driven integrations.</p>
+                    <h3 class="service-title">Data Architecture, Dashboards & Insights</h3>
+                    <p class="service-desc">We organize scattered data into a trusted source of truth and deliver intuitive dashboards leaders can rely on. </p>
                 </div>
 
                 <div class="service-card" data-tilt data-aos="fade-up" data-aos-delay="400">
@@ -231,8 +304,8 @@
                             <path d="M18 20L24 26L30 20" stroke="url(#gradient4)" stroke-width="2" stroke-linecap="round"/>
                         </svg>
                     </div>
-                    <h3 class="service-title">Data Enablement & Intelligence</h3>
-                    <p class="service-desc">We turn data into clarity with dashboards, process intelligence, and enterprise data governance.</p>
+                    <h3 class="service-title">Capability Building & Organizational Alignment</h3>
+                    <p class="service-desc">We equip your teams with the skills to adopt new systems and work effectively in a digital-first environment. </p>
                 </div>
             </div>
 

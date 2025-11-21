@@ -14,12 +14,10 @@
                 Join Our Team
             </div>
             <h1 class="career-hero-title" data-aos="fade-up" data-aos-delay="200">
-                <span class="career-title-line">JOIN SBI</span>
-                <span class="career-title-line">GROW, BUILD, AND</span>
-                <span class="career-title-line career-title-gradient">SHAPE THE FUTURE</span>
+                <span class="career-title-line">Join <span class="career-title-gradient">SBI</span></span>
             </h1>
             <p class="career-hero-subtitle" data-aos="fade-up" data-aos-delay="300">
-                Of Intelligent Operations
+                Grow, build, and shape the future of Intelligent Operations
             </p>
         </div>
     </section>
@@ -50,7 +48,7 @@
         <div class="career-section-container">
             <div class="career-section-header" data-aos="fade-up">
                 <span class="career-section-tag">Benefits</span>
-                <h2 class="career-section-title">WHY JOIN <span class="career-text-gradient">SBI?</span></h2>
+                <h2 class="career-section-title">Why Join <span class="career-text-gradient">SBI?</span></h2>
             </div>
 
             <div class="career-why-grid">
@@ -140,7 +138,7 @@
         <div class="career-section-container">
             <div class="career-section-header" data-aos="fade-up">
                 <span class="career-section-tag">Open Positions</span>
-                <h2 class="career-section-title">OUR CURRENT <span class="career-text-gradient">OPPORTUNITIES</span></h2>
+                <h2 class="career-section-title">Our Current <span class="career-text-gradient">Opportunities</span></h2>
             </div>
 
             <div class="career-opportunities-grid">
@@ -176,7 +174,7 @@
                 <!-- Business Analyst Internship -->
                 <div class="career-opp-card" data-aos="zoom-in" data-aos-delay="200" onclick="openModal('internship')">
                     <div class="career-opp-image">
-                        <img src="{{ asset('images/dummy.jpg') }}" alt="Business Analyst Internship">
+                        <img src="{{ asset('images/internship.jpg') }}" alt="Business Analyst Internship">
                         <div class="career-opp-image-overlay"></div>
                     </div>
                     <div class="career-opp-content">
@@ -204,11 +202,11 @@
     </section>
 
     <!-- What Our Team Says Section -->
-    <section class="career-testimonials-section">
+    <section class="career-testimonials-section" id="testimonials">
         <div class="career-section-container">
             <div class="career-section-header" data-aos="fade-up">
                 <span class="career-testimonial-tag">Team Stories</span>
-                <h2 class="career-testimonial-title">WHAT OUR <span class="career-testimonial-gradient">TEAM SAYS</span></h2>
+                <h2 class="career-testimonial-title">What Our <span class="career-testimonial-gradient">Team Says</span></h2>
                 <p class="career-testimonial-subtitle">Real experiences from real people who are shaping the future</p>
             </div>
 
@@ -222,7 +220,7 @@
                         </svg>
                     </div>
                     <p class="career-testimonial-text">
-                        SBI pushed my personal development to its limit. The opportunity to handle multiple direct in-hand projects has forged me into the woman I am today.
+                        SBI exposed me to many new things and continuously pushed me to grow. I learned to manage my time effectively, handle multiple projects at once, and constantly improve my skills. My experience at SBI has been invaluable to my professional development.
                     </p>
                     <div class="career-testimonial-author">
                         <div class="career-author-avatar">
@@ -304,13 +302,13 @@
                         </defs>
                     </svg>
                 </div>
-                <h2 class="career-cta-title">HOW TO APPLY</h2>
+                <h2 class="career-cta-title">How to Apply</h2>
             </div>
 
             <div class="career-cta-grid" data-aos="fade-up" data-aos-delay="200">
                 <!-- Left Side - Join Us -->
                 <div class="career-cta-left">
-                    <p class="career-cta-subtitle">READY TO GROW WITH US?</p>
+                    <p class="career-cta-subtitle">Ready to grow with us?</p>
                     <p class="career-cta-text">Send your CV, portfolio (if any), or introduction to:</p>
                     <a href="mailto:hr@samuderabiru.net" class="career-cta-email">
                         hr@samuderabiru.net

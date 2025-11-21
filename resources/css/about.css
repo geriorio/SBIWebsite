@@ -2747,26 +2747,62 @@
     width: 100%;
     padding: 1rem 1.25rem;
     background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(56, 189, 248, 0.3);
     border-radius: 12px;
-    color: #FFFFFF;
+    color: #38BDF8 !important;
     font-size: 1rem;
     font-family: inherit;
     transition: all 0.3s ease;
+    outline: none;
+    -webkit-text-fill-color: #38BDF8 !important;
     position: relative;
     z-index: 1;
+}
+
+/* Force autofill to stay cyan blue */
+.talk-form-input:-webkit-autofill,
+.talk-form-input:-webkit-autofill:hover,
+.talk-form-input:-webkit-autofill:focus,
+.talk-form-input:-webkit-autofill:active,
+.talk-form-textarea:-webkit-autofill,
+.talk-form-textarea:-webkit-autofill:hover,
+.talk-form-textarea:-webkit-autofill:focus,
+.talk-form-textarea:-webkit-autofill:active {
+    -webkit-text-fill-color: #38BDF8 !important;
+    -webkit-box-shadow: 0 0 0 1000px rgba(255, 255, 255, 0.05) inset !important;
+    box-shadow: 0 0 0 1000px rgba(255, 255, 255, 0.05) inset !important;
+    border: 1px solid rgba(56, 189, 248, 0.5) !important;
+    transition: background-color 5000s ease-in-out 0s !important;
+}
+
+/* Ensure placeholder stays white/gray, not blue */
+.talk-form-input::-webkit-input-placeholder,
+.talk-form-textarea::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.4);
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.4);
+}
+
+.talk-form-input::-moz-placeholder,
+.talk-form-textarea::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.4);
+    opacity: 1;
+}
+
+.talk-form-input:-ms-input-placeholder,
+.talk-form-textarea:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.4);
 }
 
 .talk-form-input::placeholder,
 .talk-form-textarea::placeholder {
     color: rgba(255, 255, 255, 0.4);
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.4);
 }
 
 .talk-form-input:focus,
 .talk-form-textarea:focus {
-    outline: none;
     background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(56, 189, 248, 0.5);
+    border-color: rgba(56, 189, 248, 0.6);
     box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.1);
 }
 

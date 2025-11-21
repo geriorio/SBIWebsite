@@ -103,6 +103,60 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // Article Search Functionality
+    const searchInput = document.getElementById('insightsArticleSearch');
+    const clearButton = document.getElementById('insightsClearSearch');
+    const articlesGrid = document.getElementById('insightsArticlesGrid');
+    const noResults = document.getElementById('insightsNoResults');
+    
+    if (searchInput && articlesGrid) {
+        // Get all articles
+        const articles = Array.from(articlesGrid.querySelectorAll('.insights-article-card'));
+        
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase().trim();
+            
+            // Show/hide clear button
+            if (clearButton) {
+                clearButton.style.display = searchTerm ? 'block' : 'none';
+            }
+            
+            let visibleCount = 0;
+            
+            // Filter articles
+            articles.forEach(article => {
+                const title = article.querySelector('.insights-article-title-card')?.textContent.toLowerCase() || '';
+                const summary = article.querySelector('.insights-article-summary')?.textContent.toLowerCase() || '';
+                const category = article.querySelector('.insights-category-tag')?.textContent.toLowerCase() || '';
+                
+                const matches = title.includes(searchTerm) || 
+                               summary.includes(searchTerm) || 
+                               category.includes(searchTerm);
+                
+                if (matches || searchTerm === '') {
+                    article.style.display = '';
+                    visibleCount++;
+                } else {
+                    article.style.display = 'none';
+                }
+            });
+            
+            // Show/hide no results message
+            if (noResults) {
+                noResults.style.display = (visibleCount === 0 && searchTerm !== '') ? 'block' : 'none';
+            }
+        });
+        
+        // Clear search
+        if (clearButton) {
+            clearButton.addEventListener('click', function() {
+                searchInput.value = '';
+                searchInput.dispatchEvent(new Event('input'));
+                searchInput.focus();
+            });
+        }
+    }
+    
     // Load More Insights functionality
     const loadMoreBtn = document.querySelector('.load-more-btn');
     if (loadMoreBtn) {

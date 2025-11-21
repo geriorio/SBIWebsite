@@ -821,6 +821,8 @@
                         </div>
 
                         <form class="talk-form" id="talkForm">
+                            @csrf
+                            <input type="hidden" name="source" value="about">
                             <div class="talk-form-row">
                                 <div class="talk-form-group">
                                     <label for="talkFullName" class="talk-form-label">
@@ -832,7 +834,7 @@
                                     <input 
                                         type="text" 
                                         id="talkFullName" 
-                                        name="fullName" 
+                                        name="full_name" 
                                         class="talk-form-input" 
                                         placeholder="John Doe"
                                         required
@@ -853,6 +855,8 @@
                                         name="email" 
                                         class="talk-form-input" 
                                         placeholder="john@company.com"
+                                        pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.(com|id|co\.id|net|org|edu|gov|mil|int|info|biz|name|museum|coop|aero|[a-z]{2})"
+                                        title="Please enter a valid email address ending with .com, .id, etc."
                                         required
                                     >
                                     <div class="talk-input-glow"></div>
@@ -944,5 +948,137 @@ function toggleBio(button) {
         button.classList.remove('expanded');
     }
 }
+
+// Notification System
+function showNotification(type, title, message) {
+    let container = document.querySelector('.notification-container');
+    if (!container) {
+        container = document.createElement('div');
+        container.className = 'notification-container';
+        document.body.appendChild(container);
+    }
+
+    const notification = document.createElement('div');
+    notification.className = `notification ${type}`;
+    
+    const icons = {
+        success: '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>',
+        error: '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>',
+        warning: '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>'
+    };
+    
+    notification.innerHTML = `
+        <div class="notification-icon">${icons[type]}</div>
+        <div class="notification-content">
+            <div class="notification-title">${title}</div>
+            <div class="notification-message">${message}</div>
+        </div>
+        <button class="notification-close">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <div class="notification-progress"></div>
+    `;
+    
+    container.appendChild(notification);
+    
+    const closeBtn = notification.querySelector('.notification-close');
+    closeBtn.addEventListener('click', () => removeNotification(notification));
+    
+    setTimeout(() => removeNotification(notification), 5000);
+}
+
+function removeNotification(notification) {
+    notification.classList.add('removing');
+    setTimeout(() => {
+        notification.remove();
+        const container = document.querySelector('.notification-container');
+        if (container && container.children.length === 0) {
+            container.remove();
+        }
+    }, 300);
+}
+
+function isValidEmail(email) {
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.(com|id|co\.id|net|org|edu|gov|mil|int|info|biz|name|museum|coop|aero|[a-z]{2})$/i;
+    return emailRegex.test(email);
+}
+
+// Form submission
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('talkForm');
+    const emailInput = form.querySelector('input[name="email"]');
+    
+    // Real-time email validation
+    emailInput.addEventListener('blur', function() {
+        if (this.value && !isValidEmail(this.value)) {
+            this.style.borderColor = 'rgba(239, 83, 80, 0.8)';
+            showNotification('error', 'Invalid Email', 'Please enter a valid email address ending with .com, .id, etc.');
+        } else if (this.value) {
+            this.style.borderColor = 'rgba(56, 189, 248, 0.5)';
+        }
+    });
+    
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const submitBtn = form.querySelector('.talk-submit-btn');
+        const btnText = submitBtn.querySelector('.talk-btn-text');
+        const originalText = btnText.textContent;
+        
+        // Validate email before submission
+        const emailValue = emailInput.value;
+        if (!isValidEmail(emailValue)) {
+            showNotification('error', 'Invalid Email', 'Please enter a valid email address (e.g., name@company.com)');
+            emailInput.focus();
+            emailInput.style.borderColor = 'rgba(239, 83, 80, 0.8)';
+            return;
+        }
+        
+        // Disable button and show loading
+        submitBtn.disabled = true;
+        btnText.textContent = 'Sending...';
+        
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+        
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content,
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+            
+            const result = await response.json();
+            
+            if (response.ok && result.success) {
+                form.reset();
+                showNotification('success', 'Message Sent!', result.message);
+                
+                // Scroll to top after successful submission
+                setTimeout(() => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }, 500);
+            } else {
+                let errorMessage = result.message || 'An error occurred. Please try again.';
+                if (result.errors) {
+                    errorMessage = Object.values(result.errors).flat().join('. ');
+                }
+                showNotification('error', 'Submission Failed', errorMessage);
+            }
+        } catch (error) {
+            console.error('Form submission error:', error);
+            showNotification('error', 'Connection Error', 'Unable to send message. Please check your connection and try again.');
+        } finally {
+            submitBtn.disabled = false;
+            btnText.textContent = originalText;
+        }
+    });
+});
 </script>
 @endpush

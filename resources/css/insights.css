@@ -841,3 +841,393 @@
         margin-bottom: 1rem;
     }
 }
+
+/* ========================================
+   NEW INSIGHTS ARTICLES SECTION
+   Prefix: insights- to avoid conflicts
+   ======================================== */
+
+.insights-articles-section {
+    padding: 7rem 0;
+    background: #FFFFFF;
+    position: relative;
+}
+
+.insights-section-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Search Bar */
+.insights-search-wrapper {
+    max-width: 800px;
+    margin: 0 auto 5rem;
+}
+
+.insights-search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    border: 2px solid #E2E8F0;
+    border-radius: 16px;
+    padding: 1.25rem 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.insights-search-box:focus-within {
+    border-color: #0EA5E9;
+    box-shadow: 0 8px 30px rgba(14, 165, 233, 0.15);
+}
+
+.insights-search-icon {
+    color: #94A3B8;
+    flex-shrink: 0;
+    margin-right: 1rem;
+    transition: color 0.3s ease;
+}
+
+.insights-search-box:focus-within .insights-search-icon {
+    color: #0EA5E9;
+}
+
+.insights-search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 1.125rem;
+    color: #1E293B;
+    background: transparent;
+}
+
+.insights-search-input::placeholder {
+    color: #94A3B8;
+}
+
+.insights-search-clear {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    color: #94A3B8;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+.insights-search-clear:hover {
+    background: #F1F5F9;
+    color: #64748B;
+}
+
+/* Articles Grid */
+.insights-articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+/* Article Card */
+.insights-article-card {
+    background: #FFFFFF;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #E2E8F0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.insights-article-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    border-color: #CBD5E1;
+}
+
+.insights-article-thumbnail {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+}
+
+.insights-article-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.insights-article-card:hover .insights-article-thumbnail img {
+    transform: scale(1.08);
+}
+
+.insights-thumbnail-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.3) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.insights-article-card:hover .insights-thumbnail-overlay {
+    opacity: 1;
+}
+
+.insights-category-tag {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    backdrop-filter: blur(8px);
+    z-index: 1;
+}
+
+.insights-category-tag.operational {
+    background: rgba(14, 165, 233, 0.9); /* Sky Blue */
+}
+
+.insights-category-tag.digital {
+    background: rgba(16, 185, 129, 0.9); /* Emerald Green */
+}
+
+.insights-category-tag.integration {
+    background: rgba(0, 184, 212, 0.9); /* Cyan */
+}
+
+.insights-category-tag.data {
+    background: rgba(99, 102, 241, 0.9); /* Indigo */
+}
+
+.insights-category-tag.capability {
+    background: rgba(168, 85, 247, 0.9); /* Purple */
+}
+
+.insights-article-body {
+    padding: 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.insights-article-title-card {
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: #1E293B;
+    margin: 0 0 1rem 0;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.insights-article-summary {
+    font-size: 1rem;
+    color: #64748B;
+    line-height: 1.7;
+    margin: 0 0 1.5rem 0;
+    flex: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.insights-read-more-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #0EA5E9;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+}
+
+.insights-read-more-link:hover {
+    gap: 0.75rem;
+    color: #0284C7;
+}
+
+.insights-read-more-link svg {
+    transition: transform 0.3s ease;
+}
+
+.insights-read-more-link:hover svg {
+    transform: translateX(4px);
+}
+
+/* No Results */
+.insights-no-results {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.insights-no-results svg {
+    margin-bottom: 1.5rem;
+}
+
+.insights-no-results h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #475569;
+    margin: 0 0 0.5rem 0;
+}
+
+.insights-no-results p {
+    font-size: 1.125rem;
+    color: #94A3B8;
+    margin: 0;
+}
+
+/* ========================================
+   INSIGHTS CTA SECTION
+   ======================================== */
+
+.insights-cta-section {
+    position: relative;
+    padding: 7rem 0;
+    background: linear-gradient(135deg, #0A0E27 0%, #1a1f3a 50%, #0f1729 100%);
+    overflow: hidden;
+}
+
+.insights-cta-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    z-index: 2;
+}
+
+.insights-cta-background {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.insights-cta-gradient-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.2;
+    animation: insightsOrbFloat 20s ease-in-out infinite;
+}
+
+.insights-cta-gradient-orb.orb-1 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, #0EA5E9, transparent);
+    top: -20%;
+    left: -10%;
+}
+
+.insights-cta-gradient-orb.orb-2 {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, #00E5FF, transparent);
+    bottom: -15%;
+    right: -5%;
+    animation-delay: 10s;
+}
+
+@keyframes insightsOrbFloat {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(30px, -30px) scale(1.1); }
+}
+
+.insights-cta-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.insights-cta-heading {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    color: #FFFFFF;
+    line-height: 1.2;
+    margin: 0 0 1.5rem 0;
+}
+
+.insights-cta-heading .text-gradient {
+    background: linear-gradient(135deg, #00E5FF 0%, #0EA5E9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.insights-cta-description {
+    font-size: 1.25rem;
+    color: #B8C5D6;
+    line-height: 1.7;
+    margin: 0 0 2.5rem 0;
+}
+
+.insights-cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.25rem 2.5rem;
+    background: linear-gradient(135deg, #00E5FF 0%, #0EA5E9 100%);
+    color: #FFFFFF;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 40px rgba(14, 165, 233, 0.3);
+}
+
+.insights-cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 50px rgba(14, 165, 233, 0.4);
+    gap: 1rem;
+}
+
+.insights-cta-button svg {
+    transition: transform 0.3s ease;
+}
+
+.insights-cta-button:hover svg {
+    transform: translateX(4px);
+}
+
+/* Responsive for New Sections */
+@media (max-width: 992px) {
+    .insights-articles-grid {
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .insights-articles-section,
+    .insights-cta-section {
+        padding: 4rem 0;
+    }
+    
+    .insights-search-wrapper {
+        margin-bottom: 3rem;
+    }
+    
+    .insights-articles-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .insights-cta-heading {
+        font-size: 2rem;
+    }
+    
+    .insights-cta-description {
+        font-size: 1.125rem;
+    }
+}

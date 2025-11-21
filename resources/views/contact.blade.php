@@ -32,7 +32,7 @@
                 <!-- WhatsApp -->
                 <div class="method-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="method-icon-wrapper">
-                        <img src="{{ asset('images/whatsapp.jpg') }}" alt="WhatsApp" class="method-icon-img">
+                        <img src="{{ asset('images/whatsapp.png') }}" alt="WhatsApp" class="method-icon-img">
                     </div>
                     <h3 class="method-title">WhatsApp</h3>
                     <p class="method-description">Fastest Response</p>
@@ -43,7 +43,7 @@
                 <!-- Email -->
                 <div class="method-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="method-icon-wrapper">
-                        <img src="{{ asset('images/gmail.jpg') }}" alt="Email" class="method-icon-img">
+                        <img src="{{ asset('images/gmail.png') }}" alt="Email" class="method-icon-img">
                     </div>
                     <h3 class="method-title">Email Us</h3>
                     <p class="method-description">Detailed Inquiries</p>
@@ -54,7 +54,7 @@
                 <!-- Consultation -->
                 <div class="method-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="method-icon-wrapper">
-                        <img src="{{ asset('images/calendar.jpg') }}" alt="Calendar" class="method-icon-img">
+                        <img src="{{ asset('images/calendar.png') }}" alt="Calendar" class="method-icon-img">
                     </div>
                     <h3 class="method-title">Book a 1:1 Consultation</h3>
                     <p class="method-description">Personalized Discussion</p>
@@ -65,11 +65,11 @@
                 <!-- Visit Office -->
                 <div class="method-card" data-aos="fade-up" data-aos-delay="400">
                     <div class="method-icon-wrapper">
-                        <img src="{{ asset('images/office.jpg') }}" alt="Office" class="method-icon-img">
+                        <img src="{{ asset('images/office.png') }}" alt="Office" class="method-icon-img">
                     </div>
                     <h3 class="method-title">Visit Our Office</h3>
                     <p class="method-description">In Person Meeting</p>
-                    <p class="method-details">Come meet our team at our Jakarta headquarters</p>
+                    <p class="method-details">Come and discuss with our team</p>
                     <a href="#" onclick="openMapModal()" class="method-link">Get directions →</a>
                 </div>
             </div>
@@ -80,7 +80,7 @@
     <section class="office-section" id="office-info">
         <div class="section-container">
             <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Visit Our <span class="text-gradient">Jakarta Office</span></h2>
+                <h2 class="section-title">Visit Our <span class="text-gradient">Surabaya Office</span></h2>
                 <p class="section-description">
                     We're located in the heart of Jakarta and ready to welcome you
                 </p>
@@ -92,7 +92,7 @@
                     <div class="office-icon">📍</div>
                     <h3 class="office-title">Address</h3>
                     <div class="office-content">
-                        <p>Samudra Biru Indonesia<br/>Jakarta, Indonesia</p>
+                        <p>Skysuites Residence Surabaya<br>Jl. Raya Kedung Baruk No.26, RW.28, Kedung Baruk, Kec. Rungkut, Surabaya, Jawa Timur 60298</p>
                     </div>
                 </div>
 
@@ -111,7 +111,7 @@
                     <div class="office-icon">☎️</div>
                     <h3 class="office-title">Quick Contact</h3>
                     <div class="office-content">
-                        <p><strong>Email:</strong><br/><a href="mailto:info@samuderabiru.com" class="office-link">info@samuderabiru.com</a></p>
+                        <p><strong>Email:</strong><br/><a href="mailto:info@samuderabiru.com" class="office-link">info@samuderabiru.net</a></p>
                         <p style="margin-top: 0.5rem;"><strong>Phone:</strong><br/><a href="tel:+62211234567" class="office-link">+62 21 1234 5678</a></p>
                     </div>
                 </div>

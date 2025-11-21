@@ -28,13 +28,6 @@
             <li><a href="/contact" class="nav-link {{ Request::is('contact') ? 'active' : '' }}">Contact</a></li>
         </ul>
 
-        <button class="nav-cta">
-            <span>Get Started</span>
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-        </button>
-
         <button class="mobile-toggle" id="mobileToggle">
             <span></span>
             <span></span>

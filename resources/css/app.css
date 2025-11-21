@@ -3,7 +3,10 @@
 @import './home.css';
 @import './about.css';
 @import './services.css';
+@import './service-modal.css';
+@import './notification.css';
 @import './insights.css';
+@import './insights-detail.css';
 @import './career.css';
 @import './contact.css';
 
