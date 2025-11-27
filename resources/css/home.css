@@ -373,6 +373,9 @@ body {
     text-decoration: none;
     transition: var(--transition-smooth);
     border: 2px solid transparent;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
 }
 
 .btn-primary {
@@ -1154,19 +1157,24 @@ body {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 20px;
-    padding: 2.5rem;
+    padding: 0;
     transition: var(--transition-smooth);
     position: relative;
     overflow: hidden;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .service-card::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: var(--gradient-primary);
-    opacity: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 60%, transparent 100%);
+    opacity: 1;
     transition: var(--transition-smooth);
+    z-index: 1;
 }
 
 .service-card:hover {
@@ -1176,7 +1184,7 @@ body {
 }
 
 .service-card:hover::before {
-    opacity: 0.05;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.5) 60%, transparent 100%);
 }
 
 .service-icon {
@@ -1188,18 +1196,20 @@ body {
 }
 
 .service-title {
-    font-size: 1.25rem;
+    font-size: 1.35rem;
     font-weight: 700;
     margin-bottom: 1rem;
     position: relative;
-    z-index: 1;
+    z-index: 2;
+    padding: 0 2.5rem;
 }
 
 .service-desc {
     color: var(--text-secondary);
-    margin-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
     position: relative;
-    z-index: 1;
+    z-index: 2;
+    padding: 0 2.5rem;
 }
 
 .service-link {
@@ -1745,7 +1755,7 @@ body {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
     border: 2px solid rgba(255, 255, 255, 0.1);
     border-radius: 20px;
-    padding: 3rem 2rem;
+    padding: 0;
     text-align: center;
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden;
@@ -1754,8 +1764,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    min-height: 240px;
+    justify-content: flex-end;
+    min-height: 350px;
+    background-size: cover;
+    background-position: center;
 }
 
 /* Icon Background */
@@ -1794,11 +1806,13 @@ body {
 .industry-name {
     font-size: 1.25rem;
     font-weight: 700;
-    color: var(--text-primary);
+    color: white;
     margin: 0;
+    padding: 2rem 2rem;
     position: relative;
     z-index: 2;
     transition: all 0.3s ease;
+    width: 100%;
 }
 
 .industry-card:hover .industry-name {
@@ -1836,19 +1850,13 @@ body {
     position: absolute;
     inset: 0;
     border-radius: 20px;
-    padding: 2px;
-    background: linear-gradient(135deg, #00E5FF, #76FF03, #00B8D4, #76FF03, #00E5FF);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask-composite: exclude;
-    opacity: 0;
-    transition: opacity 0.5s ease;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.3) 60%, transparent 100%);
+    z-index: 1;
+    transition: all 0.5s ease;
 }
 
 .industry-card:hover::before {
-    opacity: 0.6;
-    animation: borderRotate 3s linear infinite;
+    background: linear-gradient(to top, rgba(0, 229, 255, 0.4) 0%, rgba(0, 0, 0, 0.3) 60%, transparent 100%);
 }
 
 @keyframes borderRotate {
@@ -2367,6 +2375,9 @@ body {
     font-size: 2rem;
     margin-bottom: 0.5rem;
     animation: iconFloat 3s ease-in-out infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .kpi-item:nth-child(1) .kpi-icon {
@@ -2691,8 +2702,8 @@ body {
 }
 
 .logo-card {
-    width: 180px;
-    height: 120px;
+    width: 220px;
+    height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2703,7 +2714,7 @@ body {
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    padding: 1.5rem;
+    padding: 0;
 }
 
 .logo-card::before {
@@ -2748,11 +2759,11 @@ body {
 }
 
 .company-logo {
-    max-width: 140px;
-    max-height: 80px;
-    width: auto;
-    height: auto;
-    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     position: relative;
     z-index: 1;
     transition: all 0.3s ease;

@@ -135,6 +135,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 if (matches || searchTerm === '') {
                     article.style.display = '';
+                    article.style.opacity = '1';
+                    article.style.transform = 'none';
                     visibleCount++;
                 } else {
                     article.style.display = 'none';

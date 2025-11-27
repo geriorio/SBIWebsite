@@ -308,6 +308,283 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // ========================================
+// SERVICE MODAL FUNCTIONALITY
+// ========================================
+
+const serviceContent = {
+    operational: {
+        title: 'Operational Efficiency & Process Redesign',
+        offerings: [
+            {
+                title: 'Business Process Redesign (BPR)',
+                features: [
+                    'Full redesign of core workflows',
+                    'Standardization across sites or branches',
+                    'Elimination of redundant steps',
+                    'Modernization of outdated routines',
+                    'Clear end-to-end SOPs'
+                ],
+                bestFor: 'Businesses seeking breakthrough improvements'
+            },
+            {
+                title: 'Business Process Engineering (BPE)',
+                features: [
+                    'Targeted fixes to broken areas',
+                    'Bottleneck analysis',
+                    'Streamlined handovers between teams',
+                    'SOP refinement',
+                    'Reduction of manual tasks'
+                ],
+                bestFor: 'Improving performance without large-scale restructuring'
+            },
+            {
+                title: 'Operating Model Development',
+                features: [
+                    'Roles & responsibilities',
+                    'Decision rights',
+                    'Workflow ownership',
+                    'Governance structure',
+                    'Performance indicators'
+                ],
+                bestFor: 'Redesigning the “big picture” behind how your organization runs'
+            }
+        ]
+    },
+    digital: {
+        title: 'Digital Transformation & System Integration',
+        offerings: [
+            {
+                title: 'ERP Selection Consulting',
+                features: [
+                    'Business requirements analysis',
+                    'Fit-gap evaluation',
+                    'Vendor comparison',
+                    'Total cost and timeline modeling',
+                    'Final recommendation & negotiation support'
+                ],
+            },
+            {
+                title: 'EPICOR End-to-End Implementation',
+                description: 'Our team implements all major EPICOR modules with complete project ownership. We cover every phase:',
+                features: [
+                    'Business structure development',
+                    'Project scoping & requirement mapping',
+                    'Module configuration',
+                    'BPM (Business Process Management) creation',
+                    'Custom workflows & automation',
+                    'Reporting setup',
+                    'UAT & readiness testing',
+                    'Go-live support',
+                    'Post go-live hypercare'
+                ]
+            }
+        ],
+        platforms: [
+            { name: 'Anova', image: 'anova.jpg' },
+            { name: 'TrackAbout', image: 'trackabout.png' },
+            { name: 'MCEasy', image: 'mceasy.png' },
+            { name: 'Gajiku', image: 'gajiku.jpg' },
+            { name: 'GreatDay HR', image: 'greatday.png' },
+            { name: 'SMT Education', image: 'smtedu.jpg' },
+            { name: 'Yeastar', image: 'yeastar.png' },
+            { name: 'Icertis', image: 'icertis.jpg' }
+        ]
+    },
+    data: {
+        title: 'Data Architecture, Dashboards & Insights',
+        offerings: [
+            {
+                title: 'Management Dashboards & Reporting',
+                description: 'We design dashboards that give real-time visibility across: Sales, Finance, Operations, Supply chain, Inventory, Procurement, HR and many more. Tools we use:',
+                features: [
+                    'Microsoft Power BI',
+                    'EPICOR data visualization',
+                    'Multi-system integrated dashboards',
+                ],
+            },
+            {
+                title: 'Enterprise Data Management (EDM)',
+                description: 'We help companies build a trusted data foundation through:',
+                features: [
+                    'Data strategy',
+                    'Data governance',
+                    'Data quality & cleansing',
+                    'Master data management',
+                    'Data architecture planning'
+                ],
+            },
+            {
+                title: 'Data & Analytics Academy',
+                description: 'We upskill your teams to become data-driven through:',
+                features: [
+                    'Power BI training (Basic–Advanced)',
+                    'Data visualization workshops',
+                    'Dashboard creation training',
+                    'Reporting fundamentals',
+                    'Customized learning paths',
+                    'Dedicated online learning platform for your company'
+                ],
+            }
+        ]
+    },
+    capability: {
+        title: 'Capability Building & Organizational Alignment',
+        offerings: [
+            {
+                title: 'ERP Training & User Enablement',
+                description: 'We equip your team with hands-on, role-based training, including:',
+                features: [
+                    'Epicor user training (all modules)',
+                    'SOP-based operational training',
+                    'Admin & super user competency building',
+                    'Post-go-live support',
+                    'Change readiness & adoption support'
+                ],
+            },
+            {
+                title: 'Power BI & Analytics Training',
+                description: 'We are certified to deliver:',
+                features: [
+                    'Power BI fundamentals',
+                    'Data modeling',
+                    'Visual storytelling',
+                    'Dashboard creation',
+                    'Data cleansing & ETL basics',
+                    'Performance optimization'
+                ],
+            },
+            {
+                title: 'Customized Learning Platform',
+                description: 'We build digital learning paths tailored to your organization:',
+                features: [
+                    'Custom courses',
+                    'Online learning modules',
+                    'Role-based learning journeys',
+                    'Tracking & reporting',
+                    'Blended training options'
+                ],
+            }
+        ]
+    }
+};
+
+function openServiceModal(serviceType) {
+    const modal = document.getElementById('serviceModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalContent = document.getElementById('modalContent');
+    if (modalTitle) modalTitle.className = 'service-detail-modal-title';
+    if (modalContent) modalContent.className = 'service-detail-modal-content';
+    
+    if (!modal || !modalTitle || !modalContent) {
+        console.error('Modal elements not found');
+        return;
+    }
+    
+    const content = serviceContent[serviceType];
+    if (!content) {
+        console.error('Service content not found:', serviceType);
+        return;
+    }
+    
+    // Set title
+    modalTitle.textContent = content.title;
+    
+    // Build offerings grid HTML
+    let offeringsHTML = `<div class="modal-offerings-grid ${serviceType === 'digital' ? 'grid-2-col' : ''}">`;
+    
+    content.offerings.forEach(offering => {
+        // Check if this card should only show logos
+        if (offering.showLogos && content.platforms) {
+            offeringsHTML += `
+                <div class="modal-offering-card">
+                    <h3 class="modal-offering-title">${offering.title}</h3>
+                    <div class="modal-offering-logos-only">
+                        <div class="modal-platforms-grid-inline">
+                            ${content.platforms.map(platform => `
+                                <div class="modal-platform-logo-small">
+                                    <img src="/images/${platform.image}" alt="${platform.name}" loading="lazy">
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                </div>
+            `;
+        } else {
+            // Normal card with optional description, features and optional bestFor
+            const descriptionSection = offering.description ? `
+                <p class="modal-offering-description">${offering.description}</p>
+            ` : '';
+            
+            const bestForSection = offering.bestFor ? `
+                <div class="modal-offering-bestfor">
+                    <div class="modal-offering-bestfor-label">Best For</div>
+                    <div class="modal-offering-bestfor-text">${offering.bestFor}</div>
+                </div>
+            ` : '';
+            
+            offeringsHTML += `
+                <div class="modal-offering-card">
+                    <h3 class="modal-offering-title">${offering.title}</h3>
+                    ${descriptionSection}
+                    <ul class="modal-offering-features">
+                        ${offering.features.map(feature => `<li>${feature}</li>`).join('')}
+                    </ul>
+                    ${bestForSection}
+                </div>
+            `;
+        }
+    });
+    
+    offeringsHTML += '</div>';
+    
+    // Add platform logos for digital service
+    if (serviceType === 'digital' && content.platforms) {
+        offeringsHTML += `
+            <div class="modal-platforms-section">
+                <h3 class="modal-platforms-title">Platforms We Integrate & Implement</h3>
+                <div class="modal-platforms-grid">
+                    ${content.platforms.map(platform => `
+                        <div class="modal-platform-logo">
+                            <img src="/images/${platform.image}" alt="${platform.name}" loading="lazy">
+                        </div>
+                    `).join('')}
+                </div>
+                <p class="modal-platforms-more">...and many more</p>
+            </div>
+        `;
+    }
+    
+    modalContent.innerHTML = offeringsHTML;
+    
+    // Show modal with animation
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    
+    console.log('✅ Modal opened:', serviceType);
+}
+
+function closeServiceModal() {
+    const modal = document.getElementById('serviceModal');
+    if (!modal) return;
+    
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+    
+    console.log('✅ Modal closed');
+}
+
+// ESC key to close modal
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeServiceModal();
+    }
+});
+
+// Make functions globally available
+window.openServiceModal = openServiceModal;
+window.closeServiceModal = closeServiceModal;
+
+// ========================================
 // RESIZE HANDLER (Debounced)
 // ========================================
 let resizeTimer;

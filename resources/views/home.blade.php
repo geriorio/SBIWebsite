@@ -33,12 +33,12 @@
             </p>
             
             <div class="hero-ctas" data-aos="fade-up" data-aos-delay="300">
-                <a href="{{ route('contact') }}" class="btn-primary">
+                <button onclick="openContactFormModal()" class="btn-primary">
                     <span>Talk to Our Experts</span>
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <path d="M7 13L13 7M13 7H7M13 7V13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                     </svg>
-                </a>
+                </button>
                 <a href="#services" class="btn-secondary">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="2"/>
@@ -191,8 +191,8 @@
                         <div class="approach-card" data-aos="flip-left" data-aos-delay="300">
                             <div class="approach-icon">
                                 <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                                    <path d="M20 5L35 12.5V27.5L20 35L5 27.5V12.5L20 5Z" stroke="url(#gradient-purple)" stroke-width="2"/>
-                                    <circle cx="20" cy="20" r="8" fill="url(#gradient-purple)" opacity="0.3"/>
+                                    <path d="M20 5L35 12.5V27.5L20 35L5 27.5V12.5L20 5Z" stroke="url(#gradient-cyan)" stroke-width="2"/>
+                                    <circle cx="20" cy="20" r="8" fill="url(#gradient-cyan)" opacity="0.3"/>
                                 </svg>
                             </div>
                             <h3 class="approach-title">Transform with Purpose</h3>
@@ -213,9 +213,9 @@
                         <div class="approach-card" data-aos="flip-left" data-aos-delay="500">
                             <div class="approach-icon">
                                 <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                                    <path d="M20 10V20L26 26" stroke="url(#gradient-green)" stroke-width="3" stroke-linecap="round"/>
-                                    <circle cx="20" cy="20" r="14" stroke="url(#gradient-green)" stroke-width="2"/>
-                                    <path d="M20 5V8M20 32V35M35 20H32M8 20H5" stroke="url(#gradient-green)" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M20 10V20L26 26" stroke="url(#gradient-cyan)" stroke-width="3" stroke-linecap="round"/>
+                                    <circle cx="20" cy="20" r="14" stroke="url(#gradient-cyan)" stroke-width="2"/>
+                                    <path d="M20 5V8M20 32V35M35 20H32M8 20H5" stroke="url(#gradient-cyan)" stroke-width="2" stroke-linecap="round"/>
                                 </svg>
                             </div>
                             <h3 class="approach-title">Build Capabilities</h3>
@@ -258,54 +258,30 @@
     <section id="services" class="services-modern">
         <div class="section-container">
             <div class="section-header" data-aos="fade-up">
-                <span class="section-tag">What We Do</span>
+                <span class="section-tag">WHAT WE DO</span>
                 <h2 class="section-title"> <span class="text-gradient">Our Services</span></h2>
                 <p class="section-subtitle">Comprehensive solutions tailored to accelerate your digital transformation journey</p>
             </div>
 
             <div class="services-grid">
-                <div class="service-card" data-tilt data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-icon">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                            <rect x="8" y="8" width="32" height="32" rx="4" stroke="url(#gradient1)" stroke-width="2"/>
-                            <path d="M16 24L22 30L32 18" stroke="url(#gradient1)" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </div>
-                    <h3 class="service-title">Operational Efficiency & Process Redesign</h3>
-                    <p class="service-desc">We streamline workflows, remove bottlenecks, and redesign processes so your teams can work faster and more consistently. </p>
+                <div class="service-card" data-tilt data-aos="fade-up" data-aos-delay="100" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('{{ asset('images/homepage/operational.jpg') }}') center/cover; position: relative;">
+                    <h3 class="service-title" style="color: white; position: relative; z-index: 1;">Operational Efficiency & Process Redesign</h3>
+                    <p class="service-desc" style="color: rgba(255, 255, 255, 0.9); position: relative; z-index: 1;">We streamline workflows, remove bottlenecks, and redesign processes so your teams can work faster and more consistently. </p>
                 </div>
 
-                <div class="service-card" data-tilt data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-icon">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                            <circle cx="24" cy="24" r="16" stroke="url(#gradient2)" stroke-width="2"/>
-                            <path d="M24 12V24L30 30" stroke="url(#gradient2)" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </div>
-                    <h3 class="service-title">Digital Transformation & System Integration</h3>
-                    <p class="service-desc">We help you choose, implement, and integrate the right digital tools — from ERP to business platforms — into one connected ecosystem. </p>
+                <div class="service-card" data-tilt data-aos="fade-up" data-aos-delay="200" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('{{ asset('images/homepage/digital.jpg') }}') center/cover; position: relative;">
+                    <h3 class="service-title" style="color: white; position: relative; z-index: 1;">Digital Transformation & System Integration</h3>
+                    <p class="service-desc" style="color: rgba(255, 255, 255, 0.9); position: relative; z-index: 1;">We help you choose, implement, and integrate the right digital tools — from ERP to business platforms — into one connected ecosystem. </p>
                 </div>
 
-                <div class="service-card" data-tilt data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-icon">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                            <path d="M12 20C12 14.5 16.5 10 24 10C31.5 10 36 14.5 36 20C36 25.5 31.5 30 24 30" stroke="url(#gradient3)" stroke-width="2"/>
-                            <circle cx="24" cy="36" r="6" stroke="url(#gradient3)" stroke-width="2"/>
-                        </svg>
-                    </div>
-                    <h3 class="service-title">Data Architecture, Dashboards & Insights</h3>
-                    <p class="service-desc">We organize scattered data into a trusted source of truth and deliver intuitive dashboards leaders can rely on. </p>
+                <div class="service-card" data-tilt data-aos="fade-up" data-aos-delay="300" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('{{ asset('images/homepage/data.jpg') }}') center/cover; position: relative;">
+                    <h3 class="service-title" style="color: white; position: relative; z-index: 1;">Data Architecture, Dashboards & Insights</h3>
+                    <p class="service-desc" style="color: rgba(255, 255, 255, 0.9); position: relative; z-index: 1;">We organize scattered data into a trusted source of truth and deliver intuitive dashboards leaders can rely on. </p>
                 </div>
 
-                <div class="service-card" data-tilt data-aos="fade-up" data-aos-delay="400">
-                    <div class="service-icon">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                            <rect x="10" y="10" width="28" height="28" rx="4" stroke="url(#gradient4)" stroke-width="2"/>
-                            <path d="M18 20L24 26L30 20" stroke="url(#gradient4)" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </div>
-                    <h3 class="service-title">Capability Building & Organizational Alignment</h3>
-                    <p class="service-desc">We equip your teams with the skills to adopt new systems and work effectively in a digital-first environment. </p>
+                <div class="service-card" data-tilt data-aos="fade-up" data-aos-delay="400" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('{{ asset('images/homepage/capability.jpg') }}') center/cover; position: relative;">
+                    <h3 class="service-title" style="color: white; position: relative; z-index: 1;">Capability Building & Organizational Alignment</h3>
+                    <p class="service-desc" style="color: rgba(255, 255, 255, 0.9); position: relative; z-index: 1;">We equip your teams with the skills to adopt new systems and work effectively in a digital-first environment. </p>
                 </div>
             </div>
 
@@ -373,8 +349,8 @@
                     <div class="card-glow"></div>
                     <div class="card-number">01</div>
                     <div class="card-icon-wrapper">
-                        <div class="icon-bg icon-bg-1"></div>
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" class="card-main-icon">
+                        <div class="icon-bg icon-bg-1" style="background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(14, 165, 233, 0.2));"></div>
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" class="card-main-icon" style="color: #38BDF8;">
                             <path d="M24 8L40 16L24 24L8 16L24 8Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
                             <path d="M8 24L24 32L40 24" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
                             <path d="M8 32L24 40L40 32" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
@@ -391,8 +367,8 @@
                     <div class="card-glow"></div>
                     <div class="card-number">02</div>
                     <div class="card-icon-wrapper">
-                        <div class="icon-bg icon-bg-2"></div>
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" class="card-main-icon">
+                        <div class="icon-bg icon-bg-2" style="background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(14, 165, 233, 0.2));"></div>
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" class="card-main-icon" style="color: #38BDF8;">
                             <circle cx="24" cy="14" r="6" stroke="currentColor" stroke-width="2"/>
                             <path d="M12 38C12 31 17 26 24 26C31 26 36 31 36 38" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                             <path d="M16 20C16 20 14 22 14 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -410,8 +386,8 @@
                     <div class="card-glow"></div>
                     <div class="card-number">03</div>
                     <div class="card-icon-wrapper">
-                        <div class="icon-bg icon-bg-3"></div>
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" class="card-main-icon">
+                        <div class="icon-bg icon-bg-3" style="background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(14, 165, 233, 0.2));"></div>
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" class="card-main-icon" style="color: #38BDF8;">
                             <rect x="8" y="12" width="32" height="28" rx="2" stroke="currentColor" stroke-width="2"/>
                             <path d="M16 12V8C16 6 17 5 19 5H29C31 5 32 6 32 8V12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                             <path d="M16 22H32M16 28H28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -429,8 +405,8 @@
                     <div class="card-glow"></div>
                     <div class="card-number">04</div>
                     <div class="card-icon-wrapper">
-                        <div class="icon-bg icon-bg-4"></div>
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" class="card-main-icon">
+                        <div class="icon-bg icon-bg-4" style="background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(14, 165, 233, 0.2));"></div>
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" class="card-main-icon" style="color: #38BDF8;">
                             <path d="M8 36L16 28L22 34L32 20L40 28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             <circle cx="16" cy="28" r="3" fill="currentColor" opacity="0.5"/>
                             <circle cx="22" cy="34" r="3" fill="currentColor" opacity="0.5"/>
@@ -469,80 +445,36 @@
 
             <div class="industries-grid">
                 <div class="industry-item" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="industry-card">
-                        <div class="industry-icon-bg">
-                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" class="industry-icon">
-                                <rect x="8" y="20" width="48" height="32" rx="2" stroke="currentColor" stroke-width="2"/>
-                                <path d="M16 28H24M16 36H24M32 28H48M32 36H40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                <path d="M20 12L32 8L44 12V20H20V12Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                                <circle cx="40" cy="44" r="4" stroke="currentColor" stroke-width="2"/>
-                                <path d="M28 52L32 48L36 52" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                        <h3 class="industry-name">Manufacturing</h3>
+                    <div class="industry-card" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('{{ asset('images/homepage/manufacturing.jpg') }}') center/cover; min-height: 300px;">
+                        <h3 class="industry-name" style="color: white; position: relative; z-index: 2;">Manufacturing</h3>
                         <div class="industry-overlay"></div>
                     </div>
                 </div>
 
                 <div class="industry-item" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="industry-card">
-                        <div class="industry-icon-bg">
-                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" class="industry-icon">
-                                <rect x="12" y="24" width="40" height="24" rx="2" stroke="currentColor" stroke-width="2"/>
-                                <path d="M20 32H44M20 40H36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                <circle cx="20" cy="20" r="4" stroke="currentColor" stroke-width="2"/>
-                                <circle cx="44" cy="20" r="4" stroke="currentColor" stroke-width="2"/>
-                                <path d="M20 24V28M44 24V28" stroke="currentColor" stroke-width="2"/>
-                                <path d="M28 48L32 52L36 48" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                        <h3 class="industry-name">Logistics & Distribution</h3>
+                    <div class="industry-card" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('{{ asset('images/homepage/logistics.jpg') }}') center/cover; min-height: 300px;">
+                        <h3 class="industry-name" style="color: white; position: relative; z-index: 2;">Logistics & Distribution</h3>
                         <div class="industry-overlay"></div>
                     </div>
                 </div>
 
                 <div class="industry-item" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="industry-card">
-                        <div class="industry-icon-bg">
-                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" class="industry-icon">
-                                <path d="M16 28C16 20 20 16 28 16H36C44 16 48 20 48 28V36C48 44 44 48 36 48H28C20 48 16 44 16 36V28Z" stroke="currentColor" stroke-width="2"/>
-                                <circle cx="28" cy="28" r="4" stroke="currentColor" stroke-width="2"/>
-                                <circle cx="36" cy="36" r="4" stroke="currentColor" stroke-width="2"/>
-                                <path d="M24 40L32 32L40 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                        </div>
-                        <h3 class="industry-name">FMCG</h3>
+                    <div class="industry-card" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('{{ asset('images/homepage/fmcg.jpg') }}') center/cover; min-height: 300px;">
+                        <h3 class="industry-name" style="color: white; position: relative; z-index: 2;">FMCG</h3>
                         <div class="industry-overlay"></div>
                     </div>
                 </div>
 
                 <div class="industry-item" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="industry-card">
-                        <div class="industry-icon-bg">
-                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" class="industry-icon">
-                                <rect x="12" y="12" width="40" height="40" rx="4" stroke="currentColor" stroke-width="2"/>
-                                <path d="M12 24H52M24 12V52" stroke="currentColor" stroke-width="2"/>
-                                <circle cx="32" cy="36" r="6" stroke="currentColor" stroke-width="2"/>
-                                <path d="M38 30L42 26M38 42L42 46" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                        </div>
-                        <h3 class="industry-name">Retail</h3>
+                    <div class="industry-card" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('{{ asset('images/homepage/retail.jpg') }}') center/cover; min-height: 300px;">
+                        <h3 class="industry-name" style="color: white; position: relative; z-index: 2;">Retail</h3>
                         <div class="industry-overlay"></div>
                     </div>
                 </div>
 
                 <div class="industry-item" data-aos="zoom-in" data-aos-delay="500">
-                    <div class="industry-card">
-                        <div class="industry-icon-bg">
-                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" class="industry-icon">
-                                <circle cx="32" cy="32" r="20" stroke="currentColor" stroke-width="2"/>
-                                <path d="M32 12V32L44 38" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M32 8V12M32 52V56M56 32H52M12 32H8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                <circle cx="32" cy="32" r="4" fill="currentColor"/>
-                                <path d="M20 20L24 24M44 44L40 40M44 20L40 24M20 44L24 40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                        </div>
-                        <h3 class="industry-name">Energy & Utilities</h3>
+                    <div class="industry-card" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('{{ asset('images/homepage/energy.jpg') }}') center/cover; min-height: 300px;">
+                        <h3 class="industry-name" style="color: white; position: relative; z-index: 2;">Energy & Utilities</h3>
                         <div class="industry-overlay"></div>
                     </div>
                 </div>
@@ -659,22 +591,42 @@
                                     <div class="chart-label">Key Performance Indicators</div>
                                     <div class="kpi-grid">
                                         <div class="kpi-item">
-                                            <div class="kpi-icon">📊</div>
+                                            <div class="kpi-icon">
+                                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                                    <rect x="6" y="18" width="4" height="8" fill="white" rx="1"/>
+                                                    <rect x="14" y="12" width="4" height="14" fill="white" rx="1"/>
+                                                    <rect x="22" y="6" width="4" height="20" fill="white" rx="1"/>
+                                                </svg>
+                                            </div>
                                             <div class="kpi-value">Real-Time</div>
                                             <div class="kpi-label">Visibility</div>
                                         </div>
                                         <div class="kpi-item">
-                                            <div class="kpi-icon">⚡</div>
+                                            <div class="kpi-icon">
+                                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                                    <path d="M16 4L18 12L24 8L20 16L28 16L16 28L14 20L8 24L12 16L4 16L16 4Z" fill="white"/>
+                                                </svg>
+                                            </div>
                                             <div class="kpi-value">Faster</div>
                                             <div class="kpi-label">Decisions</div>
                                         </div>
                                         <div class="kpi-item">
-                                            <div class="kpi-icon">✓</div>
+                                            <div class="kpi-icon">
+                                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                                    <circle cx="16" cy="16" r="14" stroke="white" stroke-width="2"/>
+                                                    <path d="M10 16L14 20L22 12" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </div>
                                             <div class="kpi-value">Higher</div>
                                             <div class="kpi-label">Accuracy</div>
                                         </div>
                                         <div class="kpi-item">
-                                            <div class="kpi-icon">📈</div>
+                                            <div class="kpi-icon">
+                                                <svg width="36" height="36" viewBox="0 0 24 24" fill="none">
+                                                    <path d="M3 17L9 11L13 15L21 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M21 12V7H16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </div>
                                             <div class="kpi-value">Measurable</div>
                                             <div class="kpi-label">Results</div>
                                         </div>
@@ -869,12 +821,12 @@
                 <h2 class="cta-title">Ready to Transform Your Business?</h2>
                 <p class="cta-subtitle">Let's discuss how we can help you achieve your digital transformation goals</p>
             <div class="clients-cta" data-aos="fade-up" data-aos-delay="200">
-                <a href="{{ route('contact') }}" class="btn-secondary">
+                <button onclick="openContactFormModal()" class="btn-secondary">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <path d="M3 8L10 13L17 8M3 8L10 3L17 8M3 8V16L10 21L17 16V8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                     <span>Contact Our Team</span>
-                </a>
+                </button>
             </div>
             </div>
         </div>

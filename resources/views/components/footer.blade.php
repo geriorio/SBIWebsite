@@ -27,7 +27,6 @@
                         <p class="footer-brand-sub">Internasional</p>
                     </div>
                 </div>
-                <p class="footer-tagline">Empowering Indonesian industries through innovation and technology excellence.</p>
                 
                 <div class="footer-social">
                     <a href="#" class="social-link">
@@ -51,6 +50,21 @@
                         </svg>
                     </a>
                 </div>
+                
+                <div class="footer-contact" style="margin-top: 1.5rem;">
+                    <div class="contact-item">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M0 4a2 2 0 012-2h12a2 2 0 012 2v8a2 2 0 01-2 2H2a2 2 0 01-2-2V4zm2-1a1 1 0 00-1 1v.217l7 4.2 7-4.2V4a1 1 0 00-1-1H2zm13 2.383l-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 002 13h12a1 1 0 00.966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
+                        </svg>
+                        <span>info@samuderabiru.net</span>
+                    </div>
+                    <div class="contact-item">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M8 0C5.243 0 3 2.243 3 5c0 3.188 4.5 9.5 4.706 9.781a.5.5 0 00.588 0C8.5 14.5 13 8.188 13 5c0-2.757-2.243-5-5-5zm0 7a2 2 0 110-4 2 2 0 010 4z"/>
+                        </svg>
+                        <span>Skysuites Residence Surabaya</span>
+                    </div>
+                </div>
             </div>
 
             <div class="footer-links-col">
@@ -69,7 +83,7 @@
                     <li><a href="{{ url('/about') }}">About Us</a></li>
                     <li><a href="{{ url('/career') }}#testimonials">Our Team</a></li>
                     <li><a href="{{ url('/career') }}">Careers</a></li>
-                    <li><a href="{{ url('/contact') }}">Contact</a></li>
+                    {{-- <li><a href="{{ url('/contact') }}">Contact</a></li> --}}
                 </ul>
             </div>
 
@@ -93,21 +107,6 @@
                         </button>
                     </div>
                 </form>
-                
-                <div class="footer-contact">
-                    <div class="contact-item">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-                            <path d="M0 4a2 2 0 012-2h12a2 2 0 012 2v8a2 2 0 01-2 2H2a2 2 0 01-2-2V4zm2-1a1 1 0 00-1 1v.217l7 4.2 7-4.2V4a1 1 0 00-1-1H2zm13 2.383l-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 002 13h12a1 1 0 00.966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
-                        </svg>
-                        <span>info@samuderabiru.net</span>
-                    </div>
-                    <div class="contact-item">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-                            <path d="M8 0C5.243 0 3 2.243 3 5c0 3.188 4.5 9.5 4.706 9.781a.5.5 0 00.588 0C8.5 14.5 13 8.188 13 5c0-2.757-2.243-5-5-5zm0 7a2 2 0 110-4 2 2 0 010 4z"/>
-                        </svg>
-                        <span>Skysuites Residence Surabaya</span>
-                    </div>
-                </div>
             </div>
         </div>
 

@@ -196,7 +196,11 @@
     gap: 0.5rem;
     padding: 0.875rem 1.25rem;
     text-decoration: none;
+    background: transparent;
+    border: none;
     color: #B8C5D6;
+    font-family: inherit;
+    font-size: inherit;
     transition: all 0.3s ease;
     border-radius: 40px;
     cursor: pointer;
@@ -645,13 +649,16 @@
     background: linear-gradient(135deg, var(--services-primary) 0%, var(--services-primary-dark) 100%);
     color: var(--services-white);
     text-decoration: none;
+    border: none;
     border-radius: 50px;
     font-weight: 700;
     font-size: 1.05rem;
+    font-family: inherit;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 8px 24px rgba(14, 165, 233, 0.3);
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .pillar-cta::before {
@@ -978,13 +985,16 @@
     background: linear-gradient(135deg, #00E5FF 0%, #00B8D4 100%);
     color: var(--services-navy);
     text-decoration: none;
+    border: none;
     border-radius: 50px;
     font-weight: 800;
     font-size: 1.2rem;
+    font-family: inherit;
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 15px 50px rgba(0, 229, 255, 0.4);
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .cta-button::before {
@@ -1735,5 +1745,273 @@
     .service-features,
     .service-list {
         margin-top: 2rem;
+    }
+}
+
+/* ========================================
+   SERVICE MODAL STYLES
+   ======================================== */
+
+
+/* Hapus style modal lama, gunakan style modal dari service-modal.css saja untuk modal contact */
+
+/* Modal Content Grid - 3 Cards */
+.modal-offerings-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* 2 Column Grid for Digital Service */
+.modal-offerings-grid.grid-2-col {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Third card spans full width */
+.modal-offerings-grid.grid-2-col .modal-offering-card:nth-child(3) {
+    grid-column: 1 / -1;
+}
+
+.modal-offering-card {
+    background: white;
+    border: 2px solid #E5E7EB;
+    border-radius: 16px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-offering-card:hover {
+    border-color: var(--services-primary);
+    box-shadow: 0 10px 30px -10px rgba(14, 165, 233, 0.3);
+    transform: translateY(-4px);
+}
+
+.modal-offering-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--services-navy);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.modal-offering-title::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--services-primary);
+    border-radius: 50%;
+}
+
+.modal-offering-description {
+    color: #4B5563;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.modal-offering-features {
+    list-style: none;
+    margin: 0 0 1.5rem 0;
+    padding: 0;
+    flex-grow: 1;
+}
+
+.modal-offering-features li {
+    padding: 0.5rem 0;
+    color: #4B5563;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.modal-offering-features li::before {
+    content: '✓';
+    color: var(--services-primary);
+    font-weight: bold;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.modal-offering-bestfor {
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid #E5E7EB;
+}
+
+.modal-offering-bestfor-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--services-primary);
+    margin-bottom: 0.5rem;
+}
+
+.modal-offering-bestfor-text {
+    font-size: 0.9rem;
+    color: #6B7280;
+    line-height: 1.5;
+}
+
+/* Platform Logos Section (for Digital Transformation) */
+.modal-platforms-section {
+    margin-top: 3rem;
+    padding-top: 3rem;
+    border-top: 2px solid #E5E7EB;
+}
+
+.modal-platforms-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--services-navy);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.modal-platforms-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.modal-platforms-more {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    color: #6B7280;
+    font-style: italic;
+}
+
+/* Inline logos for System Integration card */
+.modal-offering-logos-only {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.modal-platforms-grid-inline {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    width: 100%;
+}
+
+.modal-platform-logo-small {
+    background: white;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    padding: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    height: 70px;
+}
+
+.modal-platform-logo-small:hover {
+    border-color: var(--services-primary);
+    box-shadow: 0 4px 12px -4px rgba(14, 165, 233, 0.3);
+    transform: translateY(-2px);
+}
+
+.modal-platform-logo-small img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.modal-platform-logo {
+    background: white;
+    border: 2px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    height: 120px;
+}
+
+.modal-platform-logo:hover {
+    border-color: var(--services-primary);
+    box-shadow: 0 8px 20px -8px rgba(14, 165, 233, 0.3);
+    transform: translateY(-2px);
+}
+
+.modal-platform-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Responsive Modal */
+@media (max-width: 1024px) {
+    .modal-offerings-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-offerings-grid.grid-2-col {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-platforms-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .modal-platforms-grid-inline {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .service-modal-container {
+        width: 95%;
+        max-height: 95vh;
+        border-radius: 16px;
+    }
+    
+    .service-modal-header {
+        padding: 2rem 2rem 1rem 2rem;
+    }
+    
+    .service-modal-title {
+        font-size: 1.5rem;
+    }
+    
+    .service-modal-body {
+        padding: 2rem 1.5rem;
+    }
+    
+    .modal-offerings-grid {
+        gap: 1.5rem;
+    }
+    
+    .modal-platforms-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .modal-platforms-grid-inline {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+    
+    .modal-platform-logo {
+        height: 100px;
+        padding: 1rem;
+    }
+    
+    .modal-platform-logo-small {
+        height: 60px;
+        padding: 0.5rem;
     }
 }

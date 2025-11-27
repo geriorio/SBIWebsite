@@ -13,7 +13,7 @@
         <div class="insights-hero-content" data-aos="fade-up">
             <div class="hero-badge">
                 <span class="badge-dot"></span>
-                Latest Updates
+                LATEST UPDATES
             </div>
             <h1 class="hero-heading">
                 <span class="text-gradient typing-text" data-text="Industry Insights"></span>
@@ -159,13 +159,13 @@
             </div>
 
             <!-- No Results Message -->
-            <div class="insights-no-results" id="insightsNoResults" style="display: none;">
-                <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+            <div class="insights-no-results" id="insightsNoResults" style="display: none; text-align: center; margin: 4rem auto; max-width: 400px;">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" style="margin: 0 auto 1.5rem;">
                     <circle cx="40" cy="40" r="35" stroke="#E2E8F0" stroke-width="2"/>
                     <path d="M40 25V45M40 55V55.5" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
                 </svg>
-                <h3>No articles found</h3>
-                <p>Try adjusting your search terms</p>
+                <h3 style="margin-bottom: 0.5rem;">No articles found</h3>
+                <p style="color: #64748B;">Try adjusting your search terms</p>
             </div>
         </div>
     </section>
@@ -185,12 +185,12 @@
                 <p class="insights-cta-description">
                     Our team helps businesses streamline processes, modernize systems, and build reliable data foundations.
                 </p>
-                <a href="{{ route('contact') }}" class="insights-cta-button">
+                <button onclick="openContactFormModal()" class="insights-cta-button">
                     <span>Book Consultation</span>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                     </svg>
-                </a>
+                </button>
             </div>
         </div>
     </section>

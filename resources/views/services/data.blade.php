@@ -2,6 +2,23 @@
 
 @push('styles')
 @vite(['resources/css/service-detail.css'])
+<style>
+/* Dashboard List Custom Styling */
+.dashboard-list li {
+    display: flex;
+    align-items: center;
+    padding-left: 0 !important;
+}
+
+.dashboard-list li::before {
+    display: none !important;
+}
+
+.dashboard-list li svg {
+    flex-shrink: 0;
+    margin-right: 0.75rem;
+}
+</style>
 @endpush
 
 @section('content')
@@ -203,14 +220,56 @@
                             <p class="deliverable-tagline">Real-time visibility across your entire business</p>
                         </div>
                         <p style="margin-bottom: 1rem; color: #475569;">We design dashboards that give real-time visibility across:</p>
-                        <ul class="deliverable-features">
-                            <li>Sales performance & pipeline</li>
-                            <li>Finance & cash flow</li>
-                            <li>Operations & production</li>
-                            <li>Supply chain tracking</li>
-                            <li>Inventory levels</li>
-                            <li>Procurement metrics</li>
-                            <li>HR & workforce analytics</li>
+                        <ul class="deliverable-features dashboard-list">
+                            <li>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="display: inline-block; margin-right: 0.5rem; vertical-align: middle;">
+                                    <path d="M4 10L8 14L16 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <rect x="2" y="2" width="16" height="16" rx="2" stroke="white" stroke-width="1.5"/>
+                                </svg>
+                                Sales performance & pipeline
+                            </li>
+                            <li>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="display: inline-block; margin-right: 0.5rem; vertical-align: middle;">
+                                    <path d="M4 10L8 14L16 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <rect x="2" y="2" width="16" height="16" rx="2" stroke="white" stroke-width="1.5"/>
+                                </svg>
+                                Finance & cash flow
+                            </li>
+                            <li>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="display: inline-block; margin-right: 0.5rem; vertical-align: middle;">
+                                    <path d="M4 10L8 14L16 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <rect x="2" y="2" width="16" height="16" rx="2" stroke="white" stroke-width="1.5"/>
+                                </svg>
+                                Operations & production
+                            </li>
+                            <li>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="display: inline-block; margin-right: 0.5rem; vertical-align: middle;">
+                                    <path d="M4 10L8 14L16 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <rect x="2" y="2" width="16" height="16" rx="2" stroke="white" stroke-width="1.5"/>
+                                </svg>
+                                Supply chain tracking
+                            </li>
+                            <li>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="display: inline-block; margin-right: 0.5rem; vertical-align: middle;">
+                                    <path d="M4 10L8 14L16 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <rect x="2" y="2" width="16" height="16" rx="2" stroke="white" stroke-width="1.5"/>
+                                </svg>
+                                Inventory levels
+                            </li>
+                            <li>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="display: inline-block; margin-right: 0.5rem; vertical-align: middle;">
+                                    <path d="M4 10L8 14L16 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <rect x="2" y="2" width="16" height="16" rx="2" stroke="white" stroke-width="1.5"/>
+                                </svg>
+                                Procurement metrics
+                            </li>
+                            <li>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="display: inline-block; margin-right: 0.5rem; vertical-align: middle;">
+                                    <path d="M4 10L8 14L16 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <rect x="2" y="2" width="16" height="16" rx="2" stroke="white" stroke-width="1.5"/>
+                                </svg>
+                                HR & workforce analytics
+                            </li>
                         </ul>
                         <h4 style="margin: 1.5rem 0 1rem; font-size: 1.1rem; font-weight: 700; color: #0EA5E9;">Tools we use:</h4>
                         <ul class="deliverable-features">

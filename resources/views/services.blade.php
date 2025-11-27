@@ -17,7 +17,7 @@
         <div class="services-hero-content" data-aos="fade-up">
             <div class="hero-badge">
                 <span class="badge-dot"></span>
-                Our Services
+                OUR SERVICES
             </div>
             <h1 class="hero-heading">
                 <span class="text-gradient">Enabling Real Transformation</span>
@@ -33,8 +33,8 @@
                 <a href="#operational-detail" class="service-nav-item" data-index="0">
                     <div class="nav-icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="2"/>
-                            <path d="M12 8V12L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 7V12L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                         </svg>
                     </div>
                     <span>Operational</span>
@@ -132,12 +132,12 @@
                         <p class="pillar-description">
                             We help companies work smarter by eliminating bottlenecks, simplifying workflows, and redesigning processes for speed and accuracy. If your team feels overloaded, inconsistent, or slowed down by manual work, this service helps you build a structure that actually supports high performance. From mapping your operations to optimizing every step, we make your business run cleaner, faster, and more reliably.
                         </p>
-                        <a href="{{ route('services.operational') }}" class="pillar-cta">
+                        <button onclick="openServiceModal('operational')" class="pillar-cta">
                             <span>Explore Operational Efficiency</span>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -151,12 +151,12 @@
                         <p class="pillar-description light">
                             Guiding organizations in choosing the right digital tools—ERP, operational platforms, and business applications—based on their real needs, not vendor pressure. Whether you're selecting an ERP or integrating multiple systems into one ecosystem, we help you build a seamless, efficient digital backbone that reduces manual work and improves decision-making. This includes ERP advisory, Epicor end-to-end implementation, and integrations across HR, supply chain, asset management, call centers, and more.
                         </p>
-                        <a href="{{ route('services.digital') }}" class="pillar-cta light">
+                        <button onclick="openServiceModal('digital')" class="pillar-cta light">
                             <span>See Digital Transformation Services</span>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
-                        </a>
+                        </button>
                     </div>
                     <div class="pillar-visual">
                         <div class="pillar-image-wrapper">
@@ -198,12 +198,12 @@
                         <p class="pillar-description">
                             We turn scattered data into a reliable foundation for decision-making through strong data architecture, governance, and intuitive dashboards. If you struggle with inconsistent reports or slow insights, we help you create a single source of truth that leaders can trust. From Power BI dashboards to enterprise data strategy, we make your business more intelligent and data-driven.
                         </p>
-                        <a href="{{ route('services.data') }}" class="pillar-cta">
+                        <button onclick="openServiceModal('data')" class="pillar-cta">
                             <span>Learn About Data Solutions</span>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -217,12 +217,12 @@
                         <p class="pillar-description light">
                             We equip your teams with the skills needed to adopt new systems and work effectively in a digital-first environment. Whether it's ERP usage, analytics, or Power BI, our training programs are customized to your company and delivered through modern learning platforms. This ensures your transformation is sustainable because your people grow alongside the technology.
                         </p>
-                        <a href="{{ route('services.capability') }}" class="pillar-cta light">
+                        <button onclick="openServiceModal('capability')" class="pillar-cta light">
                             <span>Go to Capability Building</span>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
-                        </a>
+                        </button>
                     </div>
                     <div class="pillar-visual">
                         <div class="pillar-image-wrapper">
@@ -354,12 +354,12 @@
                 </div>
                 <h2 class="cta-title">Ready to <span class="text-gradient">Transform?</span></h2>
                 <p class="cta-subtitle">Let's discuss your goals and see how we can help.</p>
-                <a href="{{ route('contact') }}" class="cta-button">
+                <button onclick="openContactFormModal()" class="cta-button">
                     <span>Contact Us</span>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-                </a>
+                </button>
             </div>
         </div>
     </section>
@@ -401,6 +401,10 @@
             </linearGradient>
         </defs>
     </svg>
+
+    <!-- Service Modal persis homepage -->
+    @include('components.service-modal')
+    @include('components.service-contact-modal')
 
 @endsection
 

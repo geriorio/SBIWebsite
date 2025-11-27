@@ -27,12 +27,19 @@
 .service-modal-container {
     position: relative;
     z-index: 1;
-    width: 90%;
-    max-width: 600px;
-    max-height: 90vh;
+    width: 98vw;
+    max-width: 1600px;
+    min-width: 340px;
+    max-height: 98vh;
     overflow-y: auto;
+    background: linear-gradient(135deg, #0A0E27 0%, #1a1f3a 100%);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.7);
+    border-radius: 32px;
     transform: translateY(20px);
     transition: transform 0.3s ease;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .service-modal.active .service-modal-container {
@@ -63,17 +70,25 @@
 }
 
 .service-modal-content {
-    padding: 1rem;
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: center;
+    overflow-x: auto;
+    max-width: 100vw;
+    max-height: 80vh;
+    overflow-y: auto;
 }
 
 .service-form-card {
-    background: linear-gradient(135deg, rgba(26, 31, 58, 0.95), rgba(15, 23, 41, 0.95));
-    border: 1px solid rgba(0, 229, 255, 0.2);
-    border-radius: 24px;
-    padding: 2.5rem;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    background: none;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 2.5rem 1.5rem;
+    max-height: 80vh;
+    overflow-y: auto;
 }
 
 .service-form-card::before {
@@ -332,23 +347,224 @@
     color: #F87171;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .service-form-card {
-        padding: 2rem 1.5rem;
-    }
+/* Service Detail Modal (UNIQUE, only for service modal) */
+.service-detail-modal-card {
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(10, 14, 39, 0.12);
+    padding: 2.8rem 2.2rem;
+    margin: 0 1.2rem 2.2rem 1.2rem;
+    min-width: 340px;
+    max-width: 540px;
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+}
 
-    .service-form-row {
-        grid-template-columns: 1fr;
+.service-detail-modal-container {
+    width: 98vw;
+    max-width: 1600px;
+    min-width: 340px;
+    max-height: 96vh;
+    overflow-y: auto;
+    background: linear-gradient(135deg, #0A0E27 0%, #1a1f3a 100%);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.7);
+    border-radius: 32px;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.service-detail-modal-title {
+    font-size: 2.3rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 2rem;
+    letter-spacing: -0.5px;
+    text-align: left;
+    background: none;
+    line-height: 1.1;
+}
+
+.service-detail-modal-content {
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: center;
+    overflow-x: auto;
+    max-width: 100vw;
+}
+
+.modal-offerings-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: center;
+    width: 100%;
+}
+
+.modal-offering-card {
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0 4px 16px rgba(10, 14, 39, 0.08);
+    padding: 2.2rem 1.5rem;
+    margin: 0 0.8rem 2.2rem 0.8rem;
+    min-width: 320px;
+    max-width: 420px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    vertical-align: top;
+    position: relative;
+}
+
+.modal-offering-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #1a1f3a;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.modal-offering-features {
+    font-size: 1.08rem;
+    color: #222;
+    margin-bottom: 0.5rem;
+    padding-left: 1.2rem;
+}
+
+.modal-offerings-grid.grid-2-col {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 2.5rem;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 2.5rem;
+}
+
+.modal-platforms-section {
+    width: 100%;
+    margin: 0 auto 2.5rem auto;
+    text-align: center;
+}
+
+.modal-platforms-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 2rem;
+    letter-spacing: -0.5px;
+    text-align: center;
+    background: none;
+}
+
+.modal-platforms-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 1.2rem;
+}
+
+.modal-platform-logo {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 8px rgba(10, 14, 39, 0.08);
+    padding: 1.2rem 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90px;
+    min-width: 120px;
+}
+
+.modal-platforms-more {
+    color: #bfc7e3;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+@media (max-width: 1200px) {
+    .service-detail-modal-container {
+        max-width: 98vw;
+    }
+    .service-detail-modal-content {
+        padding: 1.2rem 0.2rem;
+        gap: 1.2rem;
+    }
+    .modal-offerings-grid {
+        gap: 1.2rem;
+    }
+    .modal-offering-card {
+        min-width: 220px;
+        max-width: 98vw;
+        padding: 1.2rem 0.7rem;
+    }
+    .modal-offerings-grid.grid-2-col {
+        gap: 1.2rem;
+    }
+    .modal-platforms-grid {
+        grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
     }
-
-    .service-form-title {
+    .modal-platforms-title {
         font-size: 1.5rem;
     }
+}
 
-    .service-modal-close {
-        top: 0.5rem;
-        right: 0.5rem;
+@media (max-width: 768px) {
+    .service-detail-modal-container {
+        padding: 0.5rem;
+        max-width: 100vw;
     }
+    .service-detail-modal-content {
+        padding: 0.5rem 0.1rem;
+        gap: 0.5rem;
+    }
+    .modal-offerings-grid {
+        gap: 0.5rem;
+    }
+    .modal-offering-card {
+        min-width: 160px;
+        max-width: 98vw;
+        padding: 0.7rem 0.3rem;
+    }
+    .modal-offerings-grid.grid-2-col {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    .modal-platforms-grid {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+    .modal-platforms-title {
+        font-size: 1.2rem;
+    }
+}
+
+/* Only remove outer box for contact modal, not service modal */
+#serviceContactModal .service-modal-container {
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    width: auto;
+    max-width: none;
+    min-width: 0;
+    display: block;
+    align-items: initial;
+    justify-content: initial;
+}
+
+#serviceContactModal .service-modal-content {
+    padding: 0;
+    max-width: none;
+    display: block;
+    overflow: visible;
 }

@@ -1,0 +1,15 @@
+/* Dashboard List Custom Styling */
+.dashboard-list li {
+    display: flex;
+    align-items: center;
+    padding-left: 0 !important;
+}
+
+.dashboard-list li::before {
+    display: none !important;
+}
+
+.dashboard-list li svg {
+    flex-shrink: 0;
+    margin-right: 0.75rem;
+}

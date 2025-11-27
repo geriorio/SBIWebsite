@@ -31,6 +31,7 @@
         </main>
 
         @include('components.footer')
+        @include('components.service-contact-modal')
         
         @stack('scripts')
     </body>

@@ -15,10 +15,10 @@
         <div class="about-hero-content" data-aos="fade-up">
             <div class="hero-badge">
                 <span class="badge-dot"></span>
-                Our Story
+                OUR STORY
             </div>
             <h1 class="hero-heading">
-                Built for the  <span class="text-gradient">Blue Ocean</span>
+                Built for the <span class="text-gradient">Blue Ocean</span>
             </h1>
             <p class="hero-description">
                 Bringing Indonesian Industries an inch closer to international competition
@@ -100,11 +100,11 @@
                         <div class="challenge-card" data-aos="flip-left" data-aos-delay="350">
                             <div class="challenge-icon">
                                 <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                                    <rect x="6" y="6" width="12" height="12" rx="2" stroke="#0369A1" stroke-width="2"/>
-                                    <rect x="22" y="6" width="12" height="12" rx="2" stroke="#0369A1" stroke-width="2"/>
-                                    <rect x="6" y="22" width="12" height="12" rx="2" stroke="#0369A1" stroke-width="2"/>
-                                    <rect x="22" y="22" width="12" height="12" rx="2" stroke="#0369A1" stroke-width="2"/>
-                                    <path d="M18 12H22M12 18V22M28 18V22M18 28H22" stroke="#0369A1" stroke-width="2" stroke-dasharray="2 2"/>
+                                    <rect x="6" y="6" width="12" height="12" rx="2" stroke="#0284C7" stroke-width="2"/>
+                                    <rect x="22" y="6" width="12" height="12" rx="2" stroke="#0284C7" stroke-width="2"/>
+                                    <rect x="6" y="22" width="12" height="12" rx="2" stroke="#0284C7" stroke-width="2"/>
+                                    <rect x="22" y="22" width="12" height="12" rx="2" stroke="#0284C7" stroke-width="2"/>
+                                    <path d="M18 12H22M12 18V22M28 18V22M18 28H22" stroke="#0284C7" stroke-width="2" stroke-dasharray="2 2"/>
                                 </svg>
                             </div>
                             <h4>Disconnected Systems</h4>
@@ -114,11 +114,11 @@
                         <div class="challenge-card" data-aos="flip-left" data-aos-delay="400">
                             <div class="challenge-icon">
                                 <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                                    <rect x="8" y="8" width="24" height="24" rx="3" stroke="#075985" stroke-width="2"/>
-                                    <path d="M14 20L18 24L26 16" stroke="#075985" stroke-width="2" stroke-linecap="round"/>
-                                    <path d="M18 24L14 28" stroke="#075985" stroke-width="2" stroke-linecap="round"/>
-                                    <circle cx="28" cy="28" r="3" stroke="#075985" stroke-width="2"/>
-                                    <line x1="25" y1="25" x2="22" y2="22" stroke="#075985" stroke-width="2"/>
+                                    <rect x="8" y="8" width="24" height="24" rx="3" stroke="#0284C7" stroke-width="2"/>
+                                    <path d="M14 20L18 24L26 16" stroke="#0284C7" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M18 24L14 28" stroke="#0284C7" stroke-width="2" stroke-linecap="round"/>
+                                    <circle cx="28" cy="28" r="3" stroke="#0284C7" stroke-width="2"/>
+                                    <line x1="25" y1="25" x2="22" y2="22" stroke="#0284C7" stroke-width="2"/>
                                 </svg>
                             </div>
                             <h4>Mismatched Tech</h4>
@@ -128,9 +128,9 @@
                         <div class="challenge-card" data-aos="flip-left" data-aos-delay="450">
                             <div class="challenge-icon">
                                 <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                                    <circle cx="20" cy="20" r="14" stroke="#0C4A6E" stroke-width="2"/>
-                                    <path d="M20 12V20L26 23" stroke="#0C4A6E" stroke-width="2" stroke-linecap="round"/>
-                                    <path d="M12 8L8 12M28 8L32 12M8 28L12 32M28 32L32 28" stroke="#0C4A6E" stroke-width="2" stroke-linecap="round"/>
+                                    <circle cx="20" cy="20" r="14" stroke="#0284C7" stroke-width="2"/>
+                                    <path d="M20 12V20L26 23" stroke="#0284C7" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M12 8L8 12M28 8L32 12M8 28L12 32M28 32L32 28" stroke="#0284C7" stroke-width="2" stroke-linecap="round"/>
                                 </svg>
                             </div>
                             <h4>Firefighting Mode</h4>
@@ -345,8 +345,8 @@
                         <stop offset="100%" stop-color="#00B8D4"/>
                     </linearGradient>
                     <linearGradient id="vmGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#76FF03"/>
-                        <stop offset="100%" stop-color="#64DD17"/>
+                        <stop offset="0%" stop-color="#00E5FF"/>
+                        <stop offset="100%" stop-color="#00B8D4"/>
                     </linearGradient>
                 </defs>
             </svg>
@@ -481,144 +481,67 @@
     </section>
 
     <!-- Why Clients Trust Us Section -->
-    <section class="trust-section">
-        <div class="trust-container">
-            <!-- Animated Background -->
-            <div class="trust-bg-animated">
-                <div class="trust-gradient-orb orb-1"></div>
-                <div class="trust-gradient-orb orb-2"></div>
-                <div class="trust-gradient-orb orb-3"></div>
-                <div class="trust-grid-pattern"></div>
+    <section class="testimonials-section">
+        <div class="section-container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">TESTIMONIALS</span>
+                <h2 class="section-title">Why Clients <span class="text-gradient">Trust Us</span></h2>
             </div>
 
-            <!-- Content -->
-            <div class="trust-content">
-                <!-- Header -->
-                <div class="trust-header" data-aos="fade-down">
-                    <div class="trust-badge">
-                        <div class="trust-badge-glow"></div>
-                        <span class="trust-badge-text">OUR COMMITMENT</span>
+            <div class="testimonials-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-quote-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path d="M10 20C10 14 13 10 18 10V13C15 13 13 15 13 18H18V28H8V18H10ZM28 20C28 14 31 10 36 10V13C33 13 31 15 31 18H36V28H26V18H28Z" fill="#0284C7" opacity="0.2"/>
+                        </svg>
                     </div>
-                    <h2 class="trust-title">
-                        Why Clients <span class="trust-title-highlight">Trust Us</span>
-                    </h2>
-                </div>
-
-                <!-- Opening Statement -->
-                <div class="trust-opening" data-aos="fade-up" data-aos-delay="100">
-                    <div class="trust-statement-card">
-                        <div class="statement-glow-effect"></div>
-                        <p class="trust-statement-main">
-                            Because we've lived through the complexity and refined the path forward.
-                        </p>
-                        <p class="trust-statement-secondary">
-                            Because our decade of experience means we know where implementation goes wrong—and how to make it right.
-                        </p>
-                        <p class="trust-statement-tertiary">
-                            And because transformation is never accidental; it's engineered through clarity, discipline, and design.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- What We Give You -->
-                <div class="trust-benefits">
-                    <div class="trust-benefits-header" data-aos="fade-up" data-aos-delay="200">
-                        <h3 class="trust-benefits-title">What SBI Gives You</h3>
-                    </div>
-
-                    <div class="trust-benefits-grid">
-                        <!-- Benefit 1 -->
-                        <div class="trust-benefit-item" data-aos="zoom-in" data-aos-delay="250">
-                            <div class="benefit-icon-circle">
-                                <div class="benefit-icon-pulse"></div>
-                                <svg class="benefit-icon" viewBox="0 0 24 24" fill="none">
-                                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </div>
-                            <span class="benefit-text">a seasoned transformation partner</span>
-                            <div class="benefit-line"></div>
-                        </div>
-
-                        <!-- Benefit 2 -->
-                        <div class="trust-benefit-item" data-aos="zoom-in" data-aos-delay="300">
-                            <div class="benefit-icon-circle">
-                                <div class="benefit-icon-pulse"></div>
-                                <svg class="benefit-icon" viewBox="0 0 24 24" fill="none">
-                                    <path d="M9 11L12 14L22 4M21 12V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </div>
-                            <span class="benefit-text">a battle-tested methodology</span>
-                            <div class="benefit-line"></div>
-                        </div>
-
-                        <!-- Benefit 3 -->
-                        <div class="trust-benefit-item" data-aos="zoom-in" data-aos-delay="350">
-                            <div class="benefit-icon-circle">
-                                <div class="benefit-icon-pulse"></div>
-                                <svg class="benefit-icon" viewBox="0 0 24 24" fill="none">
-                                    <path d="M17 21V19C17 16.7909 15.2091 15 13 15H5C2.79086 15 1 16.7909 1 19V21M23 21V19C23 17.1362 21.7252 15.5701 20 15.126M16 3.12601C17.7252 3.57004 19 5.13616 19 7C19 8.86384 17.7252 10.43 16 10.874M13 7C13 9.20914 11.2091 11 9 11C6.79086 11 5 9.20914 5 7C5 4.79086 6.79086 3 9 3C11.2091 3 13 4.79086 13 7Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </div>
-                            <span class="benefit-text">a team that solves both business and technical challenges</span>
-                            <div class="benefit-line"></div>
-                        </div>
-
-                        <!-- Benefit 4 -->
-                        <div class="trust-benefit-item" data-aos="zoom-in" data-aos-delay="400">
-                            <div class="benefit-icon-circle">
-                                <div class="benefit-icon-pulse"></div>
-                                <svg class="benefit-icon" viewBox="0 0 24 24" fill="none">
-                                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </div>
-                            <span class="benefit-text">solutions built on real operations</span>
-                            <div class="benefit-line"></div>
-                        </div>
-
-                        <!-- Benefit 5 -->
-                        <div class="trust-benefit-item" data-aos="zoom-in" data-aos-delay="450">
-                            <div class="benefit-icon-circle">
-                                <div class="benefit-icon-pulse"></div>
-                                <svg class="benefit-icon" viewBox="0 0 24 24" fill="none">
-                                    <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </div>
-                            <span class="benefit-text">results that are measurable, sustainable, and scalable</span>
-                            <div class="benefit-line"></div>
+                    <p class="testimonial-text">
+                        "SBI transformed our operations completely. Their deep understanding of both technology and business processes helped us achieve results we never thought possible."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4 class="author-name">John Doe</h4>
+                            <p class="author-company">PT Manufacturing Company</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Closing Statement -->
-                <div class="trust-closing" data-aos="fade-up" data-aos-delay="500">
-                    <div class="trust-closing-card">
-                        <div class="closing-shine-effect"></div>
-                        <div class="closing-content">
-                            <p class="closing-statement-primary">
-                                You aren't buying a system.
-                            </p>
-                            <p class="closing-statement-secondary">
-                                You're gaining a partner who understands where you want to go—and knows how to get you there faster.
-                            </p>
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-quote-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path d="M10 20C10 14 13 10 18 10V13C15 13 13 15 13 18H18V28H8V18H10ZM28 20C28 14 31 10 36 10V13C33 13 31 15 31 18H36V28H26V18H28Z" fill="#0284C7" opacity="0.2"/>
+                        </svg>
+                    </div>
+                    <p class="testimonial-text">
+                        "Working with SBI was a game-changer. They didn't just implement systems—they helped us rethink how we work. The results speak for themselves."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4 class="author-name">Jane Smith</h4>
+                            <p class="author-company">Logistics Indonesia</p>
                         </div>
-                        <div class="closing-corner-accent top-left"></div>
-                        <div class="closing-corner-accent top-right"></div>
-                        <div class="closing-corner-accent bottom-left"></div>
-                        <div class="closing-corner-accent bottom-right"></div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Floating Decorative Elements -->
-            <div class="trust-floating-elements">
-                <div class="trust-float-circle circle-1"></div>
-                <div class="trust-float-circle circle-2"></div>
-                <div class="trust-float-circle circle-3"></div>
-                <div class="trust-float-dot dot-1"></div>
-                <div class="trust-float-dot dot-2"></div>
-                <div class="trust-float-dot dot-3"></div>
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-quote-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path d="M10 20C10 14 13 10 18 10V13C15 13 13 15 13 18H18V28H8V18H10ZM28 20C28 14 31 10 36 10V13C33 13 31 15 31 18H36V28H26V18H28Z" fill="#0284C7" opacity="0.2"/>
+                        </svg>
+                    </div>
+                    <p class="testimonial-text">
+                        "The SBI team's expertise in digital transformation is unmatched. They guided us every step of the way and delivered exceptional results that exceeded our expectations."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4 class="author-name">Robert Chen</h4>
+                            <p class="author-company">Energy Solutions Asia</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

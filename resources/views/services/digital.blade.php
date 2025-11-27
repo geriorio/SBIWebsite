@@ -275,14 +275,16 @@
                             <p style="font-weight: 700; color: #334155; margin-bottom: 1rem;">Asset Management:</p>
                             <div class="platforms-grid">
                                 <div class="platform-item">
-                                    <div class="platform-logo" style="background: #f1f5f9; border-radius: 12px; display: flex; align-items: center; justify-content: center; padding: 1rem;">
-                                        <span style="font-weight: 700; color: #0EA5E9;">Anova</span>
+                                    <div class="platform-logo" style="background: #ffffff; border-radius: 12px; display: flex; align-items: center; justify-content: center; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); min-height: 100px;">
+                                        <img src="{{ asset('images/anova.jpg') }}" alt="Anova" style="max-width: 120px; max-height: 60px; width: auto; height: auto; object-fit: contain;">
                                     </div>
+                                    <p style="text-align: center; margin-top: 0.75rem; font-weight: 600; color: #475569;">Anova</p>
                                 </div>
                                 <div class="platform-item">
-                                    <div class="platform-logo" style="background: #f1f5f9; border-radius: 12px; display: flex; align-items: center; justify-content: center; padding: 1rem;">
-                                        <span style="font-weight: 700; color: #0EA5E9;">Track About</span>
+                                    <div class="platform-logo" style="background: #ffffff; border-radius: 12px; display: flex; align-items: center; justify-content: center; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); min-height: 100px;">
+                                        <img src="{{ asset('images/trackabout.png') }}" alt="Track About" style="max-width: 120px; max-height: 60px; width: auto; height: auto; object-fit: contain;">
                                     </div>
+                                    <p style="text-align: center; margin-top: 0.75rem; font-weight: 600; color: #475569;">Track About</p>
                                 </div>
                             </div>
                         </div>
@@ -291,9 +293,10 @@
                             <p style="font-weight: 700; color: #334155; margin-bottom: 1rem;">Supply Chain & Fleet:</p>
                             <div class="platforms-grid">
                                 <div class="platform-item">
-                                    <div class="platform-logo" style="background: #f1f5f9; border-radius: 12px; display: flex; align-items: center; justify-content: center; padding: 1rem;">
-                                        <span style="font-weight: 700; color: #0EA5E9;">McEasy</span>
+                                    <div class="platform-logo" style="background: #ffffff; border-radius: 12px; display: flex; align-items: center; justify-content: center; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); min-height: 100px;">
+                                        <img src="{{ asset('images/mceasy.png') }}" alt="McEasy" style="max-width: 120px; max-height: 60px; width: auto; height: auto; object-fit: contain;">
                                     </div>
+                                    <p style="text-align: center; margin-top: 0.75rem; font-weight: 600; color: #475569;">McEasy</p>
                                 </div>
                             </div>
                         </div>
@@ -302,24 +305,28 @@
                             <p style="font-weight: 700; color: #334155; margin-bottom: 1rem;">HR & Workforce Systems:</p>
                             <div class="platforms-grid">
                                 <div class="platform-item">
-                                    <div class="platform-logo" style="background: #f1f5f9; border-radius: 12px; display: flex; align-items: center; justify-content: center; padding: 1rem;">
-                                        <span style="font-weight: 700; color: #0EA5E9;">Sunfish</span>
+                                    <div class="platform-logo" style="background: #ffffff; border-radius: 12px; display: flex; align-items: center; justify-content: center; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); min-height: 100px;">
+                                        <img src="{{ asset('images/sunfish.webp') }}" alt="Sunfish" style="max-width: 120px; max-height: 60px; width: auto; height: auto; object-fit: contain;">
                                     </div>
+                                    <p style="text-align: center; margin-top: 0.75rem; font-weight: 600; color: #475569;">Sunfish</p>
                                 </div>
                                 <div class="platform-item">
-                                    <div class="platform-logo" style="background: #f1f5f9; border-radius: 12px; display: flex; align-items: center; justify-content: center; padding: 1rem;">
-                                        <span style="font-weight: 700; color: #0EA5E9;">Gajiku</span>
+                                    <div class="platform-logo" style="background: #ffffff; border-radius: 12px; display: flex; align-items: center; justify-content: center; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); min-height: 100px;">
+                                        <img src="{{ asset('images/gajiku.jpg') }}" alt="Gajiku" style="max-width: 120px; max-height: 60px; width: auto; height: auto; object-fit: contain;">
                                     </div>
+                                    <p style="text-align: center; margin-top: 0.75rem; font-weight: 600; color: #475569;">Gajiku</p>
                                 </div>
                                 <div class="platform-item">
-                                    <div class="platform-logo" style="background: #f1f5f9; border-radius: 12px; display: flex; align-items: center; justify-content: center; padding: 1rem;">
-                                        <span style="font-weight: 700; color: #0EA5E9;">GreatDay HR</span>
+                                    <div class="platform-logo" style="background: #ffffff; border-radius: 12px; display: flex; align-items: center; justify-content: center; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); min-height: 100px;">
+                                        <img src="{{ asset('images/greatday.png') }}" alt="GreatDay HR" style="max-width: 120px; max-height: 60px; width: auto; height: auto; object-fit: contain;">
                                     </div>
+                                    <p style="text-align: center; margin-top: 0.75rem; font-weight: 600; color: #475569;">GreatDay HR</p>
                                 </div>
                                 <div class="platform-item">
-                                    <div class="platform-logo" style="background: #f1f5f9; border-radius: 12px; display: flex; align-items: center; justify-content: center; padding: 1rem;">
-                                        <span style="font-weight: 700; color: #0EA5E9;">SMT Edu</span>
+                                    <div class="platform-logo" style="background: #ffffff; border-radius: 12px; display: flex; align-items: center; justify-content: center; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); min-height: 100px;">
+                                        <img src="{{ asset('images/smtedu.jpg') }}" alt="SMT Edu" style="max-width: 120px; max-height: 60px; width: auto; height: auto; object-fit: contain;">
                                     </div>
+                                    <p style="text-align: center; margin-top: 0.75rem; font-weight: 600; color: #475569;">SMT Edu</p>
                                 </div>
                             </div>
                         </div>
@@ -328,9 +335,10 @@
                             <p style="font-weight: 700; color: #334155; margin-bottom: 1rem;">Call Center & Telephony:</p>
                             <div class="platforms-grid">
                                 <div class="platform-item">
-                                    <div class="platform-logo" style="background: #f1f5f9; border-radius: 12px; display: flex; align-items: center; justify-content: center; padding: 1rem;">
-                                        <span style="font-weight: 700; color: #0EA5E9;">Yeastar</span>
+                                    <div class="platform-logo" style="background: #ffffff; border-radius: 12px; display: flex; align-items: center; justify-content: center; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); min-height: 100px;">
+                                        <img src="{{ asset('images/yeastar.png') }}" alt="Yeastar" style="max-width: 120px; max-height: 60px; width: auto; height: auto; object-fit: contain;">
                                     </div>
+                                    <p style="text-align: center; margin-top: 0.75rem; font-weight: 600; color: #475569;">Yeastar</p>
                                 </div>
                             </div>
                         </div>
@@ -339,9 +347,10 @@
                             <p style="font-weight: 700; color: #334155; margin-bottom: 1rem;">Sales Contracting:</p>
                             <div class="platforms-grid">
                                 <div class="platform-item">
-                                    <div class="platform-logo" style="background: #f1f5f9; border-radius: 12px; display: flex; align-items: center; justify-content: center; padding: 1rem;">
-                                        <span style="font-weight: 700; color: #0EA5E9;">Iceritis</span>
+                                    <div class="platform-logo" style="background: #ffffff; border-radius: 12px; display: flex; align-items: center; justify-content: center; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); min-height: 100px;">
+                                        <img src="{{ asset('images/icertis.jpg') }}" alt="Icertis" style="max-width: 120px; max-height: 60px; width: auto; height: auto; object-fit: contain;">
                                     </div>
+                                    <p style="text-align: center; margin-top: 0.75rem; font-weight: 600; color: #475569;">Icertis</p>
                                 </div>
                             </div>
                         </div>

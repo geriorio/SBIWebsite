@@ -25,7 +25,7 @@
             <li><a href="/services" class="nav-link {{ Request::is('services') ? 'active' : '' }}">Services</a></li>
             <li><a href="/insights" class="nav-link {{ Request::is('insights') ? 'active' : '' }}">Insights</a></li>
             <li><a href="/career" class="nav-link {{ Request::is('career') ? 'active' : '' }}">Career</a></li>
-            <li><a href="/contact" class="nav-link {{ Request::is('contact') ? 'active' : '' }}">Contact</a></li>
+            {{-- <li><a href="/contact" class="nav-link {{ Request::is('contact') ? 'active' : '' }}">Contact</a></li> --}}
         </ul>
 
         <button class="mobile-toggle" id="mobileToggle">
