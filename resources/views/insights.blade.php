@@ -10,7 +10,7 @@
             <div class="video-overlay"></div>
         </div>
         
-        <div class="insights-hero-content" data-aos="fade-up">
+        <div class="insights-hero-content">
             <div class="hero-badge">
                 <span class="badge-dot"></span>
                 LATEST UPDATES
@@ -29,31 +29,52 @@
     <!-- Search & Articles Section -->
     <section class="insights-articles-section">
         <div class="insights-section-container">
-            <!-- Search Bar -->
-            <div class="insights-search-wrapper" data-aos="fade-up">
-                <div class="insights-search-box">
-                    <svg class="insights-search-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
-                        <path d="M16 16L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
-                    <input 
-                        type="text" 
-                        class="insights-search-input" 
-                        placeholder="Search articles by title or content..."
-                        id="insightsArticleSearch"
-                    >
-                    <button class="insights-search-clear" id="insightsClearSearch" style="display: none;">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path d="M5 5L15 15M15 5L5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <!-- Search & Filter Bar -->
+            <div class="insights-search-filter-wrapper">
+                <div class="insights-controls-row">
+                    <!-- Search Box -->
+                    <div class="insights-search-box">
+                        <svg class="insights-search-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+                            <path d="M16 16L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                         </svg>
-                    </button>
+                        <input 
+                            type="text" 
+                            class="insights-search-input" 
+                            placeholder="Search articles by title or content..."
+                            id="insightsArticleSearch"
+                        >
+                        <button class="insights-search-clear" id="insightsClearSearch" style="display: none;">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M5 5L15 15M15 5L5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Filter Dropdown -->
+                    <div class="insights-dropdown">
+                        <button class="insights-dropdown-btn" id="filterDropdownBtn" type="button">
+                            <span id="currentFilter">All Articles</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <div class="insights-dropdown-menu" id="filterDropdownMenu">
+                            <button type="button" class="insights-dropdown-option active" data-filter="all">All Articles</button>
+                            <button type="button" class="insights-dropdown-option" data-filter="digital">ERP & Digital Systems</button>
+                            <button type="button" class="insights-dropdown-option" data-filter="integration">System Integration</button>
+                            <button type="button" class="insights-dropdown-option" data-filter="operational">Operational Efficiency</button>
+                            <button type="button" class="insights-dropdown-option" data-filter="data">Data & Analytics</button>
+                            <button type="button" class="insights-dropdown-option" data-filter="capability">Capability Building</button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <!-- Articles Grid -->
             <div class="insights-articles-grid" id="insightsArticlesGrid">
                 <!-- Article Card 1 -->
-                <article class="insights-article-card" data-aos="fade-up" data-aos-delay="100">
+                <article class="insights-article-card" data-tag="digital">
                     <div class="insights-article-thumbnail">
                         <img src="{{ asset('images/insights/article1.jpg') }}" alt="ERP Digital Systems">
                         <div class="insights-thumbnail-overlay"></div>
@@ -74,7 +95,7 @@
                 </article>
 
                 <!-- Article Card 2 -->
-                <article class="insights-article-card" data-aos="fade-up" data-aos-delay="200">
+                <article class="insights-article-card" data-tag="integration">
                     <div class="insights-article-thumbnail">
                         <img src="{{ asset('images/insights/article2.jpg') }}" alt="System Integration">
                         <div class="insights-thumbnail-overlay"></div>
@@ -95,7 +116,7 @@
                 </article>
 
                 <!-- Article Card 3 -->
-                <article class="insights-article-card" data-aos="fade-up" data-aos-delay="300">
+                <article class="insights-article-card" data-tag="operational">
                     <div class="insights-article-thumbnail">
                         <img src="{{ asset('images/insights/article3.jpg') }}" alt="Operational Efficiency">
                         <div class="insights-thumbnail-overlay"></div>
@@ -116,7 +137,7 @@
                 </article>
 
                 <!-- Article Card 4 -->
-                <article class="insights-article-card" data-aos="fade-up" data-aos-delay="100">
+                <article class="insights-article-card" data-tag="data">
                     <div class="insights-article-thumbnail">
                         <img src="{{ asset('images/insights/article4.jpg') }}" alt="Data Analytics Dashboards">
                         <div class="insights-thumbnail-overlay"></div>
@@ -137,7 +158,7 @@
                 </article>
 
                 <!-- Article Card 5 -->
-                <article class="insights-article-card" data-aos="fade-up" data-aos-delay="200">
+                <article class="insights-article-card" data-tag="capability">
                     <div class="insights-article-thumbnail">
                         <img src="{{ asset('images/insights/article5.jpg') }}" alt="Digital Learning">
                         <div class="insights-thumbnail-overlay"></div>
@@ -178,7 +199,7 @@
                 <div class="insights-cta-gradient-orb orb-2"></div>
             </div>
             
-            <div class="insights-cta-content" data-aos="fade-up">
+            <div class="insights-cta-content">
                 <h2 class="insights-cta-heading">
                     Ready to bring your operations into <span class="text-gradient">the future?</span>
                 </h2>
@@ -198,13 +219,13 @@
     <!-- Featured Insights Section (OLD - KEPT FOR REFERENCE) -->
     <section class="featured-insights-section" style="display:none;">
         <div class="section-container">
-            <div class="section-header" data-aos="fade-up">
+            <div class="section-header">
                 <span class="section-tag">Featured</span>
                 <h2 class="section-title">Spotlight <span class="text-gradient">Insights</span></h2>
             </div>
 
             <!-- Featured Article 1 -->
-            <article class="featured-article" data-aos="fade-up">
+            <article class="featured-article">
                 <div class="featured-grid">
                     <div class="featured-image-wrapper">
                         <div class="featured-image">
@@ -241,7 +262,7 @@
             </article>
 
             <!-- Featured Article 2 -->
-            <article class="featured-article reverse" data-aos="fade-up">
+            <article class="featured-article reverse">
                 <div class="featured-grid">
                     <div class="featured-image-wrapper">
                         <div class="featured-image">
@@ -288,5 +309,8 @@
             </linearGradient>
         </defs>
     </svg>
+
+    <!-- Contact Form Modal -->
+    @include('components.service-contact-modal')
 
 @endsection

@@ -240,15 +240,66 @@
                         </div>
                     </div>
                     
-                    <!-- Full Width Image with Overlay Text -->
+                    <!-- Full Width Image Slider -->
                     <div class="milestone-image-creative" data-aos="fade-up" data-aos-delay="750">
-                        <img src="{{ asset('images/sbigroup2.jpg') }}" alt="SBI Transformation Journey" class="journey-photo-creative">
-                        <div class="image-overlay-gradient"></div>
-                        <div class="image-caption">
-                            <svg class="caption-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                            </svg>
-                            <p>SBI's 10th Anniversary</p>
+                        <div class="about-slider-wrapper">
+                            <button class="about-slider-btn about-slider-prev">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M15 18l-6-6 6-6"/>
+                                </svg>
+                            </button>
+                            
+                            <div class="about-slider">
+                                <div class="about-slider-track">
+                                    <div class="about-slide">
+                                        <img src="{{ asset('images/sbigroup2.jpg') }}" alt="SBI Team" class="journey-photo-creative">
+                                        <div class="image-overlay-gradient"></div>
+                                        <div class="image-caption">
+                                            <svg class="caption-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                                            </svg>
+                                            <p>SBI's 10th Anniversary</p>
+                                        </div>
+                                    </div>
+                                    <div class="about-slide">
+                                        <img src="{{ asset('images/sbigroup3.jpg') }}" alt="SBI Team" class="journey-photo-creative">
+                                        <div class="image-overlay-gradient"></div>
+                                        <div class="image-caption">
+                                            <svg class="caption-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                                            </svg>
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                    <div class="about-slide">
+                                        <img src="{{ asset('images/sbigroup4.jpg') }}" alt="SBI Team" class="journey-photo-creative">
+                                        <div class="image-overlay-gradient"></div>
+                                        <div class="image-caption">
+                                            <svg class="caption-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                                            </svg>
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                    <div class="about-slide">
+                                        <img src="{{ asset('images/sbigroup5.jpg') }}" alt="SBI Team" class="journey-photo-creative">
+                                        <div class="image-overlay-gradient"></div>
+                                        <div class="image-caption">
+                                            <svg class="caption-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                                            </svg>
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="about-slider-dots"></div>
+                            </div>
+                            
+                            <button class="about-slider-btn about-slider-next">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 18l6-6-6-6"/>
+                                </svg>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -497,12 +548,12 @@
                         </svg>
                     </div>
                     <p class="testimonial-text">
-                        "SBI transformed our operations completely. Their deep understanding of both technology and business processes helped us achieve results we never thought possible."
+                    “SBI helped us automate asset tracking and integrate our process with real-time updates. Request management became simpler, assets became easier to locate, and discrepancies significantly decreased. Today, we have clearer visibility and far fewer lost assets.”                    
                     </p>
                     <div class="testimonial-author">
                         <div class="author-info">
-                            <h4 class="author-name">John Doe</h4>
-                            <p class="author-company">PT Manufacturing Company</p>
+                            <h4 class="author-name">Irvan W.</h4>
+                            <p class="author-company">Senior Manager Asset Management - Samator Gas Industri</p>
                         </div>
                     </div>
                 </div>
@@ -515,12 +566,11 @@
                         </svg>
                     </div>
                     <p class="testimonial-text">
-                        "Working with SBI was a game-changer. They didn't just implement systems—they helped us rethink how we work. The results speak for themselves."
-                    </p>
+                    “Before SBI came in, our approval process was long and inefficient. After the new system went live, everything changed. We no longer deal with multi-layer approvals, and transactions flow without delays or data loss. The accounting team now works faster, cleaner, and with full confidence in the system.”                    </p>
                     <div class="testimonial-author">
                         <div class="author-info">
-                            <h4 class="author-name">Jane Smith</h4>
-                            <p class="author-company">Logistics Indonesia</p>
+                            <h4 class="author-name">Jessica</h4>
+                            <p class="author-company">Manager Accounting - Samator Group</p>
                         </div>
                     </div>
                 </div>
@@ -533,12 +583,11 @@
                         </svg>
                     </div>
                     <p class="testimonial-text">
-                        "The SBI team's expertise in digital transformation is unmatched. They guided us every step of the way and delivered exceptional results that exceeded our expectations."
-                    </p>
+                    “Managing an ERP transformation is never easy, especially during cut-off. But SBI supported us end-to-end. They tackled every challenge proactively and stood by us through the most stressful days. What felt impossible became manageable. We couldn’t have completed this transformation without their dedication.”                    </p>
                     <div class="testimonial-author">
                         <div class="author-info">
-                            <h4 class="author-name">Robert Chen</h4>
-                            <p class="author-company">Energy Solutions Asia</p>
+                            <h4 class="author-name">Liany S.</h4>
+                            <p class="author-company">Head of Compliance - Samator Group</p>
                         </div>
                     </div>
                 </div>
@@ -1002,6 +1051,60 @@ document.addEventListener('DOMContentLoaded', function() {
             btnText.textContent = originalText;
         }
     });
+});
+
+// About Page Slider
+document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.querySelector('.about-slider');
+    if (!slider) return;
+    
+    const track = slider.querySelector('.about-slider-track');
+    const slides = slider.querySelectorAll('.about-slide');
+    const prevBtn = document.querySelector('.about-slider-prev');
+    const nextBtn = document.querySelector('.about-slider-next');
+    const dotsContainer = slider.querySelector('.about-slider-dots');
+    
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+    
+    // Create dots
+    for (let i = 0; i < totalSlides; i++) {
+        const dot = document.createElement('div');
+        dot.className = 'about-slider-dot';
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(i));
+        dotsContainer.appendChild(dot);
+    }
+    
+    const dots = dotsContainer.querySelectorAll('.about-slider-dot');
+    
+    function updateSlider() {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+        });
+    }
+    
+    function goToSlide(index) {
+        currentIndex = index;
+        updateSlider();
+    }
+    
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateSlider();
+    }
+    
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        updateSlider();
+    }
+    
+    prevBtn.addEventListener('click', prevSlide);
+    nextBtn.addEventListener('click', nextSlide);
+    
+    // Auto-play (optional - uncomment to enable)
+    // setInterval(nextSlide, 5000);
 });
 </script>
 @endpush

@@ -220,17 +220,16 @@
                         </svg>
                     </div>
                     <p class="career-testimonial-text">
-                        SBI exposed me to many new things and continuously pushed me to grow. I learned to manage my time effectively, handle multiple projects at once, and constantly improve my skills. My experience at SBI has been invaluable to my professional development.
-                    </p>
+                    SBI has allowed me to grow far beyond what I expected. I learned how to execute complex projects, communicate with industry experts, and navigate real business challenges with confidence.                   </p>
                     <div class="career-testimonial-author">
                         <div class="career-author-avatar">
-                            <img src="{{ asset('images/team/imelda.jpg') }}" alt="Fiona Gabriela">
+                            <img src="{{ asset('images/team/celine.png') }}" alt="Celine Purnomo">
                             <div class="career-avatar-ring"></div>
                         </div>
                         <div class="career-author-info">
-                            <h4 class="career-author-name">FIONA GABRIELA</h4>
-                            <p class="career-author-role">Business Intelligence Analyst</p>
-                            <p class="career-author-tenure">Since 2019</p>
+                            <h4 class="career-author-name">Celine Purnomo</h4>
+                            <p class="career-author-role">Business Intelligence Analyst  Business Support</p>
+                            <p class="career-author-tenure">Since 2025</p>
                         </div>
                     </div>
                 </div>
@@ -244,17 +243,16 @@
                         </svg>
                     </div>
                     <p class="career-testimonial-text">
-                        SBI is a place filled with brilliant and creative people that help me in my quest for personal development. Every day brings new challenges.
-                    </p>
+                    Working at SBI has given me the space to explore, experiment, and continuously improve myself. I’m grateful for the opportunities, challenges, and support that have shaped me into someone more capable and confident.                    </p>
                     <div class="career-testimonial-author">
                         <div class="career-author-avatar">
-                            <img src="{{ asset('images/team/rachmat.webp') }}" alt="Prilya Angel">
+                            <img src="{{ asset('images/team/gerry.png') }}" alt="Gerry Tantoso">
                             <div class="career-avatar-ring"></div>
                         </div>
                         <div class="career-author-info">
-                            <h4 class="career-author-name">PRILYA ANGEL</h4>
-                            <p class="career-author-role">Business Intelligence Analyst</p>
-                            <p class="career-author-tenure">Since 2019</p>
+                            <h4 class="career-author-name">Gerry Tantoso</h4>
+                            <p class="career-author-role">Technical Team  <br>Website Developer</p>
+                            <p class="career-author-tenure">Since 2025</p>
                         </div>
                     </div>
                 </div>
@@ -268,17 +266,17 @@
                         </svg>
                     </div>
                     <p class="career-testimonial-text">
-                        The mission that SBI is trying to fulfill resonates deeply within me as a person and as a consultant; taking my talent into new heights.
+                        Being part of SBI has given me the opportunity to lead projects that truly make an impact. Through every challenge, I’ve gained valuable experience in managing teams, aligning goals, and driving meaningful results.
                     </p>
                     <div class="career-testimonial-author">
                         <div class="career-author-avatar">
-                            <img src="{{ asset('images/team/mario.jpg') }}" alt="Kevin Wijaya">
+                            <img src="{{ asset('images/team/catherine.png') }}" alt="Catherine Harijanto">
                             <div class="career-avatar-ring"></div>
                         </div>
                         <div class="career-author-info">
-                            <h4 class="career-author-name">KEVIN WIJAYA</h4>
-                            <p class="career-author-role">Business Intelligence Analyst</p>
-                            <p class="career-author-tenure">Since 2017</p>
+                            <h4 class="career-author-name">Catherine Harijanto</h4>
+                            <p class="career-author-role">Business Intelligence Analyst  Project Manager</p>
+                            <p class="career-author-tenure">Since 2025</p>
                         </div>
                     </div>
                 </div>
@@ -310,7 +308,7 @@
                 <div class="career-cta-left">
                     <p class="career-cta-subtitle">Ready to grow with us?</p>
                     <p class="career-cta-text">Send your CV, portfolio (if any), or introduction to:</p>
-                    <a href="mailto:hr@samuderabiru.net" class="career-cta-email">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hr@samuderabiru.net&su=Application:%20Career%20at%20SBI&body=Hello%20SBI%20Team,%0D%0A%0D%0AI%20am%20interested%20in%20joining%20your%20team.%0D%0A%0D%0A" target="_blank" class="career-cta-email">
                         hr@samuderabiru.net
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -402,7 +400,7 @@
             </div>
 
             <div class="career-modal-footer">
-                <a href="mailto:hr@samuderabiru.net?subject=Application: Business Analyst Full-time" class="career-modal-apply-btn">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hr@samuderabiru.net&su=Application:%20Business%20Analyst%20Full-time&body=Hello%20SBI%20Team,%0D%0A%0D%0AI%20am%20interested%20in%20applying%20for%20the%20Business%20Analyst%20Full-time%20position.%0D%0A%0D%0A" target="_blank" class="career-modal-apply-btn">
                     Apply Now
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -456,7 +454,7 @@
             </div>
 
             <div class="career-modal-footer">
-                <a href="mailto:hr@samuderabiru.net?subject=Application: Business Analyst Internship" class="career-modal-apply-btn">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hr@samuderabiru.net&su=Application:%20Business%20Analyst%20Internship&body=Hello%20SBI%20Team,%0D%0A%0D%0AI%20am%20interested%20in%20applying%20for%20the%20Business%20Analyst%20Internship%20position.%0D%0A%0D%0A" target="_blank" class="career-modal-apply-btn">
                     Apply Now
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

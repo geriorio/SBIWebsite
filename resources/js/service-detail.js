@@ -97,3 +97,23 @@ window.closeContactModal = function() {
         document.body.style.overflow = '';
     }
 };
+
+// Service Modal function for "Get Started with SBI" buttons
+window.openServiceModal = function() {
+    const modal = document.getElementById('serviceContactModal');
+    if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        console.log('📞 Service Contact Modal opened');
+    } else {
+        console.error('Service contact modal not found');
+    }
+};
+
+window.closeServiceModal = function() {
+    const modal = document.getElementById('serviceContactModal');
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+};

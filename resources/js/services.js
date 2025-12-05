@@ -524,11 +524,13 @@ function openServiceModal(serviceType) {
             
             offeringsHTML += `
                 <div class="modal-offering-card">
-                    <h3 class="modal-offering-title">${offering.title}</h3>
-                    ${descriptionSection}
-                    <ul class="modal-offering-features">
-                        ${offering.features.map(feature => `<li>${feature}</li>`).join('')}
-                    </ul>
+                    <div class="modal-offering-card-top">
+                        <h3 class="modal-offering-title">${offering.title}</h3>
+                        ${descriptionSection}
+                        <ul class="modal-offering-features">
+                            ${offering.features.map(feature => `<li>${feature}</li>`).join('')}
+                        </ul>
+                    </div>
                     ${bestForSection}
                 </div>
             `;
@@ -555,6 +557,33 @@ function openServiceModal(serviceType) {
     }
     
     modalContent.innerHTML = offeringsHTML;
+    
+    // Equalize Best For section heights
+    setTimeout(() => {
+        const bestForSections = modalContent.querySelectorAll('.modal-offering-bestfor');
+        if (bestForSections.length > 0) {
+            // Reset heights first
+            bestForSections.forEach(section => {
+                section.style.minHeight = 'auto';
+            });
+            
+            // Find the tallest Best For section
+            let maxHeight = 0;
+            bestForSections.forEach(section => {
+                const height = section.offsetHeight;
+                if (height > maxHeight) {
+                    maxHeight = height;
+                }
+            });
+            
+            // Set all Best For sections to the same height
+            bestForSections.forEach(section => {
+                section.style.minHeight = maxHeight + 'px';
+            });
+            
+            console.log('✅ Best For sections aligned at height:', maxHeight);
+        }
+    }, 50);
     
     // Show modal with animation
     modal.classList.add('active');

@@ -649,7 +649,7 @@
                             </svg>
                         </div>
                         <div class="result-content">
-                            <h3 class="result-title">Reduced operational cycle time up to 45%</h3>
+                            <h3 class="result-title">Reduced operational cycle time</h3>
                         </div>
                         <div class="result-badge">✓</div>
                     </div>
@@ -730,7 +730,7 @@
         </div>
     </section>
 
-    <!-- Clients Section -->
+    {{-- <!-- Clients Section -->
     <section class="clients-section">
         <div class="clients-background">
             <div class="shine-overlay"></div>
@@ -746,18 +746,18 @@
             <div class="clients-logos" data-aos="fade-up" data-aos-delay="100">
                 <div class="logo-track">
                     <!-- First Set -->
-                    <div class="logo-item">
+                    <!-- <div class="logo-item">
                         <div class="logo-card">
                             <img src="/images/partners/sgi.png" alt="Samator Gas Industri" class="company-logo">
                         </div>
                         <div class="company-name">Samator Gas Industri</div>
-                    </div>
-                    <div class="logo-item">
+                    </div> -->
+                    <!-- <div class="logo-item">
                         <div class="logo-card">
                             <img src="/images/partners/sig.png" alt="Samator Indo Gas" class="company-logo">
                         </div>
                         <div class="company-name">Samator Indo Gas</div>
-                    </div>
+                    </div> -->
                     <div class="logo-item">
                         <div class="logo-card">
                             <img src="/images/partners/ame.png" alt="Aneka Mega Energi" class="company-logo">
@@ -766,7 +766,7 @@
                     </div>
                     <div class="logo-item">
                         <div class="logo-card">
-                            <img src="/images/partners/sbm.png" alt="Samabayu Mandala" class="company-logo">
+                            <img src="/images/partners/sbm.jpeg" alt="Samabayu Mandala" class="company-logo">
                         </div>
                         <div class="company-name">Samabayu Mandala</div>
                     </div>
@@ -778,18 +778,18 @@
                     </div>
                     
                     <!-- Duplicate Set for Seamless Loop -->
-                    <div class="logo-item">
+                    <!-- <div class="logo-item">
                         <div class="logo-card">
                             <img src="/images/partners/sgi.png" alt="Samator Gas Industri" class="company-logo">
                         </div>
                         <div class="company-name">Samator Gas Industri</div>
-                    </div>
-                    <div class="logo-item">
+                    </div> -->
+                    <!-- <div class="logo-item">
                         <div class="logo-card">
                             <img src="/images/partners/sig.png" alt="Samator Indo Gas" class="company-logo">
                         </div>
                         <div class="company-name">Samator Indo Gas</div>
-                    </div>
+                    </div> -->
                     <div class="logo-item">
                         <div class="logo-card">
                             <img src="/images/partners/ame.png" alt="Aneka Mega Energi" class="company-logo">
@@ -798,7 +798,7 @@
                     </div>
                     <div class="logo-item">
                         <div class="logo-card">
-                            <img src="/images/partners/sbm.png" alt="Samabayu Mandala" class="company-logo">
+                            <img src="/images/partners/sbm.jpeg" alt="Samabayu Mandala" class="company-logo">
                         </div>
                         <div class="company-name">Samabayu Mandala</div>
                     </div>
@@ -812,7 +812,7 @@
             </div>
 
         </div>
-    </section>
+    </section> --}}
 
     <!-- CTA Section -->
     <section class="cta-section">

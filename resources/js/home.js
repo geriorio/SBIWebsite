@@ -48,16 +48,81 @@ function initVideoBackground() {
 function initNavbar() {
     const navbar = document.getElementById('mainNav');
     const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.querySelector('.nav-links');
+    let scrollPosition = 0;
     
     if (!navbar) return;
     
+    // Mobile menu toggle
+    if (mobileToggle && navLinks) {
+        mobileToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isActive = mobileToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            
+            if (isActive) {
+                // Save scroll position and lock body
+                scrollPosition = window.pageYOffset;
+                document.body.classList.add('menu-open');
+                document.body.style.top = `-${scrollPosition}px`;
+            } else {
+                // Restore scroll position
+                document.body.classList.remove('menu-open');
+                document.body.style.top = '';
+                window.scrollTo(0, scrollPosition);
+            }
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+                document.body.classList.remove('menu-open');
+                document.body.style.top = '';
+                window.scrollTo(0, scrollPosition);
+            });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (navLinks.classList.contains('active') && 
+                !navLinks.contains(e.target) && 
+                !mobileToggle.contains(e.target)) {
+                mobileToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+                document.body.classList.remove('menu-open');
+                document.body.style.top = '';
+                window.scrollTo(0, scrollPosition);
+            }
+        });
+        
+        // Close menu on window resize to desktop
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768 && navLinks.classList.contains('active')) {
+                mobileToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+                document.body.classList.remove('menu-open');
+                document.body.style.top = '';
+            }
+        });
+    }
+    
+    // Navbar scroll effect with throttle
+    let ticking = false;
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 100) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                if (window.scrollY > 100) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+                ticking = false;
+            });
+            ticking = true;
         }
-    });
+    }, { passive: true });
     
     // Smooth scroll for nav links (only for anchors, not page navigation)
     document.querySelectorAll('.nav-link').forEach(link => {

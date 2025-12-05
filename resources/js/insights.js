@@ -109,31 +109,38 @@ document.addEventListener('DOMContentLoaded', function() {
     const articlesGrid = document.getElementById('insightsArticlesGrid');
     const noResults = document.getElementById('insightsNoResults');
     
+    // Dropdown Filter Functionality
+    const dropdownBtn = document.getElementById('filterDropdownBtn');
+    const dropdownMenu = document.getElementById('filterDropdownMenu');
+    const currentFilterLabel = document.getElementById('currentFilter');
+    const dropdownOptions = document.querySelectorAll('.insights-dropdown-option');
+    let activeTag = 'all';
+    
     if (searchInput && articlesGrid) {
         // Get all articles
         const articles = Array.from(articlesGrid.querySelectorAll('.insights-article-card'));
         
-        searchInput.addEventListener('input', function() {
-            const searchTerm = this.value.toLowerCase().trim();
-            
-            // Show/hide clear button
-            if (clearButton) {
-                clearButton.style.display = searchTerm ? 'block' : 'none';
-            }
-            
+        // Filter function
+        function filterArticles() {
+            const searchTerm = searchInput.value.toLowerCase().trim();
             let visibleCount = 0;
             
-            // Filter articles
             articles.forEach(article => {
                 const title = article.querySelector('.insights-article-title-card')?.textContent.toLowerCase() || '';
                 const summary = article.querySelector('.insights-article-summary')?.textContent.toLowerCase() || '';
                 const category = article.querySelector('.insights-category-tag')?.textContent.toLowerCase() || '';
+                const articleTag = article.getAttribute('data-tag') || '';
                 
-                const matches = title.includes(searchTerm) || 
-                               summary.includes(searchTerm) || 
-                               category.includes(searchTerm);
+                // Check if matches search term
+                const matchesSearch = searchTerm === '' || 
+                                    title.includes(searchTerm) || 
+                                    summary.includes(searchTerm) || 
+                                    category.includes(searchTerm);
                 
-                if (matches || searchTerm === '') {
+                // Check if matches active tag filter
+                const matchesTag = activeTag === 'all' || articleTag === activeTag;
+                
+                if (matchesSearch && matchesTag) {
                     article.style.display = '';
                     article.style.opacity = '1';
                     article.style.transform = 'none';
@@ -143,17 +150,70 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
             
+            // Show/hide clear button
+            if (clearButton) {
+                clearButton.style.display = searchTerm ? 'block' : 'none';
+            }
+            
             // Show/hide no results message
             if (noResults) {
-                noResults.style.display = (visibleCount === 0 && searchTerm !== '') ? 'block' : 'none';
+                noResults.style.display = (visibleCount === 0) ? 'block' : 'none';
             }
-        });
+        }
+        
+        // Dropdown toggle
+        if (dropdownBtn && dropdownMenu) {
+            dropdownBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                this.classList.toggle('open');
+                dropdownMenu.classList.toggle('open');
+            });
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!dropdownBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                    dropdownBtn.classList.remove('open');
+                    dropdownMenu.classList.remove('open');
+                }
+            });
+            
+            // Dropdown option clicks
+            dropdownOptions.forEach(option => {
+                option.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    
+                    // Update active state
+                    dropdownOptions.forEach(opt => opt.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Update label
+                    if (currentFilterLabel) {
+                        currentFilterLabel.textContent = this.textContent;
+                    }
+                    
+                    // Update active tag
+                    activeTag = this.getAttribute('data-filter');
+                    
+                    // Filter articles
+                    filterArticles();
+                    
+                    // Close dropdown
+                    dropdownBtn.classList.remove('open');
+                    dropdownMenu.classList.remove('open');
+                    
+                    console.log('✅ Filter:', activeTag);
+                });
+            });
+        }
+        
+        // Search input event
+        searchInput.addEventListener('input', filterArticles);
         
         // Clear search
         if (clearButton) {
             clearButton.addEventListener('click', function() {
                 searchInput.value = '';
-                searchInput.dispatchEvent(new Event('input'));
+                filterArticles();
                 searchInput.focus();
             });
         }
