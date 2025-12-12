@@ -29,7 +29,7 @@
                 </div>
                 
                 <div class="footer-social">
-                    <a href="#" class="social-link">
+                    <a href="https://id.linkedin.com/company/samudera-biru-internasional" target="_blank" rel="noopener noreferrer" class="social-link">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
                             <path d="M18.5 0h-17A1.5 1.5 0 000 1.5v17A1.5 1.5 0 001.5 20h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0018.5 0zM6 17H3V8h3v9zM4.5 6.5a1.5 1.5 0 110-3 1.5 1.5 0 010 3zM17 17h-3v-4.5c0-1.1-.9-2-2-2s-2 .9-2 2V17H7V8h3v1.2c.5-.8 1.6-1.4 2.5-1.4 1.9 0 3.5 1.6 3.5 3.5V17z"/>
                         </svg>

@@ -539,9 +539,12 @@
                 <h2 class="section-title">Why Clients <span class="text-gradient">Trust Us</span></h2>
             </div>
 
-            <div class="testimonials-grid">
-                <!-- Testimonial 1 -->
-                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="testimonials-slider-wrapper">
+                <div class="swiper testimonials-swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Testimonial 1 -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
                     <div class="testimonial-quote-icon">
                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
                             <path d="M10 20C10 14 13 10 18 10V13C15 13 13 15 13 18H18V28H8V18H10ZM28 20C28 14 31 10 36 10V13C33 13 31 15 31 18H36V28H26V18H28Z" fill="#0284C7" opacity="0.2"/>
@@ -553,13 +556,15 @@
                     <div class="testimonial-author">
                         <div class="author-info">
                             <h4 class="author-name">Irvan W.</h4>
-                            <p class="author-company">Senior Manager Asset Management - Samator Gas Industri</p>
+                            <p class="author-company">Senior Manager Asset Management - PT. Samator Gas Industri</p>
                         </div>
                     </div>
-                </div>
+                            </div>
+                        </div>
 
-                <!-- Testimonial 2 -->
-                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                        <!-- Testimonial 2 -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
                     <div class="testimonial-quote-icon">
                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
                             <path d="M10 20C10 14 13 10 18 10V13C15 13 13 15 13 18H18V28H8V18H10ZM28 20C28 14 31 10 36 10V13C33 13 31 15 31 18H36V28H26V18H28Z" fill="#0284C7" opacity="0.2"/>
@@ -569,14 +574,16 @@
                     “Before SBI came in, our approval process was long and inefficient. After the new system went live, everything changed. We no longer deal with multi-layer approvals, and transactions flow without delays or data loss. The accounting team now works faster, cleaner, and with full confidence in the system.”                    </p>
                     <div class="testimonial-author">
                         <div class="author-info">
-                            <h4 class="author-name">Jessica</h4>
-                            <p class="author-company">Manager Accounting - Samator Group</p>
+                            <h4 class="author-name">Ach. Machyuddin</h4>
+                            <p class="author-company">Manager Accounting - PT. Sama Bayu Mandala</p>
                         </div>
                     </div>
-                </div>
+                            </div>
+                        </div>
 
-                <!-- Testimonial 3 -->
-                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                        <!-- Testimonial 3 -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
                     <div class="testimonial-quote-icon">
                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
                             <path d="M10 20C10 14 13 10 18 10V13C15 13 13 15 13 18H18V28H8V18H10ZM28 20C28 14 31 10 36 10V13C33 13 31 15 31 18H36V28H26V18H28Z" fill="#0284C7" opacity="0.2"/>
@@ -590,7 +597,57 @@
                             <p class="author-company">Head of Compliance - Samator Group</p>
                         </div>
                     </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 4 -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-quote-icon">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                        <path d="M10 20C10 14 13 10 18 10V13C15 13 13 15 13 18H18V28H8V18H10ZM28 20C28 14 31 10 36 10V13C33 13 31 15 31 18H36V28H26V18H28Z" fill="#0284C7" opacity="0.2"/>
+                                    </svg>
+                                </div>
+                                <p class="testimonial-text">
+                                    "Our operations involve high-volume transactions and time-critical coordination, so system reliability is non-negotiable. SBI revamped our digital workflows, integrated key platforms, and introduced automation that removed so many manual steps we didn't even realize were slowing us down. Today, our team works with greater precision and far fewer interruptions. SBI's attention to detail and commitment to understanding our business made the transformation seamless."
+                                </p>
+                                <div class="testimonial-author">
+                                    <div class="author-info">
+                                        <h4 class="author-name">Eddy W.</h4>
+                                        <p class="author-company">Associate Director - PT Aneka Mega Energi</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 5 -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-quote-icon">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                        <path d="M10 20C10 14 13 10 18 10V13C15 13 13 15 13 18H18V28H8V18H10ZM28 20C28 14 31 10 36 10V13C33 13 31 15 31 18H36V28H26V18H28Z" fill="#0284C7" opacity="0.2"/>
+                                    </svg>
+                                </div>
+                                <p class="testimonial-text">
+                                    "Implementing automation in finance is always challenging, especially when multiple branches operate with different habits and legacy processes. SBI helped us unify everything into a single, reliable financial ecosystem. Our reporting became faster, data inconsistencies were eliminated, and closing processes that once took days can now be completed in hours."
+                                </p>
+                                <div class="testimonial-author">
+                                    <div class="author-info">
+                                        <h4 class="author-name">Dhaniendra L.</h4>
+                                        <p class="author-company">Chief Finance Officer - PT. Samator Indo Gas</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pagination -->
+                    <div class="swiper-pagination testimonial-pagination"></div>
                 </div>
+                
+                <!-- Navigation outside swiper -->
+                <div class="swiper-button-next testimonial-nav-next"></div>
+                <div class="swiper-button-prev testimonial-nav-prev"></div>
             </div>
         </div>
     </section>
@@ -1106,5 +1163,41 @@ document.addEventListener('DOMContentLoaded', function() {
     // Auto-play (optional - uncomment to enable)
     // setInterval(nextSlide, 5000);
 });
+
+// Initialize Testimonials Swiper
+if (document.querySelector('.testimonials-swiper')) {
+    new Swiper('.testimonials-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 40,
+        loop: true,
+        autoHeight: false,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.testimonial-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.testimonial-nav-next',
+            prevEl: '.testimonial-nav-prev',
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+            },
+            768: {
+                slidesPerView: 1,
+                spaceBetween: 40,
+            },
+            1024: {
+                slidesPerView: 2,
+                spaceBetween: 40,
+            },
+        },
+    });
+}
 </script>
 @endpush

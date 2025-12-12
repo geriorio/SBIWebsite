@@ -19,9 +19,9 @@
 .service-modal-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(10, 14, 39, 0.85);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    background: rgba(10, 14, 39, 0.98);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
 .service-modal-container {
