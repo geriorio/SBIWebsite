@@ -480,36 +480,26 @@ function openServiceModal(serviceType) {
         return;
     }
     
-    const content = serviceContent[serviceType];
+    // Get translations from window object (injected from Blade)
+    const serviceTranslations = window.serviceTranslations || {};
+    const content = serviceTranslations.modal?.[serviceType];
+    
     if (!content) {
         console.error('Service content not found:', serviceType);
         return;
     }
     
     // Set title
-    modalTitle.textContent = content.title;
+    modalTitle.textContent = content.title || '';
+    
+    // Get Best For label
+    const bestForLabel = serviceTranslations.bestFor || 'Best For';
     
     // Build offerings grid HTML
     let offeringsHTML = `<div class="modal-offerings-grid ${serviceType === 'digital' ? 'grid-2-col' : ''}">`;
     
-    content.offerings.forEach(offering => {
-        // Check if this card should only show logos
-        if (offering.showLogos && content.platforms) {
-            offeringsHTML += `
-                <div class="modal-offering-card">
-                    <h3 class="modal-offering-title">${offering.title}</h3>
-                    <div class="modal-offering-logos-only">
-                        <div class="modal-platforms-grid-inline">
-                            ${content.platforms.map(platform => `
-                                <div class="modal-platform-logo-small">
-                                    <img src="/images/${platform.image}" alt="${platform.name}" loading="lazy">
-                                </div>
-                            `).join('')}
-                        </div>
-                    </div>
-                </div>
-            `;
-        } else {
+    if (content.offerings && Array.isArray(content.offerings)) {
+        content.offerings.forEach(offering => {
             // Normal card with optional description, features and optional bestFor
             const descriptionSection = offering.description ? `
                 <p class="modal-offering-description">${offering.description}</p>
@@ -517,41 +507,60 @@ function openServiceModal(serviceType) {
             
             const bestForSection = offering.bestFor ? `
                 <div class="modal-offering-bestfor">
-                    <div class="modal-offering-bestfor-label">Best For</div>
+                    <div class="modal-offering-bestfor-label">${bestForLabel}</div>
                     <div class="modal-offering-bestfor-text">${offering.bestFor}</div>
                 </div>
             ` : '';
             
+            const featuresHTML = offering.features && Array.isArray(offering.features) 
+                ? offering.features.map(feature => `<li>${feature}</li>`).join('') 
+                : '';
+            
             offeringsHTML += `
                 <div class="modal-offering-card">
                     <div class="modal-offering-card-top">
-                        <h3 class="modal-offering-title">${offering.title}</h3>
+                        <h3 class="modal-offering-title">${offering.title || ''}</h3>
                         ${descriptionSection}
                         <ul class="modal-offering-features">
-                            ${offering.features.map(feature => `<li>${feature}</li>`).join('')}
+                            ${featuresHTML}
                         </ul>
                     </div>
                     ${bestForSection}
                 </div>
             `;
-        }
-    });
+        });
+    }
     
     offeringsHTML += '</div>';
     
     // Add platform logos for digital service
     if (serviceType === 'digital' && content.platforms) {
+        const platformsTitle = content.platforms.title || 'Platforms We Integrate & Implement';
+        const platformsMore = content.platforms.more || '...and many more';
+        
+        // Fixed platform list with images
+        const platforms = [
+            { name: 'Anova', image: 'anova.jpg' },
+            { name: 'TrackAbout', image: 'trackabout.png' },
+            { name: 'MCEasy', image: 'mceasy.png' },
+            { name: 'Gajiku', image: 'gajiku.jpg' },
+            { name: 'GreatDay HR', image: 'greatday.png' },
+            { name: 'SMT Education', image: 'smtedu.jpg' },
+            { name: 'Yeastar', image: 'yeastar.png' },
+            { name: 'Icertis', image: 'icertis.jpg' }
+        ];
+        
         offeringsHTML += `
             <div class="modal-platforms-section">
-                <h3 class="modal-platforms-title">Platforms We Integrate & Implement</h3>
+                <h3 class="modal-platforms-title">${platformsTitle}</h3>
                 <div class="modal-platforms-grid">
-                    ${content.platforms.map(platform => `
+                    ${platforms.map(platform => `
                         <div class="modal-platform-logo">
                             <img src="/images/${platform.image}" alt="${platform.name}" loading="lazy">
                         </div>
                     `).join('')}
                 </div>
-                <p class="modal-platforms-more">...and many more</p>
+                <p class="modal-platforms-more">${platformsMore}</p>
             </div>
         `;
     }

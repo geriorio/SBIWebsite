@@ -13,15 +13,15 @@
         <div class="insights-hero-content">
             <div class="hero-badge">
                 <span class="badge-dot"></span>
-                LATEST UPDATES
+                {{ __('insights.hero.badge') }}
             </div>
             <h1 class="hero-heading">
-                <span class="text-gradient typing-text" data-text="Industry Insights"></span>
+                <span class="text-gradient typing-text" data-text="{{ __('insights.hero.title') }}"></span>
                 <br>
-                <span class="typing-text-second" data-text="& Innovation"></span>
+                <span class="typing-text-second" data-text="{{ __('insights.hero.title_second') }}"></span>
             </h1>
             <p class="hero-description" style="opacity: 0;">
-                Stay ahead with our latest perspectives on technology, sustainability, and business transformation
+                {{ __('insights.hero.description') }}
             </p>
         </div>
     </section>
@@ -41,7 +41,7 @@
                         <input 
                             type="text" 
                             class="insights-search-input" 
-                            placeholder="Search articles by title or content..."
+                            placeholder="{{ __('insights.search.placeholder') }}"
                             id="insightsArticleSearch"
                         >
                         <button class="insights-search-clear" id="insightsClearSearch" style="display: none;">
@@ -54,18 +54,18 @@
                     <!-- Filter Dropdown -->
                     <div class="insights-dropdown">
                         <button class="insights-dropdown-btn" id="filterDropdownBtn" type="button">
-                            <span id="currentFilter">All Articles</span>
+                            <span id="currentFilter">{{ __('insights.search.filters.all') }}</span>
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </button>
                         <div class="insights-dropdown-menu" id="filterDropdownMenu">
-                            <button type="button" class="insights-dropdown-option active" data-filter="all">All Articles</button>
-                            <button type="button" class="insights-dropdown-option" data-filter="digital">ERP & Digital Systems</button>
-                            <button type="button" class="insights-dropdown-option" data-filter="integration">System Integration</button>
-                            <button type="button" class="insights-dropdown-option" data-filter="operational">Operational Efficiency</button>
-                            <button type="button" class="insights-dropdown-option" data-filter="data">Data & Analytics</button>
-                            <button type="button" class="insights-dropdown-option" data-filter="capability">Capability Building</button>
+                            <button type="button" class="insights-dropdown-option active" data-filter="all">{{ __('insights.search.filters.all') }}</button>
+                            <button type="button" class="insights-dropdown-option" data-filter="digital">{{ __('insights.search.filters.digital') }}</button>
+                            <button type="button" class="insights-dropdown-option" data-filter="integration">{{ __('insights.search.filters.integration') }}</button>
+                            <button type="button" class="insights-dropdown-option" data-filter="operational">{{ __('insights.search.filters.operational') }}</button>
+                            <button type="button" class="insights-dropdown-option" data-filter="data">{{ __('insights.search.filters.data') }}</button>
+                            <button type="button" class="insights-dropdown-option" data-filter="capability">{{ __('insights.search.filters.capability') }}</button>
                         </div>
                     </div>
                 </div>
@@ -78,15 +78,15 @@
                     <div class="insights-article-thumbnail">
                         <img src="{{ asset('images/insights/article1.jpg') }}" alt="ERP Digital Systems">
                         <div class="insights-thumbnail-overlay"></div>
-                        <div class="insights-category-tag digital">ERP & Digital Systems</div>
+                        <div class="insights-category-tag digital">{{ __('insights.articles.article_1.category') }}</div>
                     </div>
                     <div class="insights-article-body">
-                        <h3 class="insights-article-title-card">ERP & Digital Systems: Building Smarter Workflows That Protect Revenue</h3>
+                        <h3 class="insights-article-title-card">{{ __('insights.articles.article_1.title') }}</h3>
                         <p class="insights-article-summary">
-                            Payments are the lifeblood of every business, yet billing processes are often overlooked. When your ERP isn't optimized, cash flow slows and teams work harder than necessary.
+                            {{ __('insights.articles.article_1.summary') }}
                         </p>
                         <a href="{{ route('insights.detail', ['slug' => 'erp-digital-systems-smarter-workflows']) }}" class="insights-read-more-link">
-                            <span>Read More</span>
+                            <span>{{ __('insights.articles.read_more') }}</span>
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                             </svg>
@@ -99,15 +99,15 @@
                     <div class="insights-article-thumbnail">
                         <img src="{{ asset('images/insights/article2.jpg') }}" alt="System Integration">
                         <div class="insights-thumbnail-overlay"></div>
-                        <div class="insights-category-tag integration">System Integration</div>
+                        <div class="insights-category-tag integration">{{ __('insights.articles.article_2.category') }}</div>
                     </div>
                     <div class="insights-article-body">
-                        <h3 class="insights-article-title-card">System Integration: Connecting Every Part of Your Business Into One Flow</h3>
+                        <h3 class="insights-article-title-card">{{ __('insights.articles.article_2.title') }}</h3>
                         <p class="insights-article-summary">
-                            As companies grow, systems often don't grow with them. Data becomes scattered and processes stay manual. System integration closes that gap.
+                            {{ __('insights.articles.article_2.summary') }}
                         </p>
                         <a href="{{ route('insights.detail', ['slug' => 'system-integration-intelligent-flow']) }}" class="insights-read-more-link">
-                            <span>Read More</span>
+                            <span>{{ __('insights.articles.read_more') }}</span>
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                             </svg>
@@ -120,15 +120,15 @@
                     <div class="insights-article-thumbnail">
                         <img src="{{ asset('images/insights/article3.jpg') }}" alt="Operational Efficiency">
                         <div class="insights-thumbnail-overlay"></div>
-                        <div class="insights-category-tag operational">Operational Efficiency</div>
+                        <div class="insights-category-tag operational">{{ __('insights.articles.article_3.category') }}</div>
                     </div>
                     <div class="insights-article-body">
-                        <h3 class="insights-article-title-card">Driving Operational Efficiency: How Smart Process Redesign Speeds Up Work</h3>
+                        <h3 class="insights-article-title-card">{{ __('insights.articles.article_3.title') }}</h3>
                         <p class="insights-article-summary">
-                            Even small inefficiencies snowball into delays, lost revenue, and burnout. Learn how SBI helps companies streamline processes and reduce costs.
+                            {{ __('insights.articles.article_3.summary') }}
                         </p>
                         <a href="{{ route('insights.detail', ['slug' => 'operational-efficiency-process-redesign']) }}" class="insights-read-more-link">
-                            <span>Read More</span>
+                            <span>{{ __('insights.articles.read_more') }}</span>
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                             </svg>
@@ -141,15 +141,15 @@
                     <div class="insights-article-thumbnail">
                         <img src="{{ asset('images/insights/article4.jpg') }}" alt="Data Analytics Dashboards">
                         <div class="insights-thumbnail-overlay"></div>
-                        <div class="insights-category-tag data">Data & Analytics</div>
+                        <div class="insights-category-tag data">{{ __('insights.articles.article_4.category') }}</div>
                     </div>
                     <div class="insights-article-body">
-                        <h3 class="insights-article-title-card">Empowering Smarter Decisions Through Clear, Actionable Dashboards</h3>
+                        <h3 class="insights-article-title-card">{{ __('insights.articles.article_4.title') }}</h3>
                         <p class="insights-article-summary">
-                            Scattered data and delayed insights slow companies down. Learn how SBI transforms information into real-time dashboards that drive decisions.
+                            {{ __('insights.articles.article_4.summary') }}
                         </p>
                         <a href="{{ route('insights.detail', ['slug' => 'actionable-dashboards-analytics']) }}" class="insights-read-more-link">
-                            <span>Read More</span>
+                            <span>{{ __('insights.articles.read_more') }}</span>
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                             </svg>
@@ -162,15 +162,15 @@
                     <div class="insights-article-thumbnail">
                         <img src="{{ asset('images/insights/article5.jpg') }}" alt="Digital Learning">
                         <div class="insights-thumbnail-overlay"></div>
-                        <div class="insights-category-tag capability">Capability Building</div>
+                        <div class="insights-category-tag capability">{{ __('insights.articles.article_5.category') }}</div>
                     </div>
                     <div class="insights-article-body">
-                        <h3 class="insights-article-title-card">How Scalable Digital Learning Transforms Enterprise Operations</h3>
+                        <h3 class="insights-article-title-card">{{ __('insights.articles.article_5.title') }}</h3>
                         <p class="insights-article-summary">
-                            Traditional training can't keep up with growth. See how SBI built SamatorEdu, a digital learning ecosystem for nationwide capability building.
+                            {{ __('insights.articles.article_5.summary') }}
                         </p>
                         <a href="{{ route('insights.detail', ['slug' => 'samatoredu-digital-learning']) }}" class="insights-read-more-link">
-                            <span>Read More</span>
+                            <span>{{ __('insights.articles.read_more') }}</span>
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                             </svg>
@@ -185,8 +185,8 @@
                     <circle cx="40" cy="40" r="35" stroke="#E2E8F0" stroke-width="2"/>
                     <path d="M40 25V45M40 55V55.5" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
                 </svg>
-                <h3 style="margin-bottom: 0.5rem;">No articles found</h3>
-                <p style="color: #64748B;">Try adjusting your search terms</p>
+                <h3 style="margin-bottom: 0.5rem;">{{ __('insights.articles.no_results') }}</h3>
+                <p style="color: #64748B;">{{ __('insights.articles.no_results_desc') }}</p>
             </div>
         </div>
     </section>
@@ -201,13 +201,13 @@
             
             <div class="insights-cta-content">
                 <h2 class="insights-cta-heading">
-                    Ready to bring your operations into <span class="text-gradient">the future?</span>
+                    {!! __('insights.cta.heading') !!}
                 </h2>
                 <p class="insights-cta-description">
-                    Our team helps businesses streamline processes, modernize systems, and build reliable data foundations.
+                    {{ __('insights.cta.description') }}
                 </p>
                 <button onclick="openContactFormModal()" class="insights-cta-button">
-                    <span>Book Consultation</span>
+                    <span>{{ __('insights.cta.button') }}</span>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                     </svg>
@@ -314,3 +314,13 @@
     @include('components.service-contact-modal')
 
 @endsection
+
+@push('scripts')
+<script>
+    // Inject service translations for contact form modal
+    window.serviceTranslations = {
+        contactForm: @json(__('services.contact_form')),
+        notifications: @json(__('services.notifications'))
+    };
+</script>
+@endpush

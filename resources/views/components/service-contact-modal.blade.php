@@ -16,34 +16,34 @@
                     </svg>
                     <div class="form-icon-glow"></div>
                 </div>
-                <h3 class="service-form-title">Start Your Transformation</h3>
-                <p class="service-form-subtitle">We'll respond within 24 hours</p>
+                <h3 class="service-form-title">{{ __('services.contact_form.title') }}</h3>
+                <p class="service-form-subtitle">{{ __('services.contact_form.subtitle') }}</p>
             </div>
             <form class="service-form" id="serviceContactForm">
                 <div class="service-form-row">
                     <div class="service-form-group">
-                        <label class="service-form-label" for="full_name">Full Name</label>
+                        <label class="service-form-label" for="full_name">{{ __('services.contact_form.full_name') }}</label>
                         <input type="text" class="service-form-input" id="full_name" name="full_name" required>
                         <div class="service-input-glow"></div>
                     </div>
                     <div class="service-form-group">
-                        <label class="service-form-label" for="email">Email</label>
+                        <label class="service-form-label" for="email">{{ __('services.contact_form.email') }}</label>
                         <input type="email" class="service-form-input" id="email" name="email" required>
                         <div class="service-input-glow"></div>
                     </div>
                 </div>
                 <div class="service-form-group">
-                    <label class="service-form-label" for="subject">Subject</label>
+                    <label class="service-form-label" for="subject">{{ __('services.contact_form.subject') }}</label>
                     <input type="text" class="service-form-input" id="subject" name="subject" required>
                     <div class="service-input-glow"></div>
                 </div>
                 <div class="service-form-group">
-                    <label class="service-form-label" for="message">Message</label>
+                    <label class="service-form-label" for="message">{{ __('services.contact_form.message') }}</label>
                     <textarea class="service-form-textarea" id="message" name="message" rows="4" required></textarea>
                     <div class="service-input-glow"></div>
                 </div>
                 <button type="submit" class="service-submit-btn">
-                    <span class="service-btn-text">Send Message</span>
+                    <span class="service-btn-text">{{ __('services.contact_form.submit') }}</span>
                     <span class="service-btn-arrow">→</span>
                     <span class="service-btn-shine"></span>
                 </button>
@@ -150,7 +150,8 @@ document.addEventListener('DOMContentLoaded', function() {
     emailInput.addEventListener('blur', function() {
         if (this.value && !isValidEmail(this.value)) {
             this.style.borderColor = 'rgba(239, 83, 80, 0.8)';
-            showNotification('error', 'Invalid Email', 'Please enter a valid email address ending with .com, .id, etc.');
+            const notif = window.serviceTranslations?.notifications || {};
+            showNotification('error', notif.invalid_email_title || 'Invalid Email', notif.invalid_email_message || 'Please enter a valid email address.');
         } else if (this.value) {
             this.style.borderColor = 'rgba(0, 229, 255, 0.5)';
         }
@@ -165,8 +166,11 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Validate email before submission
         const emailValue = emailInput.value;
+        const notif = window.serviceTranslations?.notifications || {};
+        const form_trans = window.serviceTranslations?.contactForm || {};
+        
         if (!isValidEmail(emailValue)) {
-            showNotification('error', 'Invalid Email', 'Please enter a valid email address (e.g., name@company.com)');
+            showNotification('error', notif.invalid_email_title || 'Invalid Email', notif.invalid_email_message || 'Please enter a valid email address (e.g., name@company.com)');
             emailInput.focus();
             emailInput.style.borderColor = 'rgba(239, 83, 80, 0.8)';
             return;
@@ -174,7 +178,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Disable button and show loading
         submitBtn.disabled = true;
-        btnText.textContent = 'Sending...';
+        btnText.textContent = form_trans.sending || 'Sending...';
         
         const formData = new FormData(form);
         const data = Object.fromEntries(formData.entries());
@@ -205,19 +209,41 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 // Show success notification
                 setTimeout(() => {
-                    showNotification('success', 'Message Sent!', result.message);
+                    showNotification('success', notif.success_title || 'Message Sent!', notif.success_message || 'Thank you for reaching out! We\'ll respond within 24 hours.');
                 }, 300);
             } else {
                 // Show error notification
-                let errorMessage = result.message || 'An error occurred. Please try again.';
+                let errorMessage = notif.error_message || 'We couldn\'t send your message. Please try again.';
+                let errorTitle = notif.error_title || 'Submission Failed';
+                
                 if (result.errors) {
-                    errorMessage = Object.values(result.errors).flat().join('. ');
+                    // Check if error is about duplicate/already exists
+                    const errorText = JSON.stringify(result.errors).toLowerCase();
+                    if (errorText.includes('already') || errorText.includes('duplicate') || errorText.includes('exists') || 
+                        errorText.includes('sudah') || errorText.includes('terdaftar')) {
+                        errorTitle = notif.duplicate_title || 'Already Submitted';
+                        errorMessage = notif.duplicate_message || 'Your request has already been sent. Please wait for our response.';
+                    } else {
+                        // Show validation errors from server
+                        const errorsList = Object.values(result.errors).flat().join('. ');
+                        errorMessage = errorsList || notif.validation_error_message || 'Please correct the errors and submit again.';
+                    }
+                } else if (result.message) {
+                    // Check message text for duplicate indicators
+                    const messageText = result.message.toLowerCase();
+                    if (messageText.includes('already') || messageText.includes('duplicate') || messageText.includes('exists') ||
+                        messageText.includes('sudah') || messageText.includes('terdaftar')) {
+                        errorTitle = notif.duplicate_title || 'Already Submitted';
+                        errorMessage = notif.duplicate_message || 'Your request has already been sent. Please wait for our response.';
+                    } else {
+                        errorMessage = result.message;
+                    }
                 }
-                showNotification('error', 'Submission Failed', errorMessage);
+                showNotification('error', errorTitle, errorMessage);
             }
         } catch (error) {
             console.error('Form submission error:', error);
-            showNotification('error', 'Connection Error', 'Unable to send message. Please check your connection and try again.');
+            showNotification('error', notif.connection_error_title || 'Connection Error', notif.connection_error_message || 'Unable to send message. Please check your connection and try again.');
         } finally {
             submitBtn.disabled = false;
             btnText.textContent = originalText;

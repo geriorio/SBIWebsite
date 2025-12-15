@@ -19,22 +19,22 @@
         <div class="hero-content">
             <div class="hero-badge" data-aos="fade-down">
                 <span class="badge-dot"></span>
-                Industry 4.0 Solutions
+                {{ __('home.hero.badge') }}
             </div>
             
             <h1 class="hero-heading" data-aos="fade-right" data-aos-delay="100">
-                <span class="text-gradient">Transform</span> Today.
+                <span class="text-gradient">{{ __('home.hero.title') }}</span>
                 <br/>
-                <span class="typing-text">Lead Tomorrow.</span>
+                <span class="typing-text">{{ __('home.hero.title_highlight') }}</span>
             </h1>
             
             <p class="hero-description" data-aos="fade-up" data-aos-delay="200">
-                Samudera Biru Internasional (SBI) helps organizations modernize operations, strengthen digital capabilities, and compete with confidence—through practical transformation, integrated systems, and data-driven intelligence.
+                {{ __('home.hero.description') }}
             </p>
             
             <div class="hero-ctas" data-aos="fade-up" data-aos-delay="300">
                 <button onclick="openContactFormModal()" class="btn-primary">
-                    <span>Talk to Our Experts</span>
+                    <span>{{ __('home.hero.cta_primary') }}</span>
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <path d="M7 13L13 7M13 7H7M13 7V13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                     </svg>
@@ -44,24 +44,24 @@
                         <circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="2"/>
                         <path d="M10 6V10L13 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                     </svg>
-                    <span>Explore Our Services</span>
+                    <span>{{ __('home.hero.cta_secondary') }}</span>
                 </a>
             </div>
 
             <div class="hero-stats">
                 <div class="stat-item">
                     <div class="stat-number" data-target="150">0</div>
-                    <div class="stat-label">Projects Delivered</div>
+                    <div class="stat-label">{{ __('home.hero.stats.projects') }}</div>
                 </div>
                 <div class="stat-divider"></div>
                 <div class="stat-item">
                     <div class="stat-number" data-target="98">0</div>
-                    <div class="stat-label">Client Satisfaction</div>
+                    <div class="stat-label">{{ __('home.hero.stats.satisfaction') }}</div>
                 </div>
                 <div class="stat-divider"></div>
                 <div class="stat-item">
                     <div class="stat-number" data-target="15">0</div>
-                    <div class="stat-label">Years Experience</div>
+                    <div class="stat-label">{{ __('home.hero.stats.experience') }}</div>
                 </div>
             </div>
         </div>
@@ -96,7 +96,7 @@
                         <line x1="11" y1="33" x2="15" y2="37" stroke="url(#stratGrad)" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
                     </svg>
                 </div>
-                <div class="card-text">Strategic</div>
+                <div class="card-text">{{ __('home.hero.cards.strategic') }}</div>
             </div>
             <div class="floating-card card-2">
                 <div class="card-icon-wrapper">
@@ -125,7 +125,7 @@
                         <circle cx="12" cy="30" r="2" fill="url(#practGrad)" opacity="0.8"/>
                     </svg>
                 </div>
-                <div class="card-text">Practical</div>
+                <div class="card-text">{{ __('home.hero.cards.practical') }}</div>
             </div>
             <div class="floating-card card-3">
                 <div class="card-icon-wrapper">
@@ -150,7 +150,7 @@
                         <circle cx="34" cy="10" r="1.5" fill="url(#humanGrad)" opacity="0.4" class="float-dot"/>
                     </svg>
                 </div>
-                <div class="card-text">Human-Centered</div>
+                <div class="card-text">{{ __('home.hero.cards.human_centered') }}</div>
             </div>
         </div>
     </section>
@@ -169,24 +169,23 @@
                 <div class="why-sbi-header" data-aos="fade-up">
                     <div class="header-line"></div>
                     <h2 class="why-sbi-title">
-                        Why <span class="text-gradient-alt">SBI</span> Exists
+                        {!! __('home.why_sbi.title') !!}
                     </h2>
                     <div class="header-line"></div>
                 </div>
                 
                 <div class="why-sbi-main" data-aos="fade-up" data-aos-delay="100">
                     <p class="why-sbi-statement">
-                        Technology changes fast. Your business needs <span class="highlight-text">clarity</span>—not <span class="highlight-text">complexity</span>.
+                        {!! __('home.why_sbi.statement') !!}
                     </p>
                     
                     <p class="why-sbi-description">
-                        SBI partners with companies across industries to redesign processes, implement the right systems, 
-                        and build data maturity that lasts.
+                        {{ __('home.why_sbi.description') }}
                     </p>
                 </div>
                 
                 <div class="why-sbi-approach" data-aos="fade-up" data-aos-delay="200">
-                    <div class="approach-label">Our approach is simple:</div>
+                    <div class="approach-label">{{ __('home.why_sbi.approach_label') }}</div>
                     <div class="approach-grid">
                         <div class="approach-card" data-aos="flip-left" data-aos-delay="300">
                             <div class="approach-icon">
@@ -195,7 +194,7 @@
                                     <circle cx="20" cy="20" r="8" fill="url(#gradient-cyan)" opacity="0.3"/>
                                 </svg>
                             </div>
-                            <h3 class="approach-title">Transform with Purpose</h3>
+                            <h3 class="approach-title">{{ __('home.why_sbi.approach.transform') }}</h3>
                             <div class="approach-accent"></div>
                         </div>
                         
@@ -206,7 +205,7 @@
                                     <rect x="5" y="5" width="30" height="30" rx="5" stroke="url(#gradient-cyan)" stroke-width="2"/>
                                 </svg>
                             </div>
-                            <h3 class="approach-title">Deliver Results</h3>
+                            <h3 class="approach-title">{{ __('home.why_sbi.approach.deliver') }}</h3>
                             <div class="approach-accent"></div>
                         </div>
                         
@@ -218,8 +217,8 @@
                                     <path d="M20 5V8M20 32V35M35 20H32M8 20H5" stroke="url(#gradient-cyan)" stroke-width="2" stroke-linecap="round"/>
                                 </svg>
                             </div>
-                            <h3 class="approach-title">Build Capabilities</h3>
-                            <p class="approach-subtitle">—not dependence</p>
+                            <h3 class="approach-title">{{ __('home.why_sbi.approach.build') }}</h3>
+                            <p class="approach-subtitle">{{ __('home.why_sbi.approach.build_subtitle') }}</p>
                             <div class="approach-accent"></div>
                         </div>
                     </div>
@@ -227,7 +226,7 @@
                 
                 <div class="why-sbi-cta" data-aos="zoom-in" data-aos-delay="600">
                     <a href="{{ route('about') }}" class="btn-why-sbi">
-                        <span>Discover Our Story</span>
+                        <span>{{ __('home.why_sbi.cta') }}</span>
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                             <path d="M7 13L13 7M13 7H7M13 7V13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                         </svg>
@@ -258,36 +257,36 @@
     <section id="services" class="services-modern">
         <div class="section-container">
             <div class="section-header" data-aos="fade-up">
-                <span class="section-tag">WHAT WE DO</span>
-                <h2 class="section-title"> <span class="text-gradient">Our Services</span></h2>
-                <p class="section-subtitle">Comprehensive solutions tailored to accelerate your digital transformation journey</p>
+                <span class="section-tag">{{ __('home.services.tag') }}</span>
+                <h2 class="section-title"> <span class="text-gradient">{{ __('home.services.title') }}</span></h2>
+                <p class="section-subtitle">{{ __('home.services.subtitle') }}</p>
             </div>
 
             <div class="services-grid">
                 <div class="service-card" data-tilt data-aos="fade-up" data-aos-delay="100" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('{{ asset('images/homepage/operational.jpg') }}') center/cover; position: relative;">
-                    <h3 class="service-title" style="color: white; position: relative; z-index: 1;">Operational Efficiency & Process Redesign</h3>
-                    <p class="service-desc" style="color: rgba(255, 255, 255, 0.9); position: relative; z-index: 1;">We streamline workflows, remove bottlenecks, and redesign processes so your teams can work faster and more consistently. </p>
+                    <h3 class="service-title" style="color: white; position: relative; z-index: 1;">{{ __('home.services.list.operational.title') }}</h3>
+                    <p class="service-desc" style="color: rgba(255, 255, 255, 0.9); position: relative; z-index: 1;">{{ __('home.services.list.operational.description') }}</p>
                 </div>
 
                 <div class="service-card" data-tilt data-aos="fade-up" data-aos-delay="200" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('{{ asset('images/homepage/digital.jpg') }}') center/cover; position: relative;">
-                    <h3 class="service-title" style="color: white; position: relative; z-index: 1;">Digital Transformation & System Integration</h3>
-                    <p class="service-desc" style="color: rgba(255, 255, 255, 0.9); position: relative; z-index: 1;">We help you choose, implement, and integrate the right digital tools — from ERP to business platforms — into one connected ecosystem. </p>
+                    <h3 class="service-title" style="color: white; position: relative; z-index: 1;">{{ __('home.services.list.digital.title') }}</h3>
+                    <p class="service-desc" style="color: rgba(255, 255, 255, 0.9); position: relative; z-index: 1;">{{ __('home.services.list.digital.description') }}</p>
                 </div>
 
                 <div class="service-card" data-tilt data-aos="fade-up" data-aos-delay="300" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('{{ asset('images/homepage/data.jpg') }}') center/cover; position: relative;">
-                    <h3 class="service-title" style="color: white; position: relative; z-index: 1;">Data Architecture, Dashboards & Insights</h3>
-                    <p class="service-desc" style="color: rgba(255, 255, 255, 0.9); position: relative; z-index: 1;">We organize scattered data into a trusted source of truth and deliver intuitive dashboards leaders can rely on. </p>
+                    <h3 class="service-title" style="color: white; position: relative; z-index: 1;">{{ __('home.services.list.data.title') }}</h3>
+                    <p class="service-desc" style="color: rgba(255, 255, 255, 0.9); position: relative; z-index: 1;">{{ __('home.services.list.data.description') }}</p>
                 </div>
 
                 <div class="service-card" data-tilt data-aos="fade-up" data-aos-delay="400" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('{{ asset('images/homepage/capability.jpg') }}') center/cover; position: relative;">
-                    <h3 class="service-title" style="color: white; position: relative; z-index: 1;">Capability Building & Organizational Alignment</h3>
-                    <p class="service-desc" style="color: rgba(255, 255, 255, 0.9); position: relative; z-index: 1;">We equip your teams with the skills to adopt new systems and work effectively in a digital-first environment. </p>
+                    <h3 class="service-title" style="color: white; position: relative; z-index: 1;">{{ __('home.services.list.capability.title') }}</h3>
+                    <p class="service-desc" style="color: rgba(255, 255, 255, 0.9); position: relative; z-index: 1;">{{ __('home.services.list.capability.description') }}</p>
                 </div>
             </div>
 
             <div class="services-cta" data-aos="fade-up" data-aos-delay="500">
                 <a href="{{ route('services') }}" class="btn-services">
-                    <span>View All Services</span>
+                    <span>{{ __('home.services.cta') }}</span>
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <path d="M7 13L13 7M13 7H7M13 7V13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                     </svg>
@@ -337,7 +336,7 @@
         <div class="section-container">
             <div class="choose-header" data-aos="fade-up">
                 <h2 class="choose-title">
-                    Why Companies Choose <span class="text-gradient">SBI</span>
+                    {!! __('home.why_choose.title') !!}
                 </h2>
                 <div class="title-underline">
                     <div class="underline-animated"></div>
@@ -356,9 +355,9 @@
                             <path d="M8 32L24 40L40 32" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
                         </svg>
                     </div>
-                    <h3 class="card-heading">Built for Impact</h3>
+                    <h3 class="card-heading">{{ __('home.why_choose.reasons.impact.title') }}</h3>
                     <p class="card-description">
-                        Our work focuses on outcomes that improve speed, accuracy, and performance across your business.
+                        {{ __('home.why_choose.reasons.impact.description') }}
                     </p>
                     <div class="card-shine"></div>
                 </div>
@@ -375,9 +374,9 @@
                             <path d="M32 20C32 20 34 22 34 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                         </svg>
                     </div>
-                    <h3 class="card-heading">Human-Centered Transformation</h3>
+                    <h3 class="card-heading">{{ __('home.why_choose.reasons.human.title') }}</h3>
                     <p class="card-description">
-                        We align your people, processes, and technology—ensuring the change is practical, usable, and sustainable.
+                        {{ __('home.why_choose.reasons.human.description') }}
                     </p>
                     <div class="card-shine"></div>
                 </div>
@@ -394,9 +393,9 @@
                             <circle cx="24" cy="34" r="2" fill="currentColor"/>
                         </svg>
                     </div>
-                    <h3 class="card-heading">End-to-End Expertise</h3>
+                    <h3 class="card-heading">{{ __('home.why_choose.reasons.expertise.title') }}</h3>
                     <p class="card-description">
-                        From advisory to execution, we support your organization at every stage of the transformation journey.
+                        {{ __('home.why_choose.reasons.expertise.description') }}
                     </p>
                     <div class="card-shine"></div>
                 </div>
@@ -414,9 +413,9 @@
                             <rect x="6" y="10" width="36" height="30" rx="2" stroke="currentColor" stroke-width="2"/>
                         </svg>
                     </div>
-                    <h3 class="card-heading">Clear, Measurable Results</h3>
+                    <h3 class="card-heading">{{ __('home.why_choose.reasons.results.title') }}</h3>
                     <p class="card-description">
-                        Every workflow, dashboard, and integration we deliver is backed by KPIs and operational gains.
+                        {{ __('home.why_choose.reasons.results.description') }}
                     </p>
                     <div class="card-shine"></div>
                 </div>
@@ -438,43 +437,43 @@
         <div class="section-container">
             <div class="industries-header" data-aos="fade-up">
                 <h2 class="industries-title">
-                    Industries <span class="text-gradient">We Serve</span>
+                    {!! __('home.industries.title') !!}
                 </h2>
-                <p class="industries-subtitle">Trusted by companies across:</p>
+                <p class="industries-subtitle">{{ __('home.industries.subtitle') }}</p>
             </div>
 
             <div class="industries-grid">
                 <div class="industry-item" data-aos="zoom-in" data-aos-delay="100">
                     <div class="industry-card" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('{{ asset('images/homepage/manufacturing.jpg') }}') center/cover; min-height: 300px;">
-                        <h3 class="industry-name" style="color: white; position: relative; z-index: 2;">Manufacturing</h3>
+                        <h3 class="industry-name" style="color: white; position: relative; z-index: 2;">{{ __('home.industries.list.manufacturing') }}</h3>
                         <div class="industry-overlay"></div>
                     </div>
                 </div>
 
                 <div class="industry-item" data-aos="zoom-in" data-aos-delay="200">
                     <div class="industry-card" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('{{ asset('images/homepage/logistics.jpg') }}') center/cover; min-height: 300px;">
-                        <h3 class="industry-name" style="color: white; position: relative; z-index: 2;">Logistics & Distribution</h3>
+                        <h3 class="industry-name" style="color: white; position: relative; z-index: 2;">{{ __('home.industries.list.logistics') }}</h3>
                         <div class="industry-overlay"></div>
                     </div>
                 </div>
 
                 <div class="industry-item" data-aos="zoom-in" data-aos-delay="300">
                     <div class="industry-card" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('{{ asset('images/homepage/fmcg.jpg') }}') center/cover; min-height: 300px;">
-                        <h3 class="industry-name" style="color: white; position: relative; z-index: 2;">FMCG</h3>
+                        <h3 class="industry-name" style="color: white; position: relative; z-index: 2;">{{ __('home.industries.list.fmcg') }}</h3>
                         <div class="industry-overlay"></div>
                     </div>
                 </div>
 
                 <div class="industry-item" data-aos="zoom-in" data-aos-delay="400">
                     <div class="industry-card" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('{{ asset('images/homepage/retail.jpg') }}') center/cover; min-height: 300px;">
-                        <h3 class="industry-name" style="color: white; position: relative; z-index: 2;">Retail</h3>
+                        <h3 class="industry-name" style="color: white; position: relative; z-index: 2;">{{ __('home.industries.list.retail') }}</h3>
                         <div class="industry-overlay"></div>
                     </div>
                 </div>
 
                 <div class="industry-item" data-aos="zoom-in" data-aos-delay="500">
                     <div class="industry-card" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('{{ asset('images/homepage/energy.jpg') }}') center/cover; min-height: 300px;">
-                        <h3 class="industry-name" style="color: white; position: relative; z-index: 2;">Energy & Utilities</h3>
+                        <h3 class="industry-name" style="color: white; position: relative; z-index: 2;">{{ __('home.industries.list.energy') }}</h3>
                         <div class="industry-overlay"></div>
                     </div>
                 </div>
@@ -482,7 +481,7 @@
 
             <div class="industries-cta" data-aos="fade-up" data-aos-delay="600">
                 <a href="{{ route('insights') }}" class="btn-industries">
-                    <span>Explore Industry Expertise</span>
+                    <span>{{ __('home.industries.cta') }}</span>
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <path d="M7 13L13 7M13 7H7M13 7V13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                     </svg>
@@ -510,13 +509,12 @@
         <div class="section-container">
             <!-- Header -->
             <div class="results-header" data-aos="fade-up">
-                <div class="header-tag">Insight Into Your Operations</div>
+                <div class="header-tag">{{ __('home.results.tag') }}</div>
                 <h2 class="results-title">
-                    Real Results. <span class="text-gradient">Delivered</span>
+                    {!! __('home.results.title') !!}
                 </h2>
                 <p class="results-intro">
-                    You can't improve what you can't see.<br/>
-                    <strong>SBI gives leaders real-time visibility into performance</strong>—so decisions can be faster, smarter, and aligned with strategy.
+                    {!! __('home.results.intro') !!}
                 </p>
             </div>
 
@@ -531,14 +529,14 @@
                                 <span></span>
                                 <span></span>
                             </div>
-                            <div class="dash-title">Performance Dashboard</div>
+                            <div class="dash-title">{{ __('home.results.dashboard.title') }}</div>
                         </div>
                         
                         <div class="dashboard-content">
                             <!-- Animated Charts -->
                             <div class="chart-row">
                                 <div class="chart-card">
-                                    <div class="chart-label">Cycle Time Reduction</div>
+                                    <div class="chart-label">{{ __('home.results.dashboard.cycle_time') }}</div>
                                     <div class="chart-value-large">
                                         <span class="percentage-number">45</span>
                                         <span class="percentage-symbol">%</span>
@@ -560,13 +558,13 @@
                                 </div>
                                 
                                 <div class="chart-card">
-                                    <div class="chart-label">Performance Trend</div>
+                                    <div class="chart-label">{{ __('home.results.dashboard.trend') }}</div>
                                     <div class="trend-indicator positive">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                                             <path d="M7 17L12 12L17 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                                             <path d="M17 13V7H11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                                         </svg>
-                                        <span>Improving</span>
+                                        <span>{{ __('home.results.dashboard.trend_status') }}</span>
                                     </div>
                                     <div class="mini-area-chart">
                                         <svg viewBox="0 0 200 80" class="area-svg">
@@ -588,7 +586,7 @@
                             
                             <div class="chart-row">
                                 <div class="chart-card wide">
-                                    <div class="chart-label">Key Performance Indicators</div>
+                                    <div class="chart-label">{{ __('home.results.dashboard.kpi_title') }}</div>
                                     <div class="kpi-grid">
                                         <div class="kpi-item">
                                             <div class="kpi-icon">
@@ -598,8 +596,8 @@
                                                     <rect x="22" y="6" width="4" height="20" fill="white" rx="1"/>
                                                 </svg>
                                             </div>
-                                            <div class="kpi-value">Real-Time</div>
-                                            <div class="kpi-label">Visibility</div>
+                                            <div class="kpi-value">{{ __('home.results.dashboard.kpi.visibility.value') }}</div>
+                                            <div class="kpi-label">{{ __('home.results.dashboard.kpi.visibility.label') }}</div>
                                         </div>
                                         <div class="kpi-item">
                                             <div class="kpi-icon">
@@ -607,8 +605,8 @@
                                                     <path d="M16 4L18 12L24 8L20 16L28 16L16 28L14 20L8 24L12 16L4 16L16 4Z" fill="white"/>
                                                 </svg>
                                             </div>
-                                            <div class="kpi-value">Faster</div>
-                                            <div class="kpi-label">Decisions</div>
+                                            <div class="kpi-value">{{ __('home.results.dashboard.kpi.decisions.value') }}</div>
+                                            <div class="kpi-label">{{ __('home.results.dashboard.kpi.decisions.label') }}</div>
                                         </div>
                                         <div class="kpi-item">
                                             <div class="kpi-icon">
@@ -617,8 +615,8 @@
                                                     <path d="M10 16L14 20L22 12" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
                                                 </svg>
                                             </div>
-                                            <div class="kpi-value">Higher</div>
-                                            <div class="kpi-label">Accuracy</div>
+                                            <div class="kpi-value">{{ __('home.results.dashboard.kpi.accuracy.value') }}</div>
+                                            <div class="kpi-label">{{ __('home.results.dashboard.kpi.accuracy.label') }}</div>
                                         </div>
                                         <div class="kpi-item">
                                             <div class="kpi-icon">
@@ -627,8 +625,8 @@
                                                     <path d="M21 12V7H16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                                 </svg>
                                             </div>
-                                            <div class="kpi-value">Measurable</div>
-                                            <div class="kpi-label">Results</div>
+                                            <div class="kpi-value">{{ __('home.results.dashboard.kpi.results.value') }}</div>
+                                            <div class="kpi-label">{{ __('home.results.dashboard.kpi.results.label') }}</div>
                                         </div>
                                     </div>
                                 </div>
@@ -649,7 +647,7 @@
                             </svg>
                         </div>
                         <div class="result-content">
-                            <h3 class="result-title">Reduced operational cycle time</h3>
+                            <h3 class="result-title">{{ __('home.results.achievements.cycle_time') }}</h3>
                         </div>
                         <div class="result-badge">✓</div>
                     </div>
@@ -664,7 +662,7 @@
                             </svg>
                         </div>
                         <div class="result-content">
-                            <h3 class="result-title">Improved teamwork efficiency across multiple branches</h3>
+                            <h3 class="result-title">{{ __('home.results.achievements.teamwork') }}</h3>
                         </div>
                         <div class="result-badge">✓</div>
                     </div>
@@ -678,7 +676,7 @@
                             </svg>
                         </div>
                         <div class="result-content">
-                            <h3 class="result-title">Enhanced visibility through custom dashboards</h3>
+                            <h3 class="result-title">{{ __('home.results.achievements.visibility') }}</h3>
                         </div>
                         <div class="result-badge">✓</div>
                     </div>
@@ -691,7 +689,7 @@
                             </svg>
                         </div>
                         <div class="result-content">
-                            <h3 class="result-title">Faster, standardized approvals and workflows</h3>
+                            <h3 class="result-title">{{ __('home.results.achievements.workflows') }}</h3>
                         </div>
                         <div class="result-badge">✓</div>
                     </div>
@@ -706,7 +704,7 @@
                             </svg>
                         </div>
                         <div class="result-content">
-                            <h3 class="result-title">Integrated systems across supply chain, HR, and finance</h3>
+                            <h3 class="result-title">{{ __('home.results.achievements.integration') }}</h3>
                         </div>
                         <div class="result-badge">✓</div>
                     </div>
@@ -721,7 +719,7 @@
                             </svg>
                         </div>
                         <div class="result-content">
-                            <h3 class="result-title">Stronger accuracy and traceability using real-time data</h3>
+                            <h3 class="result-title">{{ __('home.results.achievements.accuracy') }}</h3>
                         </div>
                         <div class="result-badge">✓</div>
                     </div>
@@ -818,14 +816,14 @@
     <section class="cta-section">
         <div class="section-container">
             <div class="cta-content" data-aos="zoom-in">
-                <h2 class="cta-title">Ready to Transform Your Business?</h2>
-                <p class="cta-subtitle">Let's discuss how we can help you achieve your digital transformation goals</p>
+                <h2 class="cta-title">{{ __('home.cta.title') }}</h2>
+                <p class="cta-subtitle">{{ __('home.cta.subtitle') }}</p>
             <div class="clients-cta" data-aos="fade-up" data-aos-delay="200">
                 <button onclick="openContactFormModal()" class="btn-secondary">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <path d="M3 8L10 13L17 8M3 8L10 3L17 8M3 8V16L10 21L17 16V8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-                    <span>Contact Our Team</span>
+                    <span>{{ __('home.cta.button') }}</span>
                 </button>
             </div>
             </div>
@@ -833,3 +831,17 @@
     </section>
 
 @endsection
+
+@push('scripts')
+<script>
+    // Inject translations for homepage
+    window.homeTranslations = {
+        newsletter: @json(__('home.newsletter'))
+    };
+    // Inject service translations for contact form modal
+    window.serviceTranslations = {
+        contactForm: @json(__('services.contact_form')),
+        notifications: @json(__('services.notifications'))
+    };
+</script>
+@endpush

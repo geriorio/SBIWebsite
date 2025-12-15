@@ -2560,6 +2560,10 @@
     object-position: center 5%;
 }
 
+.team-card-modern:nth-child(3) .team-image {
+    object-position: center 35%;
+}
+
 .team-card-modern:hover .team-image {
     transform: scale(1.05);
 }

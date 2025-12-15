@@ -310,11 +310,18 @@ if (newsletterForm) {
         e.preventDefault();
         const email = newsletterForm.querySelector('input[type="email"]').value;
         
+        // Get translations
+        const trans = window.homeTranslations?.newsletter || {};
+        
         // Add your newsletter subscription logic here
         console.log('Newsletter subscription:', email);
         
-        // Show success message (you can customize this)
-        alert('Thank you for subscribing!');
+        // Show success notification
+        if (typeof showNotification === 'function') {
+            showNotification('success', trans.success_title || 'Thank You!', trans.success_message || 'You\'ve successfully subscribed to our newsletter.');
+        } else {
+            alert(trans.success_message || 'Thank you for subscribing!');
+        }
         newsletterForm.reset();
     });
 }

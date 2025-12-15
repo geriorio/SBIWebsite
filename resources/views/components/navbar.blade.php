@@ -26,6 +26,13 @@
             <li><a href="/insights" class="nav-link {{ Request::is('insights') ? 'active' : '' }}">Insights</a></li>
             <li><a href="/career" class="nav-link {{ Request::is('career') ? 'active' : '' }}">Career</a></li>
             {{-- <li><a href="/contact" class="nav-link {{ Request::is('contact') ? 'active' : '' }}">Contact</a></li> --}}
+            
+            <!-- Language Switcher -->
+            <li class="language-switcher">
+                <a href="{{ route('language.switch', 'en') }}" class="lang-link {{ app()->getLocale() == 'en' ? 'active' : '' }}">EN</a>
+                <span class="lang-divider">|</span>
+                <a href="{{ route('language.switch', 'id') }}" class="lang-link {{ app()->getLocale() == 'id' ? 'active' : '' }}">ID</a>
+            </li>
         </ul>
 
         <button class="mobile-toggle" id="mobileToggle">

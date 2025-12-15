@@ -11,13 +11,13 @@
         <div class="career-hero-content" data-aos="fade-up" data-aos-delay="0">
             <div class="career-hero-badge" data-aos="fade-down" data-aos-delay="100">
                 <span class="career-badge-pulse"></span>
-                Join Our Team
+                {{ __('career.hero.badge') }}
             </div>
             <h1 class="career-hero-title" data-aos="fade-up" data-aos-delay="200">
-                <span class="career-title-line">Join <span class="career-title-gradient">SBI</span></span>
+                <span class="career-title-line">{!! __('career.hero.title') !!}</span>
             </h1>
             <p class="career-hero-subtitle" data-aos="fade-up" data-aos-delay="300">
-                Grow, build, and shape the future of Intelligent Operations
+                {{ __('career.hero.subtitle') }}
             </p>
         </div>
     </section>
@@ -28,15 +28,15 @@
             <div class="career-about-grid">
                 <div class="career-about-main" data-aos="fade-right">
                     <h2 class="career-about-title">
-                        At SBI, we believe that <span class="career-gradient-text">great businesses</span> are built by people who never stop learning, improving, and pushing boundaries.
+                        {!! __('career.about.title') !!}
                     </h2>
                 </div>
                 <div class="career-about-content" data-aos="fade-left" data-aos-delay="200">
                     <p>
-                        We work with organizations that want to evolve — and we're looking for individuals who share the same hunger for progress.
+                        {{ __('career.about.paragraph_1') }}
                     </p>
                     <p>
-                        Whether you come from a <strong>technical background</strong> or a <strong>business discipline</strong>, if you are curious, analytical, adaptable, and excited about the future of intelligent automation, you can thrive here.
+                        {!! __('career.about.paragraph_2') !!}
                     </p>
                 </div>
             </div>
@@ -47,88 +47,48 @@
     <section class="career-why-section">
         <div class="career-section-container">
             <div class="career-section-header" data-aos="fade-up">
-                <span class="career-section-tag">Benefits</span>
-                <h2 class="career-section-title">Why Join <span class="career-text-gradient">SBI?</span></h2>
+                <span class="career-section-tag">{{ __('career.why.tag') }}</span>
+                <h2 class="career-section-title">{!! __('career.why.title') !!}</h2>
             </div>
 
             <div class="career-why-grid">
-                <!-- Benefit 1 -->
-                <div class="career-why-card" data-aos="fade-up" data-aos-delay="100">
+                @php
+                    $benefits = ['growth', 'learning', 'future', 'culture'];
+                    $delays = [100, 200, 100, 400];
+                    $animations = ['fade-up', 'fade-up', 'fade-right', 'fade-up'];
+                    $gradientIds = ['gradient1', 'gradient2', 'gradient3', 'gradient4'];
+                @endphp
+                
+                @foreach($benefits as $index => $benefit)
+                <!-- Benefit {{ $index + 1 }} -->
+                <div class="career-why-card" data-aos="{{ $animations[$index] }}" data-aos-delay="{{ $delays[$index] }}">
                     <div class="career-why-icon">
                         <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                            <path d="M24 4L30 18L44 20L34 30L37 44L24 36L11 44L14 30L4 20L18 18L24 4Z" stroke="url(#gradient1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            @if($benefit == 'growth')
+                            <path d="M24 4L30 18L44 20L34 30L37 44L24 36L11 44L14 30L4 20L18 18L24 4Z" stroke="url(#{{ $gradientIds[$index] }})" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            @elseif($benefit == 'learning')
+                            <rect x="8" y="8" width="32" height="32" rx="4" stroke="url(#{{ $gradientIds[$index] }})" stroke-width="2" fill="none"/>
+                            <path d="M16 24L22 30L32 18" stroke="url(#{{ $gradientIds[$index] }})" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            @elseif($benefit == 'future')
+                            <circle cx="24" cy="24" r="16" stroke="url(#{{ $gradientIds[$index] }})" stroke-width="2" fill="none"/>
+                            <path d="M24 14V24L30 30" stroke="url(#{{ $gradientIds[$index] }})" stroke-width="2" stroke-linecap="round"/>
+                            @else
+                            <path d="M12 36L24 24L36 36M12 24L24 12L36 24" stroke="url(#{{ $gradientIds[$index] }})" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            @endif
                             <defs>
-                                <linearGradient id="gradient1" x1="4" y1="4" x2="44" y2="44">
+                                <linearGradient id="{{ $gradientIds[$index] }}" x1="{{ $benefit == 'culture' ? '12' : ($benefit == 'future' ? '8' : '4') }}" y1="{{ $benefit == 'culture' ? '12' : ($benefit == 'future' ? '8' : '4') }}" x2="{{ $benefit == 'culture' ? '36' : ($benefit == 'future' ? '40' : '44') }}" y2="{{ $benefit == 'culture' ? '36' : ($benefit == 'future' ? '40' : '44') }}">
                                     <stop offset="0%" stop-color="#0EA5E9"/>
                                     <stop offset="100%" stop-color="#0284C7"/>
                                 </linearGradient>
                             </defs>
                         </svg>
                     </div>
-                    <h3 class="career-why-title">A Place to Grow Faster</h3>
+                    <h3 class="career-why-title">{{ __('career.why.benefits.' . $benefit . '.title') }}</h3>
                     <p class="career-why-text">
-                        You'll work closely with industry experts, real clients, and real systems—from day one.
+                        {{ __('career.why.benefits.' . $benefit . '.description') }}
                     </p>
                 </div>
-
-                <!-- Benefit 2 -->
-                <div class="career-why-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="career-why-icon">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                            <rect x="8" y="8" width="32" height="32" rx="4" stroke="url(#gradient2)" stroke-width="2" fill="none"/>
-                            <path d="M16 24L22 30L32 18" stroke="url(#gradient2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <defs>
-                                <linearGradient id="gradient2" x1="8" y1="8" x2="40" y2="40">
-                                    <stop offset="0%" stop-color="#0EA5E9"/>
-                                    <stop offset="100%" stop-color="#0284C7"/>
-                                </linearGradient>
-                            </defs>
-                        </svg>
-                    </div>
-                    <h3 class="career-why-title">Learn Across Disciplines</h3>
-                    <p class="career-why-text">
-                        Our projects blend business, technology, data, and process optimization. Even if you come from a non-tech background, you'll learn how digital systems work, how data drives decisions, and how to design efficient workflows.
-                    </p>
-                </div>
-
-                <!-- Benefit 3 -->
-                <div class="career-why-card" data-aos="fade-right" data-aos-delay="100">
-                    <div class="career-why-icon">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                            <circle cx="24" cy="24" r="16" stroke="url(#gradient3)" stroke-width="2" fill="none"/>
-                            <path d="M24 14V24L30 30" stroke="url(#gradient3)" stroke-width="2" stroke-linecap="round"/>
-                            <defs>
-                                <linearGradient id="gradient3" x1="8" y1="8" x2="40" y2="40">
-                                    <stop offset="0%" stop-color="#0EA5E9"/>
-                                    <stop offset="100%" stop-color="#0284C7"/>
-                                </linearGradient>
-                            </defs>
-                        </svg>
-                    </div>
-                    <h3 class="career-why-title">Build the Future of Intelligent Operations</h3>
-                    <p class="career-why-text">
-                        You'll contribute directly to how companies modernize—designing better processes, improving digital tools, and supporting system transformations.
-                    </p>
-                </div>
-
-                <!-- Benefit 4 -->
-                <div class="career-why-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="career-why-icon">
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                            <path d="M12 36L24 24L36 36M12 24L24 12L36 24" stroke="url(#gradient4)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <defs>
-                                <linearGradient id="gradient4" x1="12" y1="12" x2="36" y2="36">
-                                    <stop offset="0%" stop-color="#0EA5E9"/>
-                                    <stop offset="100%" stop-color="#0284C7"/>
-                                </linearGradient>
-                            </defs>
-                        </svg>
-                    </div>
-                    <h3 class="career-why-title">A Culture Built on Curiosity & Collaboration</h3>
-                    <p class="career-why-text">
-                        We value people who observe deeply, think critically, experiment fearlessly, and communicate openly.
-                    </p>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -137,8 +97,8 @@
     <section class="career-opportunities-section">
         <div class="career-section-container">
             <div class="career-section-header" data-aos="fade-up">
-                <span class="career-section-tag">Open Positions</span>
-                <h2 class="career-section-title">Our Current <span class="career-text-gradient">Opportunities</span></h2>
+                <span class="career-section-tag">{{ __('career.opportunities.tag') }}</span>
+                <h2 class="career-section-title">{!! __('career.opportunities.title') !!}</h2>
             </div>
 
             <div class="career-opportunities-grid">
@@ -149,21 +109,19 @@
                         <div class="career-opp-image-overlay"></div>
                     </div>
                     <div class="career-opp-content">
-                        <div class="career-opp-badge">Full Time</div>
-                        <div class="career-opp-number">01</div>
-                        <h3 class="career-opp-title">Business Analyst</h3>
+                        <div class="career-opp-badge">{{ __('career.opportunities.fulltime.badge') }}</div>
+                        <div class="career-opp-number">{{ __('career.opportunities.fulltime.number') }}</div>
+                        <h3 class="career-opp-title">{{ __('career.opportunities.fulltime.title') }}</h3>
                         <p class="career-opp-summary">
-                            Help clients rethink how their organizations - from operations and data to digital tools and integrated systems.
+                            {{ __('career.opportunities.fulltime.summary') }}
                         </p>
                         <div class="career-opp-tags">
-                            <span class="career-opp-tag">IE</span>
-                            <span class="career-opp-tag">IS</span>
-                            <span class="career-opp-tag">IT</span>
-                            <span class="career-opp-tag">Business</span>
-                            <span class="career-opp-tag">+More</span>
+                            @foreach(__('career.opportunities.fulltime.tags') as $tag)
+                            <span class="career-opp-tag">{{ $tag }}</span>
+                            @endforeach
                         </div>
                         <button class="career-opp-btn">
-                            Learn More
+                            {{ __('career.opportunities.fulltime.button') }}
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
@@ -178,19 +136,19 @@
                         <div class="career-opp-image-overlay"></div>
                     </div>
                     <div class="career-opp-content">
-                        <div class="career-opp-badge internship">6 Months Internship</div>
-                        <div class="career-opp-number">02</div>
-                        <h3 class="career-opp-title">Business Analyst Internship</h3>
+                        <div class="career-opp-badge internship">{{ __('career.opportunities.internship.badge') }}</div>
+                        <div class="career-opp-number">{{ __('career.opportunities.internship.number') }}</div>
+                        <h3 class="career-opp-title">{{ __('career.opportunities.internship.title') }}</h3>
                         <p class="career-opp-summary">
-                            Meaningful, real-world experience. Learn business analysis, assist in digital projects, and support process mapping activities.
+                            {{ __('career.opportunities.internship.summary') }}
                         </p>
                         <div class="career-opp-tags">
-                            <span class="career-opp-tag">Students</span>
-                            <span class="career-opp-tag">Fresh Grads</span>
-                            <span class="career-opp-tag">All Majors</span>
+                            @foreach(__('career.opportunities.internship.tags') as $tag)
+                            <span class="career-opp-tag">{{ $tag }}</span>
+                            @endforeach
                         </div>
                         <button class="career-opp-btn">
-                            Learn More
+                            {{ __('career.opportunities.internship.button') }}
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
@@ -205,9 +163,9 @@
     <section class="career-testimonials-section" id="testimonials">
         <div class="career-section-container">
             <div class="career-section-header" data-aos="fade-up">
-                <span class="career-testimonial-tag">Team Stories</span>
-                <h2 class="career-testimonial-title">What Our <span class="career-testimonial-gradient">Team Says</span></h2>
-                <p class="career-testimonial-subtitle">Real experiences from real people who are shaping the future</p>
+                <span class="career-testimonial-tag">{{ __('career.testimonials.tag') }}</span>
+                <h2 class="career-testimonial-title">{!! __('career.testimonials.title') !!}</h2>
+                <p class="career-testimonial-subtitle">{{ __('career.testimonials.subtitle') }}</p>
             </div>
 
             <div class="career-testimonials-grid" data-aos="fade-up" data-aos-delay="100">
@@ -220,16 +178,16 @@
                         </svg>
                     </div>
                     <p class="career-testimonial-text">
-                    SBI has allowed me to grow far beyond what I expected. I learned how to execute complex projects, communicate with industry experts, and navigate real business challenges with confidence.                   </p>
+                    {{ __('career.testimonials.items.0.text') }}                   </p>
                     <div class="career-testimonial-author">
                         <div class="career-author-avatar">
-                            <img src="{{ asset('images/team/celine.png') }}" alt="Celine Purnomo">
+                            <img src="{{ asset('images/team/' . __('career.testimonials.items.0.image')) }}" alt="{{ __('career.testimonials.items.0.name') }}">
                             <div class="career-avatar-ring"></div>
                         </div>
                         <div class="career-author-info">
-                            <h4 class="career-author-name">Celine Purnomo</h4>
-                            <p class="career-author-role">Business Intelligence Analyst  Business Support</p>
-                            <p class="career-author-tenure">Since 2025</p>
+                            <h4 class="career-author-name">{{ __('career.testimonials.items.0.name') }}</h4>
+                            <p class="career-author-role">{!! __('career.testimonials.items.0.role') !!}</p>
+                            <p class="career-author-tenure">{{ __('career.testimonials.items.0.tenure') }}</p>
                         </div>
                     </div>
                 </div>
@@ -243,16 +201,16 @@
                         </svg>
                     </div>
                     <p class="career-testimonial-text">
-                    Working at SBI has given me the space to explore, experiment, and continuously improve myself. I’m grateful for the opportunities, challenges, and support that have shaped me into someone more capable and confident.                    </p>
+                    {{ __('career.testimonials.items.1.text') }}                    </p>
                     <div class="career-testimonial-author">
                         <div class="career-author-avatar">
-                            <img src="{{ asset('images/team/gerry.png') }}" alt="Gerry Tantoso">
+                            <img src="{{ asset('images/team/' . __('career.testimonials.items.1.image')) }}" alt="{{ __('career.testimonials.items.1.name') }}">
                             <div class="career-avatar-ring"></div>
                         </div>
                         <div class="career-author-info">
-                            <h4 class="career-author-name">Gerry Tantoso</h4>
-                            <p class="career-author-role">Technical Team  <br>Website Developer</p>
-                            <p class="career-author-tenure">Since 2025</p>
+                            <h4 class="career-author-name">{{ __('career.testimonials.items.1.name') }}</h4>
+                            <p class="career-author-role">{!! __('career.testimonials.items.1.role') !!}</p>
+                            <p class="career-author-tenure">{{ __('career.testimonials.items.1.tenure') }}</p>
                         </div>
                     </div>
                 </div>
@@ -266,17 +224,17 @@
                         </svg>
                     </div>
                     <p class="career-testimonial-text">
-                        Being part of SBI has given me the opportunity to lead projects that truly make an impact. Through every challenge, I’ve gained valuable experience in managing teams, aligning goals, and driving meaningful results.
+                        {{ __('career.testimonials.items.2.text') }}
                     </p>
                     <div class="career-testimonial-author">
                         <div class="career-author-avatar">
-                            <img src="{{ asset('images/team/catherine.png') }}" alt="Catherine Harijanto">
+                            <img src="{{ asset('images/team/' . __('career.testimonials.items.2.image')) }}" alt="{{ __('career.testimonials.items.2.name') }}">
                             <div class="career-avatar-ring"></div>
                         </div>
                         <div class="career-author-info">
-                            <h4 class="career-author-name">Catherine Harijanto</h4>
-                            <p class="career-author-role">Business Intelligence Analyst  Project Manager</p>
-                            <p class="career-author-tenure">Since 2025</p>
+                            <h4 class="career-author-name">{{ __('career.testimonials.items.2.name') }}</h4>
+                            <p class="career-author-role">{!! __('career.testimonials.items.2.role') !!}</p>
+                            <p class="career-author-tenure">{{ __('career.testimonials.items.2.tenure') }}</p>
                         </div>
                     </div>
                 </div>
@@ -300,16 +258,16 @@
                         </defs>
                     </svg>
                 </div>
-                <h2 class="career-cta-title">How to Apply</h2>
+                <h2 class="career-cta-title">{{ __('career.cta.title') }}</h2>
             </div>
 
             <div class="career-cta-grid" data-aos="fade-up" data-aos-delay="200">
                 <!-- Left Side - Join Us -->
                 <div class="career-cta-left">
-                    <p class="career-cta-subtitle">Ready to grow with us?</p>
-                    <p class="career-cta-text">Send your CV, portfolio (if any), or introduction to:</p>
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hr@samuderabiru.net&su=Application:%20Career%20at%20SBI&body=Hello%20SBI%20Team,%0D%0A%0D%0AI%20am%20interested%20in%20joining%20your%20team.%0D%0A%0D%0A" target="_blank" class="career-cta-email">
-                        hr@samuderabiru.net
+                    <p class="career-cta-subtitle">{{ __('career.cta.subtitle') }}</p>
+                    <p class="career-cta-text">{{ __('career.cta.text') }}</p>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to={{ __('career.cta.email') }}&su=Application:%20Career%20at%20SBI&body=Hello%20SBI%20Team,%0D%0A%0D%0AI%20am%20interested%20in%20joining%20your%20team.%0D%0A%0D%0A" target="_blank" class="career-cta-email">
+                        {{ __('career.cta.email') }}
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -318,26 +276,16 @@
 
                 <!-- Right Side - Please Include -->
                 <div class="career-cta-right">
-                    <p class="career-cta-include-title">Please include:</p>
+                    <p class="career-cta-include-title">{{ __('career.cta.include_title') }}</p>
                     <div class="career-cta-include-list">
+                        @foreach(__('career.cta.include_items') as $item)
                         <div class="career-include-item">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
-                            <span>Your name</span>
+                            <span>{{ $item }}</span>
                         </div>
-                        <div class="career-include-item">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <span>The position you're applying for</span>
-                        </div>
-                        <div class="career-include-item">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <span>Short note about why you're interested</span>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -355,53 +303,46 @@
             </button>
             
             <div class="career-modal-header">
-                <div class="career-modal-badge">Full Time</div>
-                <h3 class="career-modal-title">Business Analyst</h3>
+                <div class="career-modal-badge">{{ __('career.modal.fulltime.badge') }}</div>
+                <h3 class="career-modal-title">{{ __('career.modal.fulltime.title') }}</h3>
             </div>
 
             <div class="career-modal-body">
                 <div class="career-modal-section">
-                    <h4>For Graduates From:</h4>
+                    <h4>{{ __('career.modal.fulltime.majors_title') }}</h4>
                     <div class="career-modal-majors">
-                        <span>Industrial Engineering</span>
-                        <span>Information Systems</span>
-                        <span>IT</span>
-                        <span>Data & Statistics</span>
-                        <span>Business</span>
-                        <span>Economics</span>
-                        <span>Accounting</span>
-                        <span>Related Fields</span>
+                        @foreach(__('career.modal.fulltime.majors_list') as $major)
+                        <span>{{ $major }}</span>
+                        @endforeach
                     </div>
                     <p class="career-modal-note">
-                        Interested in business process optimization and digital transformation
+                        {{ __('career.modal.fulltime.majors_note') }}
                     </p>
                 </div>
 
                 <div class="career-modal-section">
-                    <h4>What You'll Do:</h4>
+                    <h4>{{ __('career.modal.fulltime.role_title') }}</h4>
                     <p>
-                        As a Business Analyst at SBI, you will help clients rethink how their organizations - from operations and data to digital tools and integrated systems. You'll map processes, analyze pain points, design better workflows, and work with technical teams to bring those improvements to life.
+                        {{ __('career.modal.fulltime.role_description') }}
                     </p>
                 </div>
 
                 <div class="career-modal-section">
-                    <h4>This Role Suits Individuals Who:</h4>
+                    <h4>{{ __('career.modal.fulltime.requirements_title') }}</h4>
                     <ul class="career-modal-list">
-                        <li>Enjoy understanding how things work and how they can work better</li>
-                        <li>Are comfortable learning new technologies, systems, and tools</li>
-                        <li>Are detail-oriented, communicative, and thoughtful in problem-solving</li>
-                        <li>Love turning complexity into clarity</li>
-                        <li>Believe that automation and intelligence are at the core of future business</li>
+                        @foreach(__('career.modal.fulltime.requirements_list') as $requirement)
+                        <li>{{ $requirement }}</li>
+                        @endforeach
                     </ul>
                     <p class="career-modal-highlight">
-                        If you love connecting business needs with intelligent solutions, this role is for you.
+                        {{ __('career.modal.fulltime.highlight') }}
                     </p>
                 </div>
             </div>
 
             <div class="career-modal-footer">
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hr@samuderabiru.net&su=Application:%20Business%20Analyst%20Full-time&body=Hello%20SBI%20Team,%0D%0A%0D%0AI%20am%20interested%20in%20applying%20for%20the%20Business%20Analyst%20Full-time%20position.%0D%0A%0D%0A" target="_blank" class="career-modal-apply-btn">
-                    Apply Now
+                    {{ __('career.modal.fulltime.apply_button') }}
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
@@ -421,41 +362,40 @@
             </button>
             
             <div class="career-modal-header">
-                <div class="career-modal-badge internship">6 Months Internship</div>
-                <h3 class="career-modal-title">Business Analyst Internship</h3>
+                <div class="career-modal-badge internship">{{ __('career.modal.internship.badge') }}</div>
+                <h3 class="career-modal-title">{{ __('career.modal.internship.title') }}</h3>
             </div>
 
             <div class="career-modal-body">
                 <div class="career-modal-section">
-                    <h4>Program Overview:</h4>
+                    <h4>{{ __('career.modal.internship.overview_title') }}</h4>
                     <p>
-                        Our 6 months internship program is designed for students who want meaningful, real-world experience. Over six months, you'll learn how to conduct business analysis, assist in digital projects, and support process mapping and data structuring activities.
+                        {{ __('career.modal.internship.overview_description') }}
                     </p>
                     <p class="career-modal-note">
-                        The internship can be converted into academic credit or practical work experience based on your university requirements.
+                        {{ __('career.modal.internship.overview_note') }}
                     </p>
                 </div>
 
                 <div class="career-modal-section">
-                    <h4>This Internship is Ideal For:</h4>
+                    <h4>{{ __('career.modal.internship.ideal_title') }}</h4>
                     <ul class="career-modal-list">
-                        <li>Students who want hands-on exposure to digital transformation projects</li>
-                        <li>Individuals who enjoy research, analysis, and understanding how businesses operate</li>
-                        <li>Proactive, adaptable, and eager to learn people</li>
-                        <li>Those who want to explore careers in operations, consulting, technology, or data</li>
+                        @foreach(__('career.modal.internship.ideal_list') as $item)
+                        <li>{{ $item }}</li>
+                        @endforeach
                     </ul>
                 </div>
 
                 <div class="career-modal-section">
                     <p class="career-modal-highlight">
-                        You won't be treated as "just an intern" - you'll be part of our team, contributing to real deliverables and learning skills that truly matter.
+                        {{ __('career.modal.internship.highlight') }}
                     </p>
                 </div>
             </div>
 
             <div class="career-modal-footer">
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hr@samuderabiru.net&su=Application:%20Business%20Analyst%20Internship&body=Hello%20SBI%20Team,%0D%0A%0D%0AI%20am%20interested%20in%20applying%20for%20the%20Business%20Analyst%20Internship%20position.%0D%0A%0D%0A" target="_blank" class="career-modal-apply-btn">
-                    Apply Now
+                    {{ __('career.modal.internship.apply_button') }}
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>

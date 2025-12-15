@@ -15,13 +15,13 @@
         <div class="about-hero-content" data-aos="fade-up">
             <div class="hero-badge">
                 <span class="badge-dot"></span>
-                OUR STORY
+                {{ __('about.hero.badge') }}
             </div>
             <h1 class="hero-heading">
-                Built for the <span class="text-gradient">Blue Ocean</span>
+                {!! __('about.hero.title') !!}
             </h1>
             <p class="hero-description">
-                Bringing Indonesian Industries an inch closer to international competition
+                {{ __('about.hero.description') }}
             </p>
         </div>
     </section>
@@ -62,9 +62,9 @@
                         </div>
                     </div>
                     <div class="story-hero-text">
-                        <h2 class="story-lead-title" data-aos="fade-up">SBI was born from a simple belief:</h2>
+                        <h2 class="story-lead-title" data-aos="fade-up">{{ __('about.story.lead_title') }}</h2>
                         <p class="story-statement" data-aos="fade-up" data-aos-delay="100">
-                            <span class="highlight-blue">Every company deserves the chance to break free from constraints and compete in a space of its own—its blue ocean.</span>
+                            <span class="highlight-blue">{{ __('about.story.statement') }}</span>
                         </p>
                     </div>
                 </div>
@@ -77,12 +77,12 @@
                                 <circle cx="12" cy="12" r="10" stroke="#0284C7" stroke-width="2"/>
                                 <path d="M12 6V12L16 14" stroke="#0284C7" stroke-width="2" stroke-linecap="round"/>
                             </svg>
-                            <span>A Decade Ago</span>
+                            <span>{{ __('about.ui.a_decade_ago') }}</span>
                         </div>
                     </div>
                     
                     <p class="timeline-text" data-aos="fade-up" data-aos-delay="250">
-                        Long before "digital transformation" became a buzzword, we saw Indonesian companies struggling with the same patterns:
+                        {{ __('about.story.timeline_text') }}
                     </p>
                     
                     <div class="challenges-grid">
@@ -93,8 +93,8 @@
                                     <circle cx="20" cy="20" r="3" fill="#0284C7"/>
                                 </svg>
                             </div>
-                            <h4>Complex Processes</h4>
-                            <p>that slowed decisions</p>
+                            <h4>{{ __('about.story.challenges.0.title') }}</h4>
+                            <p>{{ __('about.story.challenges.0.description') }}</p>
                         </div>
                         
                         <div class="challenge-card" data-aos="flip-left" data-aos-delay="350">
@@ -107,8 +107,8 @@
                                     <path d="M18 12H22M12 18V22M28 18V22M18 28H22" stroke="#0284C7" stroke-width="2" stroke-dasharray="2 2"/>
                                 </svg>
                             </div>
-                            <h4>Disconnected Systems</h4>
-                            <p>creating data silos</p>
+                            <h4>{{ __('about.story.challenges.1.title') }}</h4>
+                            <p>{{ __('about.story.challenges.1.description') }}</p>
                         </div>
                         
                         <div class="challenge-card" data-aos="flip-left" data-aos-delay="400">
@@ -121,8 +121,8 @@
                                     <line x1="25" y1="25" x2="22" y2="22" stroke="#0284C7" stroke-width="2"/>
                                 </svg>
                             </div>
-                            <h4>Mismatched Tech</h4>
-                            <p>never fit business needs</p>
+                            <h4>{{ __('about.story.challenges.2.title') }}</h4>
+                            <p>{{ __('about.story.challenges.2.description') }}</p>
                         </div>
                         
                         <div class="challenge-card" data-aos="flip-left" data-aos-delay="450">
@@ -133,8 +133,8 @@
                                     <path d="M12 8L8 12M28 8L32 12M8 28L12 32M28 32L32 28" stroke="#0284C7" stroke-width="2" stroke-linecap="round"/>
                                 </svg>
                             </div>
-                            <h4>Firefighting Mode</h4>
-                            <p>instead of building the future</p>
+                            <h4>{{ __('about.story.challenges.3.title') }}</h4>
+                            <p>{{ __('about.story.challenges.3.description') }}</p>
                         </div>
                     </div>
                 </div>
@@ -155,9 +155,9 @@
                                     </defs>
                                 </svg>
                             </div>
-                            <h3 class="pivot-title">SBI was created to change that.</h3>
+                            <h3 class="pivot-title">{{ __('about.story.pivot_title') }}</h3>
                             <p class="pivot-text">
-                                Our name is a reminder of the philosophy that built us—<strong>to help organizations step out of crowded, competitive waters and into a new space defined by clarity, efficiency, and possibility.</strong>
+                                {{ __('about.story.pivot_text') }}
                             </p>
                         </div>
                         <div class="pivot-image" data-aos="fade-left" data-aos-delay="600">
@@ -174,9 +174,9 @@
                     <!-- Top Section: Title + Badge Split -->
                     <div class="milestone-header">
                         <div class="milestone-header-content" data-aos="fade-right" data-aos-delay="575">
-                            <span class="milestone-tag">Our Journey</span>
-                            <h3>A Decade of Transformation</h3>
-                            <p class="milestone-subtitle">Building the future, one solution at a time</p>
+                            <span class="milestone-tag">{{ __('about.ui.our_journey') }}</span>
+                            <h3>{{ __('about.milestone.title') }}</h3>
+                            <p class="milestone-subtitle">{{ __('about.milestone.subtitle') }}</p>
                         </div>
                         <div class="milestone-badge-wrapper" data-aos="zoom-in" data-aos-delay="600">
                             <div class="badge-ring"></div>
@@ -191,7 +191,7 @@
 
                     <!-- Intro Text -->
                     <p class="milestone-intro-text" data-aos="fade-up" data-aos-delay="650">
-                        Today, after <strong>10 years</strong> of building, fixing, and transforming, we've refined what we do into a simple promise:
+                        {{ __('about.milestone.intro_text') }}
                     </p>
 
                     <!-- Promise Box - Refined Design -->
@@ -199,9 +199,7 @@
                         <div class="promise-box-inner">
                             <div class="promise-content-main">
                                 <p class="promise-statement-big">
-                                    We help you <span class="text-highlight">grow faster</span> and 
-                                    <span class="text-highlight">operate smarter</span> by marrying 
-                                    business insight with the right technology.
+                                    {!! __('about.milestone.promise_statement') !!}
                                 </p>
                             </div>
                             <div class="promise-principles">
@@ -211,7 +209,7 @@
                                             <path d="M5 13l4 4L19 7"/>
                                         </svg>
                                     </div>
-                                    <span>No jargon</span>
+                                    <span>{{ __('about.ui.no_jargon') }}</span>
                                 </div>
                                 <div class="promise-principle-divider"></div>
                                 <div class="promise-principle-item">
@@ -220,7 +218,7 @@
                                             <path d="M5 13l4 4L19 7"/>
                                         </svg>
                                     </div>
-                                    <span>No complexity</span>
+                                    <span>{{ __('about.ui.no_complexity') }}</span>
                                 </div>
                                 <div class="promise-principle-divider"></div>
                                 <div class="promise-principle-item">
@@ -229,7 +227,7 @@
                                             <path d="M5 13l4 4L19 7"/>
                                         </svg>
                                     </div>
-                                    <span>Only solutions</span>
+                                    <span>{{ __('about.ui.only_solutions') }}</span>
                                 </div>
                             </div>
                         </div>
@@ -258,7 +256,7 @@
                                             <svg class="caption-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
                                             </svg>
-                                            <p>SBI's 10th Anniversary</p>
+                                            <p>{{ __('about.ui.anniversary_caption') }}</p>
                                         </div>
                                     </div>
                                     <div class="about-slide">
@@ -313,7 +311,7 @@
                                     <rect x="4" y="4" width="24" height="24" rx="3" stroke="#0284C7" stroke-width="2"/>
                                     <path d="M10 16L14 20L22 12" stroke="#0284C7" stroke-width="2" stroke-linecap="round"/>
                                 </svg>
-                                <span>Systems</span>
+                                <span>{{ __('about.ui.systems') }}</span>
                             </div>
                             <div class="arrow-divider">→</div>
                             <div class="icon-item" data-aos="zoom-in" data-aos-delay="750">
@@ -323,19 +321,19 @@
                                     <circle cx="16" cy="18" r="2" fill="#0284C7"/>
                                     <circle cx="26" cy="8" r="2" fill="#0284C7"/>
                                 </svg>
-                                <span>Growth</span>
+                                <span>{{ __('about.ui.growth') }}</span>
                             </div>
                         </div>
                     </div>
                     <div class="closing-text">
-                        <p class="closing-line">We don't just implement systems.</p>
+                        <p class="closing-line">{{ __('about.ui.we_dont_just') }}</p>
                         <p class="closing-statement">
-                            <span class="text-gradient-blue">We elevate organizations</span>
+                            <span class="text-gradient-blue">{{ __('about.ui.we_elevate') }}</span>
                         </p>
                         <div class="closing-tags">
-                            <span class="tag">Digitally</span>
-                            <span class="tag">Operationally</span>
-                            <span class="tag">Strategically</span>
+                            <span class="tag">{{ __('about.ui.digitally') }}</span>
+                            <span class="tag">{{ __('about.ui.operationally') }}</span>
+                            <span class="tag">{{ __('about.ui.strategically') }}</span>
                         </div>
                     </div>
                 </div>
@@ -347,8 +345,8 @@
     <section class="vm-section-modern">
         <div class="section-container">
             <div class="section-header" data-aos="fade-up">
-                <span class="section-tag">Core Values</span>
-                <h2 class="section-title">Our Core <span class="text-gradient">Beliefs</span></h2>
+                <span class="section-tag">{{ __('about.ui.core_values') }}</span>
+                <h2 class="section-title">{!! __('about.beliefs.title') !!}</h2>
             </div>
 
             <div class="vm-grid">
@@ -359,13 +357,13 @@
                             <circle cx="24" cy="32" r="8" stroke="url(#vmGradient1)" stroke-width="2"/>
                         </svg>
                     </div>
-                    <h3 class="vm-title-modern">VISION</h3>
+                    <h3 class="vm-title-modern">{{ __('about.beliefs.vision.label') }}</h3>
                     <div class="vision-content-modern">
                         <p class="vision-headline">
-                            To become the most trusted transformation partner for companies seeking operational excellence, data clarity, and long-term digital capability.
+                            {{ __('about.beliefs.vision.headline') }}
                         </p>
                         <p class="vision-description">
-                            A future where Indonesian and regional companies don't just "catch up," but lead—with technology that empowers people, simplifies decisions, and opens new opportunities.
+                            {{ __('about.beliefs.vision.description') }}
                         </p>
                     </div>
                 </div>
@@ -377,13 +375,13 @@
                             <path d="M16 24L22 30L32 18" stroke="url(#vmGradient2)" stroke-width="2" stroke-linecap="round"/>
                         </svg>
                     </div>
-                    <h3 class="vm-title-modern">MISSION</h3>
+                    <h3 class="vm-title-modern">{{ __('about.beliefs.mission.label') }}</h3>
                     <div class="mission-content-modern">
                         <p class="mission-headline">
-                            To accelerate organizations through practical, human-centered digital transformation—so technology becomes an engine, not an obstacle.
+                            {{ __('about.beliefs.mission.headline') }}
                         </p>
                         <p class="mission-description">
-                            We believe transformation isn't only about tools. It's about clarity, discipline, and a willingness to redesign how work gets done. Our mission is to help companies reach that point faster, with solutions that are built to last.
+                            {{ __('about.beliefs.mission.description') }}
                         </p>
                     </div>
                 </div>
@@ -409,10 +407,10 @@
         <div class="section-container">
             <!-- Section Header -->
             <div class="section-header" data-aos="fade-up">
-                <span class="section-tag-light">How We Work</span>
-                <h2 class="section-title-light">The SBI<span class="text-gradient-light"> Principles</span></h2>
+                <span class="section-tag-light">{{ __('about.ui.how_we_work') }}</span>
+                <h2 class="section-title-light">{!! __('about.principles.title') !!}</h2>
                 <p class="section-subtitle-light">
-                    These principles guide how we work internally—but they also shape the experience we bring to every client.
+                    {{ __('about.principles.subtitle') }}
                 </p>
             </div>
 
@@ -430,9 +428,9 @@
                                 <circle cx="32" cy="32" r="20" stroke="currentColor" stroke-width="1" opacity="0.3"/>
                             </svg>
                         </div>
-                        <h3 class="principle-title">Transformation is Our Business</h3>
+                        <h3 class="principle-title">{{ __('about.principles.items.0.title') }}</h3>
                         <p class="sbi-principle-description">
-                            We exist to unlock change. We help you remove complexity, upgrade operations, and step into a more efficient, future-ready way of working.
+                            {{ __('about.principles.items.0.description') }}
                         </p>
                         <div class="principle-line"></div>
                     </div>
@@ -452,9 +450,9 @@
                                 <circle cx="48" cy="32" r="3" fill="currentColor"/>
                             </svg>
                         </div>
-                        <h3 class="principle-title">Results Rule</h3>
+                        <h3 class="principle-title">{{ __('about.principles.items.1.title') }}</h3>
                         <p class="sbi-principle-description">
-                            Every recommendation, workflow, and dashboard must drive impact. If it doesn't deliver measurable results, it doesn't make it into your system.
+                            {{ __('about.principles.items.1.description') }}
                         </p>
                         <div class="principle-line"></div>
                     </div>
@@ -473,9 +471,9 @@
                                 <circle cx="48" cy="48" r="4" fill="currentColor"/>
                             </svg>
                         </div>
-                        <h3 class="principle-title">Fix the Root, Not the Symptom</h3>
+                        <h3 class="principle-title">{{ __('about.principles.items.2.title') }}</h3>
                         <p class="sbi-principle-description">
-                            We dig deep into the real source of inefficiency. Not assumptions. Not surface-level issues. Just solutions that last.
+                            {{ __('about.principles.items.2.description') }}
                         </p>
                         <div class="principle-line"></div>
                     </div>
@@ -493,9 +491,9 @@
                                 <circle cx="32" cy="32" r="16" stroke="currentColor" stroke-width="1" opacity="0.2"/>
                             </svg>
                         </div>
-                        <h3 class="principle-title">Simplify Relentlessly</h3>
+                        <h3 class="principle-title">{{ __('about.principles.items.3.title') }}</h3>
                         <p class="sbi-principle-description">
-                            We delete unnecessary steps, remove noise, and streamline processes—before automation. Faster cycle times come from simplification, not layering more tools.
+                            {{ __('about.principles.items.3.description') }}
                         </p>
                         <div class="principle-line"></div>
                     </div>
@@ -512,9 +510,9 @@
                                 <circle cx="32" cy="32" r="8" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>
                             </svg>
                         </div>
-                        <h3 class="principle-title">Impact Above All Else</h3>
+                        <h3 class="principle-title">{{ __('about.principles.items.4.title') }}</h3>
                         <p class="sbi-principle-description">
-                            We focus on what creates real movement for your business. Your goals become our compass.
+                            {{ __('about.principles.items.4.description') }}
                         </p>
                         <div class="principle-line"></div>
                     </div>
@@ -535,8 +533,8 @@
     <section class="testimonials-section">
         <div class="section-container">
             <div class="section-header" data-aos="fade-up">
-                <span class="section-tag">TESTIMONIALS</span>
-                <h2 class="section-title">Why Clients <span class="text-gradient">Trust Us</span></h2>
+                <span class="section-tag">{{ __('about.ui.testimonials_tag') }}</span>
+                <h2 class="section-title">{!! __('about.testimonials.title') !!}</h2>
             </div>
 
             <div class="testimonials-slider-wrapper">
@@ -551,12 +549,12 @@
                         </svg>
                     </div>
                     <p class="testimonial-text">
-                    “SBI helped us automate asset tracking and integrate our process with real-time updates. Request management became simpler, assets became easier to locate, and discrepancies significantly decreased. Today, we have clearer visibility and far fewer lost assets.”                    
+                        {{ __('about.testimonials.items.0.text') }}
                     </p>
                     <div class="testimonial-author">
                         <div class="author-info">
-                            <h4 class="author-name">Irvan W.</h4>
-                            <p class="author-company">Senior Manager Asset Management - PT. Samator Gas Industri</p>
+                            <h4 class="author-name">{{ __('about.testimonials.items.0.author') }}</h4>
+                            <p class="author-company">{{ __('about.testimonials.items.0.company') }}</p>
                         </div>
                     </div>
                             </div>
@@ -571,11 +569,12 @@
                         </svg>
                     </div>
                     <p class="testimonial-text">
-                    “Before SBI came in, our approval process was long and inefficient. After the new system went live, everything changed. We no longer deal with multi-layer approvals, and transactions flow without delays or data loss. The accounting team now works faster, cleaner, and with full confidence in the system.”                    </p>
+                        {{ __('about.testimonials.items.1.text') }}
+                    </p>
                     <div class="testimonial-author">
                         <div class="author-info">
-                            <h4 class="author-name">Ach. Machyuddin</h4>
-                            <p class="author-company">Manager Accounting - PT. Sama Bayu Mandala</p>
+                            <h4 class="author-name">{{ __('about.testimonials.items.1.author') }}</h4>
+                            <p class="author-company">{{ __('about.testimonials.items.1.company') }}</p>
                         </div>
                     </div>
                             </div>
@@ -590,11 +589,12 @@
                         </svg>
                     </div>
                     <p class="testimonial-text">
-                    “Managing an ERP transformation is never easy, especially during cut-off. But SBI supported us end-to-end. They tackled every challenge proactively and stood by us through the most stressful days. What felt impossible became manageable. We couldn’t have completed this transformation without their dedication.”                    </p>
+                        {{ __('about.testimonials.items.2.text') }}
+                    </p>
                     <div class="testimonial-author">
                         <div class="author-info">
-                            <h4 class="author-name">Liany S.</h4>
-                            <p class="author-company">Head of Compliance - Samator Group</p>
+                            <h4 class="author-name">{{ __('about.testimonials.items.2.author') }}</h4>
+                            <p class="author-company">{{ __('about.testimonials.items.2.company') }}</p>
                         </div>
                     </div>
                             </div>
@@ -609,12 +609,12 @@
                                     </svg>
                                 </div>
                                 <p class="testimonial-text">
-                                    "Our operations involve high-volume transactions and time-critical coordination, so system reliability is non-negotiable. SBI revamped our digital workflows, integrated key platforms, and introduced automation that removed so many manual steps we didn't even realize were slowing us down. Today, our team works with greater precision and far fewer interruptions. SBI's attention to detail and commitment to understanding our business made the transformation seamless."
+                                    {{ __('about.testimonials.items.3.text') }}
                                 </p>
                                 <div class="testimonial-author">
                                     <div class="author-info">
-                                        <h4 class="author-name">Eddy W.</h4>
-                                        <p class="author-company">Associate Director - PT Aneka Mega Energi</p>
+                                        <h4 class="author-name">{{ __('about.testimonials.items.3.author') }}</h4>
+                                        <p class="author-company">{{ __('about.testimonials.items.3.company') }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -629,12 +629,12 @@
                                     </svg>
                                 </div>
                                 <p class="testimonial-text">
-                                    "Implementing automation in finance is always challenging, especially when multiple branches operate with different habits and legacy processes. SBI helped us unify everything into a single, reliable financial ecosystem. Our reporting became faster, data inconsistencies were eliminated, and closing processes that once took days can now be completed in hours."
+                                    {{ __('about.testimonials.items.4.text') }}
                                 </p>
                                 <div class="testimonial-author">
                                     <div class="author-info">
-                                        <h4 class="author-name">Dhaniendra L.</h4>
-                                        <p class="author-company">Chief Finance Officer - PT. Samator Indo Gas</p>
+                                        <h4 class="author-name">{{ __('about.testimonials.items.4.author') }}</h4>
+                                        <p class="author-company">{{ __('about.testimonials.items.4.company') }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -656,8 +656,8 @@
     <section class="team-section-modern">
         <div class="section-container">
             <div class="section-header" data-aos="fade-up">
-                <span class="section-tag">Leadership</span>
-                <h2 class="section-title">Board of <span class="text-gradient">Directors</span></h2>
+                <span class="section-tag">{{ __('about.ui.leadership') }}</span>
+                <h2 class="section-title">{!! __('about.ui.board_of_directors') !!}</h2>
             </div>
 
             <!-- Team Grid -->
@@ -672,29 +672,29 @@
                                 <img src="{{ asset('images/team/imelda.jpg') }}" alt="Imelda Harsono" class="team-image">
                             </picture>
                             <div class="team-overlay">
-                                <div class="team-role-badge">Founder & MD</div>
+                                <div class="team-role-badge">{{ __('about.ui.founder_badge') }}</div>
                             </div>
                         </div>
                         <div class="team-content">
                             <h3 class="team-name-modern">Imelda Harsono</h3>
-                            <p class="team-position">FOUNDER & MANAGING DIRECTOR</p>
+                            <p class="team-position">{{ __('about.ui.founder_md') }}</p>
                             <div class="team-quote-modern">
                                 <svg class="quote-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                     <path d="M6 9C6 6.8 7.8 5 10 5V7C8.9 7 8 7.9 8 9H10V15H4V9H6ZM18 9C18 6.8 19.8 5 22 5V7C20.9 7 20 7.9 20 9H22V15H16V9H18Z" fill="currentColor"/>
                                 </svg>
-                                <p>Our Business Intelligence team is trained to constantly adapt towards changes by leveraging technology to achieve maximum business performance</p>
+                                <p>{{ __('about.team.imelda.quote') }}</p>
                             </div>
                             <div class="team-bio-modern">
                                 <div class="bio-content">
-                                    <p class="bio-preview">Imelda Harsono founded Samudera Biru Internasional in 2015 as a renewable energy company to facilitate wide-scale adoption of solar projects throughout Indonesia...</p>
+                                    <p class="bio-preview">{{ __('about.team.imelda.bio_preview') }}</p>
                                     <div class="bio-full" style="display: none;">
-                                        <p>Imelda Harsono founded Samudera Biru Internasional in 2015 as a renewable energy company to facilitate wide-scale adoption of solar projects throughout Indonesia. As the Industry 4.0 revolution rapidly took hold in the rest of the world, Imelda quickly expanded SBI's mission into business process consulting services to help local companies achieve a successful transition into the 4.0 era without getting left behind.</p>
-                                        <p>Her passion for improving the skills and education of working age Indonesians led her to join the Board of HarukaEdu, a company dedicated to providing technology platform solutions that enable affordable lifelong learning.</p>
-                                        <p>Imelda is currently enrolled at Harvard Business School's Owner/President Management Program, a two year program designed to enhance the business skills of top world executives and entrepreneurs. She also holds a BA in Political Science and Philosophy from the National University of Singapore, a Master of Management from Universitas Pelita Harapan Graduate School of Business (Cum Laude), and a Master of Laws in International Commercial Law from the University of Edinburgh in Scotland.</p>
+                                        @foreach(__('about.team.imelda.bio_full') as $paragraph)
+                                            <p>{{ $paragraph }}</p>
+                                        @endforeach
                                     </div>
                                 </div>
                                 <button class="read-more-btn" onclick="toggleBio(this)">
-                                    <span class="read-more-text">Read More</span>
+                                    <span class="read-more-text">{{ __('about.ui.read_more') }}</span>
                                     <svg class="read-more-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                         <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                                     </svg>
@@ -710,27 +710,29 @@
                         <div class="team-image-container">
                             <img src="{{ asset('images/team/rachmat.webp') }}" alt="Rachmat Harsono" class="team-image">
                             <div class="team-overlay">
-                                <div class="team-role-badge">Co-Founder</div>
+                                <div class="team-role-badge">{{ __('about.ui.cofounder_badge') }}</div>
                             </div>
                         </div>
                         <div class="team-content">
                             <h3 class="team-name-modern">Rachmat Harsono</h3>
-                            <p class="team-position">CO-FOUNDER & COMMISSIONER</p>
+                            <p class="team-position">{{ __('about.ui.cofounder_commissioner') }}</p>
                             <div class="team-quote-modern">
                                 <svg class="quote-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                     <path d="M6 9C6 6.8 7.8 5 10 5V7C8.9 7 8 7.9 8 9H10V15H4V9H6ZM18 9C18 6.8 19.8 5 22 5V7C20.9 7 20 7.9 20 9H22V15H16V9H18Z" fill="currentColor"/>
                                 </svg>
-                                <p>SBI was established to brought change into the landscape of Indonesian Industry. A catalyst of a nation-wide change into alternative energy</p>
+                                <p>{{ __('about.team.rachmat.quote') }}</p>
                             </div>
                             <div class="team-bio-modern">
                                 <div class="bio-content">
-                                    <p class="bio-preview">Rachmat has 15+ years experience in Indonesia's energy industry and is a driven and passionate serial Entrepreneur...</p>
+                                    <p class="bio-preview">{{ __('about.team.rachmat.bio_preview') }}</p>
                                     <div class="bio-full" style="display: none;">
-                                        <p>Rachmat has 15+ years experience in Indonesia's energy industry and is a driven and passionate serial Entrepreneur. He has received numerous awards, including Fortune 40 under 40 (Indonesia) and is a member of the Chicago Booth CFO Forum. Rachmat has a BSc in Marketing, International Business and HR from Marquette University and a MBA from the University of Chicago Booth School of Business.</p>
+                                        @foreach(__('about.team.rachmat.bio_full') as $paragraph)
+                                            <p>{{ $paragraph }}</p>
+                                        @endforeach
                                     </div>
                                 </div>
                                 <button class="read-more-btn" onclick="toggleBio(this)">
-                                    <span class="read-more-text">Read More</span>
+                                    <span class="read-more-text">{{ __('about.ui.read_more') }}</span>
                                     <svg class="read-more-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                         <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                                     </svg>
@@ -744,33 +746,31 @@
                 <div class="team-card-modern" data-aos="fade-up" data-aos-delay="300">
                     <div class="team-card-inner">
                         <div class="team-image-container">
-                            <picture>
-                                <source srcset="{{ asset('images/team/mario.webp') }}" type="image/webp">
-                                <source srcset="{{ asset('images/team/mario.png') }}" type="image/png">
-                                <img src="{{ asset('images/team/mario.jpg') }}" alt="Mario Velez" class="team-image">
-                            </picture>
+                            <img src="{{ asset('images/team/mario.jpg') }}" alt="Mario Velez" class="team-image">
                             <div class="team-overlay">
-                                <div class="team-role-badge">COO</div>
+                                <div class="team-role-badge">{{ __('about.ui.coo_badge') }}</div>
                             </div>
                         </div>
                         <div class="team-content">
                             <h3 class="team-name-modern">Mario Velez</h3>
-                            <p class="team-position">CHIEF OPERATING OFFICER</p>
+                            <p class="team-position">{{ __('about.ui.coo') }}</p>
                             <div class="team-quote-modern">
                                 <svg class="quote-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                     <path d="M6 9C6 6.8 7.8 5 10 5V7C8.9 7 8 7.9 8 9H10V15H4V9H6ZM18 9C18 6.8 19.8 5 22 5V7C20.9 7 20 7.9 20 9H22V15H16V9H18Z" fill="currentColor"/>
                                 </svg>
-                                <p>In the Industry 4.0 era, businesses failing to use technology to radically and continuously change are making themselves vulnerable to severe disruption</p>
+                                <p>{{ __('about.team.mario.quote') }}</p>
                             </div>
                             <div class="team-bio-modern">
                                 <div class="bio-content">
-                                    <p class="bio-preview">After graduating with a B.A. from Pomona College in Claremont, California, Mario began his career as a Strategy and Operations consultant at Deloitte Consulting...</p>
+                                    <p class="bio-preview">{{ __('about.team.mario.bio_preview') }}</p>
                                     <div class="bio-full" style="display: none;">
-                                        <p>After graduating with a B.A. from Pomona College in Claremont, California, Mario began his career as a Strategy and Operations consultant at Deloitte Consulting. He later obtained a Juris Doctor degree from the University of Chicago Law School in 2009 and an LLM with Distinction in Commercial Law from the University of Edinburgh in 2010. Prior to moving to Indonesia, Mario worked as an attorney for White & Case, an international law firm, where he represented multinational companies and sovereigns.</p>
+                                        @foreach(__('about.team.mario.bio_full') as $paragraph)
+                                            <p>{{ $paragraph }}</p>
+                                        @endforeach
                                     </div>
                                 </div>
                                 <button class="read-more-btn" onclick="toggleBio(this)">
-                                    <span class="read-more-text">Read More</span>
+                                    <span class="read-more-text">{{ __('about.ui.read_more') }}</span>
                                     <svg class="read-more-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                         <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                                     </svg>
@@ -798,13 +798,11 @@
                 <div class="lets-talk-left" data-aos="fade-right">
                     <div class="talk-badge">
                         <div class="talk-badge-pulse"></div>
-                        <span class="talk-badge-text">Ready to Transform?</span>
+                        <span class="talk-badge-text">{{ __('about.cta.badge') }}</span>
                     </div>
                     
                     <h2 class="talk-heading">
-                        Let's discuss how we can help 
-                        <span class="talk-highlight">accelerate your company's growth</span> 
-                        through digital transformation.
+                        {{ __('about.cta.title') }}
                     </h2>
 
                     <div class="talk-features">
@@ -814,7 +812,7 @@
                                     <path d="M16.6667 5L7.50004 14.1667L3.33337 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </div>
-                            <span>Free consultation & assessment</span>
+                            <span>{{ __('about.cta.features.0') }}</span>
                         </div>
                         <div class="talk-feature-item" data-aos="fade-up" data-aos-delay="150">
                             <div class="feature-check">
@@ -822,7 +820,7 @@
                                     <path d="M16.6667 5L7.50004 14.1667L3.33337 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </div>
-                            <span>Tailored transformation roadmap</span>
+                            <span>{{ __('about.cta.features.1') }}</span>
                         </div>
                         <div class="talk-feature-item" data-aos="fade-up" data-aos-delay="200">
                             <div class="feature-check">
@@ -830,7 +828,7 @@
                                     <path d="M16.6667 5L7.50004 14.1667L3.33337 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </div>
-                            <span>Expert guidance from day one</span>
+                            <span>{{ __('about.cta.features.2') }}</span>
                         </div>
                     </div>
                 </div>
@@ -845,8 +843,8 @@
                                 </svg>
                                 <div class="form-icon-glow"></div>
                             </div>
-                            <h3 class="talk-form-title">Start Your Transformation</h3>
-                            <p class="talk-form-subtitle">We'll respond within 24 hours</p>
+                            <h3 class="talk-form-title">{{ __('about.cta.form_title') }}</h3>
+                            <p class="talk-form-subtitle">{{ __('about.cta.form_subtitle') }}</p>
                         </div>
 
                         <form class="talk-form" id="talkForm">
@@ -858,14 +856,14 @@
                                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                                             <path d="M13.3333 14V12.6667C13.3333 11.9594 13.0524 11.2811 12.5523 10.781C12.0522 10.281 11.3739 10 10.6667 10H5.33333C4.62609 10 3.94781 10.281 3.44772 10.781C2.94762 11.2811 2.66667 11.9594 2.66667 12.6667V14M10.6667 4.66667C10.6667 6.13943 9.47276 7.33333 8 7.33333C6.52724 7.33333 5.33333 6.13943 5.33333 4.66667C5.33333 3.19391 6.52724 2 8 2C9.47276 2 10.6667 3.19391 10.6667 4.66667Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        Full Name
+                                        {{ __('about.cta.full_name') }}
                                     </label>
                                     <input 
                                         type="text" 
                                         id="talkFullName" 
                                         name="full_name" 
                                         class="talk-form-input" 
-                                        placeholder="John Doe"
+                                        placeholder="{{ __('about.cta.placeholder_name') }}"
                                         required
                                     >
                                     <div class="talk-input-glow"></div>
@@ -876,14 +874,14 @@
                                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                                             <path d="M2.66667 4L7.92667 7.50667C7.95646 7.52583 7.99023 7.53799 8.02532 7.54218C8.06042 7.54637 8.09591 7.54248 8.12933 7.53083C8.16276 7.51918 8.19324 7.50007 8.21853 7.47493C8.24382 7.44979 8.26329 7.41926 8.27556 7.38556C8.28782 7.35186 8.29258 7.31581 8.28949 7.28015C8.2864 7.24449 8.27554 7.21006 8.25763 7.17907C8.23973 7.14809 8.21523 7.12126 8.18579 7.10042C8.15635 7.07958 8.12267 7.06522 8.08733 7.05833L2.66667 4ZM2.66667 4V10.6667C2.66667 11.0203 2.80714 11.3594 3.05719 11.6095C3.30724 11.8595 3.64638 12 4 12H12C12.3536 12 12.6928 11.8595 12.9428 11.6095C13.1929 11.3594 13.3333 11.0203 13.3333 10.6667V4M2.66667 4L8 7.33333M13.3333 4L8 7.33333" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        Email
+                                        {{ __('about.cta.email') }}
                                     </label>
                                     <input 
                                         type="email" 
                                         id="talkEmail" 
                                         name="email" 
                                         class="talk-form-input" 
-                                        placeholder="john@company.com"
+                                        placeholder="{{ __('about.cta.placeholder_email') }}"
                                         pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.(com|id|co\.id|net|org|edu|gov|mil|int|info|biz|name|museum|coop|aero|[a-z]{2})"
                                         title="Please enter a valid email address ending with .com, .id, etc."
                                         required
@@ -898,14 +896,14 @@
                                         <path d="M14 7.33333V4.66667C14 4.31305 13.8595 3.97391 13.6095 3.72386C13.3594 3.47381 13.0203 3.33333 12.6667 3.33333H3.33333C2.97971 3.33333 2.64057 3.47381 2.39052 3.72386C2.14048 3.97391 2 4.31305 2 4.66667V11.3333C2 11.687 2.14048 12.0261 2.39052 12.2761C2.64057 12.5262 2.97971 12.6667 3.33333 12.6667H8.66667" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                         <path d="M2 4.66667L8 8.66667L14 4.66667M11.3333 10H14.6667M13 8.66667V11.3333" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
-                                    Subject
+                                    {{ __('about.cta.subject') }}
                                 </label>
                                 <input 
                                     type="text" 
                                     id="talkSubject" 
                                     name="subject" 
                                     class="talk-form-input" 
-                                    placeholder="Digital Transformation Consultation"
+                                    placeholder="{{ __('about.cta.placeholder_subject') }}"
                                     required
                                 >
                                 <div class="talk-input-glow"></div>
@@ -916,13 +914,13 @@
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                                         <path d="M14 10C14 10.3536 13.8595 10.6928 13.6095 10.9428C13.3594 11.1929 13.0203 11.3333 12.6667 11.3333H5.33333L2 14V3.33333C2 2.97971 2.14048 2.64057 2.39052 2.39052C2.64057 2.14048 2.97971 2 3.33333 2H12.6667C13.0203 2 13.3594 2.14048 13.6095 2.39052C13.8595 2.64057 14 2.97971 14 3.33333V10Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
-                                    Message
+                                    {{ __('about.cta.message') }}
                                 </label>
                                 <textarea 
                                     id="talkMessage" 
                                     name="message" 
                                     class="talk-form-textarea" 
-                                    placeholder="Tell us about your business goals and transformation needs..."
+                                    placeholder="{{ __('about.cta.placeholder_message') }}"
                                     rows="4"
                                     required
                                 ></textarea>
@@ -930,7 +928,7 @@
                             </div>
 
                             <button type="submit" class="talk-submit-btn">
-                                <span class="talk-btn-text">Send Message</span>
+                                <span class="talk-btn-text">{{ __('about.cta.send_message') }}</span>
                                 <div class="talk-btn-shine"></div>
                                 <svg class="talk-btn-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                     <path d="M4.16667 10H15.8333M15.8333 10L10.8333 5M15.8333 10L10.8333 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -957,7 +955,7 @@ function toggleBio(button) {
         // Expand
         preview.style.display = 'none';
         full.style.display = 'block';
-        readMoreText.textContent = 'Read Less';
+        readMoreText.textContent = '{{ __('about.ui.read_less') }}';
         button.classList.add('expanded');
         
         // Smooth scroll to keep button in view if needed
@@ -973,7 +971,7 @@ function toggleBio(button) {
         // Collapse
         preview.style.display = 'block';
         full.style.display = 'none';
-        readMoreText.textContent = 'Read More';
+        readMoreText.textContent = '{{ __('about.ui.read_more') }}';
         button.classList.remove('expanded');
     }
 }
@@ -1043,7 +1041,7 @@ document.addEventListener('DOMContentLoaded', function() {
     emailInput.addEventListener('blur', function() {
         if (this.value && !isValidEmail(this.value)) {
             this.style.borderColor = 'rgba(239, 83, 80, 0.8)';
-            showNotification('error', 'Invalid Email', 'Please enter a valid email address ending with .com, .id, etc.');
+            showNotification('error', '{{ __("about.notifications.invalid_email_title") }}', '{{ __("about.notifications.invalid_email_message") }}');
         } else if (this.value) {
             this.style.borderColor = 'rgba(56, 189, 248, 0.5)';
         }
@@ -1059,7 +1057,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Validate email before submission
         const emailValue = emailInput.value;
         if (!isValidEmail(emailValue)) {
-            showNotification('error', 'Invalid Email', 'Please enter a valid email address (e.g., name@company.com)');
+            showNotification('error', '{{ __("about.notifications.invalid_email_title") }}', '{{ __("about.notifications.invalid_email_format") }}');
             emailInput.focus();
             emailInput.style.borderColor = 'rgba(239, 83, 80, 0.8)';
             return;
@@ -1067,7 +1065,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Disable button and show loading
         submitBtn.disabled = true;
-        btnText.textContent = 'Sending...';
+        btnText.textContent = '{{ __("about.notifications.sending") }}';
         
         const formData = new FormData(form);
         const data = Object.fromEntries(formData.entries());
@@ -1087,22 +1085,22 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (response.ok && result.success) {
                 form.reset();
-                showNotification('success', 'Message Sent!', result.message);
+                showNotification('success', '{{ __("about.notifications.message_sent_title") }}', result.message || '{{ __("about.notifications.message_sent_message") }}');
                 
                 // Scroll to top after successful submission
                 setTimeout(() => {
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                 }, 500);
             } else {
-                let errorMessage = result.message || 'An error occurred. Please try again.';
+                let errorMessage = result.message || '{{ __("about.notifications.submission_failed_message") }}';
                 if (result.errors) {
                     errorMessage = Object.values(result.errors).flat().join('. ');
                 }
-                showNotification('error', 'Submission Failed', errorMessage);
+                showNotification('error', '{{ __("about.notifications.submission_failed_title") }}', errorMessage);
             }
         } catch (error) {
             console.error('Form submission error:', error);
-            showNotification('error', 'Connection Error', 'Unable to send message. Please check your connection and try again.');
+            showNotification('error', '{{ __("about.notifications.connection_error_title") }}', '{{ __("about.notifications.connection_error_message") }}');
         } finally {
             submitBtn.disabled = false;
             btnText.textContent = originalText;

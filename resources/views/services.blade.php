@@ -17,13 +17,13 @@
         <div class="services-hero-content" data-aos="fade-up">
             <div class="hero-badge">
                 <span class="badge-dot"></span>
-                OUR SERVICES
+                {{ __('services.hero.badge') }}
             </div>
             <h1 class="hero-heading">
-                <span class="text-gradient">Enabling Real Transformation</span>
+                <span class="text-gradient">{{ __('services.hero.title') }}</span>
             </h1>
             <p class="hero-description">
-                We help organizations simplify operations, unlock efficiency, and build long-term digital capability. Our services are designed to remove complexity—not add new layers—so your teams can work faster, smarter, and with absolute clarity.
+                {{ __('services.hero.description') }}
             </p>
         </div>
 
@@ -37,7 +37,7 @@
                             <path d="M12 7V12L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                         </svg>
                     </div>
-                    <span>Operational</span>
+                    <span>{{ __('services.hero.nav.operational') }}</span>
                 </a>
                 <a href="#digital-detail" class="service-nav-item" data-index="1">
                     <div class="nav-icon">
@@ -46,7 +46,7 @@
                             <path d="M4 10H20M10 4V20" stroke="currentColor" stroke-width="2"/>
                         </svg>
                     </div>
-                    <span>Digital</span>
+                    <span>{{ __('services.hero.nav.digital') }}</span>
                 </a>
                 <a href="#data-detail" class="service-nav-item" data-index="2">
                     <div class="nav-icon">
@@ -55,7 +55,7 @@
                             <circle cx="10" cy="14" r="2" fill="currentColor"/>
                         </svg>
                     </div>
-                    <span>Data</span>
+                    <span>{{ __('services.hero.nav.data') }}</span>
                 </a>
                 <a href="#capability-detail" class="service-nav-item" data-index="3">
                     <div class="nav-icon">
@@ -64,7 +64,7 @@
                             <path d="M4 12L12 16L20 12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
                         </svg>
                     </div>
-                    <span>Capability</span>
+                    <span>{{ __('services.hero.nav.capability') }}</span>
                 </a>
             </div>
         </div>
@@ -84,18 +84,18 @@
 
         <div class="section-container">
             <div class="intro-header" data-aos="fade-up">
-                <span class="section-tag-modern">Our Approach</span>
+                <span class="section-tag-modern">{{ __('services.intro.tag') }}</span>
                 <h2 class="intro-title">
-                    What We Help You <span class="text-gradient">Solve</span>
+                    {!! __('services.intro.title') !!}
                 </h2>
                 <p class="intro-subtitle">
-                    Clear solutions for real operational challenges.
+                    {{ __('services.intro.subtitle') }}
                 </p>
             </div>
 
             <div class="intro-content" data-aos="fade-up" data-aos-delay="200">
                 <p class="intro-description">
-                    Every service is built on <strong>simplification</strong>, <strong>measurable results</strong>, and <strong>sustainable capability building</strong>. No jargon. No unnecessary tools. Just clarity and impact.
+                    {!! __('services.intro.description') !!}
                 </p>
             </div>
         </div>
@@ -128,12 +128,12 @@
                         </div>
                     </div>
                     <div class="pillar-content">
-                        <h3 class="pillar-title">Operational Efficiency & Process Redesign</h3>
+                        <h3 class="pillar-title">{{ __('services.pillars.operational.title') }}</h3>
                         <p class="pillar-description">
-                            We help companies work smarter by eliminating bottlenecks, simplifying workflows, and redesigning processes for speed and accuracy. If your team feels overloaded, inconsistent, or slowed down by manual work, this service helps you build a structure that actually supports high performance. From mapping your operations to optimizing every step, we make your business run cleaner, faster, and more reliably.
+                            {{ __('services.pillars.operational.description') }}
                         </p>
                         <button onclick="openServiceModal('operational')" class="pillar-cta">
-                            <span>Explore Operational Efficiency</span>
+                            <span>{{ __('services.pillars.operational.cta') }}</span>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
@@ -147,12 +147,12 @@
                 <div class="pillar-number dark">02</div>
                 <div class="pillar-grid reverse">
                     <div class="pillar-content">
-                        <h3 class="pillar-title light">Digital Transformation & System Integration</h3>
+                        <h3 class="pillar-title light">{{ __('services.pillars.digital.title') }}</h3>
                         <p class="pillar-description light">
-                            Guiding organizations in choosing the right digital tools—ERP, operational platforms, and business applications—based on their real needs, not vendor pressure. Whether you're selecting an ERP or integrating multiple systems into one ecosystem, we help you build a seamless, efficient digital backbone that reduces manual work and improves decision-making. This includes ERP advisory, Epicor end-to-end implementation, and integrations across HR, supply chain, asset management, call centers, and more.
+                            {{ __('services.pillars.digital.description') }}
                         </p>
                         <button onclick="openServiceModal('digital')" class="pillar-cta light">
-                            <span>See Digital Transformation Services</span>
+                            <span>{{ __('services.pillars.digital.cta') }}</span>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
@@ -194,12 +194,12 @@
                         </div>
                     </div>
                     <div class="pillar-content">
-                        <h3 class="pillar-title">Data Architecture, Dashboards & Insights</h3>
+                        <h3 class="pillar-title">{{ __('services.pillars.data.title') }}</h3>
                         <p class="pillar-description">
-                            We turn scattered data into a reliable foundation for decision-making through strong data architecture, governance, and intuitive dashboards. If you struggle with inconsistent reports or slow insights, we help you create a single source of truth that leaders can trust. From Power BI dashboards to enterprise data strategy, we make your business more intelligent and data-driven.
+                            {{ __('services.pillars.data.description') }}
                         </p>
                         <button onclick="openServiceModal('data')" class="pillar-cta">
-                            <span>Learn About Data Solutions</span>
+                            <span>{{ __('services.pillars.data.cta') }}</span>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
@@ -213,12 +213,12 @@
                 <div class="pillar-number dark">04</div>
                 <div class="pillar-grid reverse">
                     <div class="pillar-content">
-                        <h3 class="pillar-title light">Capability Building & Organizational Alignment</h3>
+                        <h3 class="pillar-title light">{{ __('services.pillars.capability.title') }}</h3>
                         <p class="pillar-description light">
-                            We equip your teams with the skills needed to adopt new systems and work effectively in a digital-first environment. Whether it's ERP usage, analytics, or Power BI, our training programs are customized to your company and delivered through modern learning platforms. This ensures your transformation is sustainable because your people grow alongside the technology.
+                            {{ __('services.pillars.capability.description') }}
                         </p>
                         <button onclick="openServiceModal('capability')" class="pillar-cta light">
-                            <span>Go to Capability Building</span>
+                            <span>{{ __('services.pillars.capability.cta') }}</span>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
@@ -252,7 +252,7 @@
         <div class="section-container">
             <div class="choose-header" data-aos="fade-up">
                 <h2 class="choose-main-title">
-                    Why Companies Choose <span class="text-gradient">SBI</span>
+                    {!! __('services.why_choose.title') !!}
                 </h2>
             </div>
 
@@ -266,9 +266,9 @@
                             <path d="M12 32L32 42L52 32M12 42L32 52L52 42" stroke="url(#gradient-impact)" stroke-width="2.5" stroke-linejoin="round"/>
                         </svg>
                     </div>
-                    <h3 class="value-title">Measurable Impact</h3>
+                    <h3 class="value-title">{{ __('services.why_choose.values.impact.title') }}</h3>
                     <p class="value-description">
-                        We design solutions that deliver real improvements in speed, clarity, and cost efficiency.
+                        {{ __('services.why_choose.values.impact.description') }}
                     </p>
                     <div class="value-accent-line"></div>
                 </div>
@@ -282,9 +282,9 @@
                             <circle cx="32" cy="32" r="24" stroke="url(#gradient-scale)" stroke-width="2"/>
                         </svg>
                     </div>
-                    <h3 class="value-title">Built to Scale</h3>
+                    <h3 class="value-title">{{ __('services.why_choose.values.scale.title') }}</h3>
                     <p class="value-description">
-                        Your systems and processes will grow with your business—not hold it back.
+                        {{ __('services.why_choose.values.scale.description') }}
                     </p>
                     <div class="value-accent-line"></div>
                 </div>
@@ -299,9 +299,9 @@
                             <path d="M24 28C24 28 22 30 22 32M40 28C40 28 42 30 42 32" stroke="url(#gradient-human)" stroke-width="2" stroke-linecap="round"/>
                         </svg>
                     </div>
-                    <h3 class="value-title">Practical, Human-Centered Approach</h3>
+                    <h3 class="value-title">{{ __('services.why_choose.values.human.title') }}</h3>
                     <p class="value-description">
-                        Every recommendation is based on how people actually work, not theoretical frameworks.
+                        {{ __('services.why_choose.values.human.description') }}
                     </p>
                     <div class="value-accent-line"></div>
                 </div>
@@ -316,9 +316,9 @@
                             <circle cx="32" cy="32" r="4" fill="url(#gradient-root)"/>
                         </svg>
                     </div>
-                    <h3 class="value-title">Deep Root-Cause Fixing</h3>
+                    <h3 class="value-title">{{ __('services.why_choose.values.root_cause.title') }}</h3>
                     <p class="value-description">
-                        We don't patch symptoms. We fix what slows your company down at its core.
+                        {{ __('services.why_choose.values.root_cause.description') }}
                     </p>
                     <div class="value-accent-line"></div>
                 </div>
@@ -352,10 +352,10 @@
                         </defs>
                     </svg>
                 </div>
-                <h2 class="cta-title">Ready to <span class="text-gradient">Transform?</span></h2>
-                <p class="cta-subtitle">Let's discuss your goals and see how we can help.</p>
+                <h2 class="cta-title">{!! __('services.cta.title') !!}</h2>
+                <p class="cta-subtitle">{{ __('services.cta.subtitle') }}</p>
                 <button onclick="openContactFormModal()" class="cta-button">
-                    <span>Contact Us</span>
+                    <span>{{ __('services.cta.button') }}</span>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
@@ -409,5 +409,14 @@
 @endsection
 
 @push('scripts')
+<script>
+    // Inject translations for service modals
+    window.serviceTranslations = {
+        modal: @json(__('services.modal')),
+        bestFor: "{{ __('services.modal.best_for') }}",
+        contactForm: @json(__('services.contact_form')),
+        notifications: @json(__('services.notifications'))
+    };
+</script>
 @vite(['resources/js/services.js'])
 @endpush
