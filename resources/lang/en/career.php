@@ -145,7 +145,7 @@ return [
         'title' => 'How to Apply',
         'subtitle' => 'Ready to grow with us?',
         'text' => 'Send your CV, portfolio (if any), or introduction to:',
-        'email' => 'hr@samuderabiru.net',
+        'email' => 'careers@samuderabiru.net',
         'include_title' => 'Please include:',
         'include_items' => [
             'Your name',

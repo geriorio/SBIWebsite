@@ -667,7 +667,6 @@
                     <div class="team-card-inner">
                         <div class="team-image-container">
                             <picture>
-                                <source srcset="{{ asset('images/team/imelda.webp') }}" type="image/webp">
                                 <source srcset="{{ asset('images/team/imelda.png') }}" type="image/png">
                                 <img src="{{ asset('images/team/imelda.jpg') }}" alt="Imelda Harsono" class="team-image">
                             </picture>
@@ -746,7 +745,7 @@
                 <div class="team-card-modern" data-aos="fade-up" data-aos-delay="300">
                     <div class="team-card-inner">
                         <div class="team-image-container">
-                            <img src="{{ asset('images/team/mario.jpg') }}" alt="Mario Velez" class="team-image">
+                            <img src="{{ asset('images/team/mario.png') }}" alt="Mario Velez" class="team-image">
                             <div class="team-overlay">
                                 <div class="team-role-badge">{{ __('about.ui.coo_badge') }}</div>
                             </div>

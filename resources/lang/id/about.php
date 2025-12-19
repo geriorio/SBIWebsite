@@ -36,7 +36,7 @@ return [
     'milestone' => [
         'title' => 'Satu Dekade Transformasi',
         'subtitle' => 'Membangun masa depan, satu solusi pada satu waktu',
-        'intro_text' => 'Sejak didirikan pada 2014, kami telah mengemban misi untuk memodernisasi operasi dan membuka alur kerja cerdas untuk bisnis di seluruh Indonesia.',
+        'intro_text' => 'Sejak didirikan pada 2015, kami telah mengemban misi untuk memodernisasi operasi dan membuka alur kerja cerdas untuk bisnis di seluruh Indonesia.',
         'promise_statement' => 'Kami tidak hanya mengimplementasikan sistem. Kami membangun kembali bagaimana perusahaan beroperasi, memutuskan, dan berkembang—dengan kejelasan, presisi, dan dampak yang bertahan lama.',
     ],
 

@@ -341,7 +341,7 @@
             </div>
 
             <div class="career-modal-footer">
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hr@samuderabiru.net&su=Application:%20Business%20Analyst%20Full-time&body=Hello%20SBI%20Team,%0D%0A%0D%0AI%20am%20interested%20in%20applying%20for%20the%20Business%20Analyst%20Full-time%20position.%0D%0A%0D%0A" target="_blank" class="career-modal-apply-btn">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=careers@samuderabiru.net&su=Application:%20Business%20Analyst%20Full-time&body=Hello%20SBI%20Team,%0D%0A%0D%0AI%20am%20interested%20in%20applying%20for%20the%20Business%20Analyst%20Full-time%20position.%0D%0A%0D%0A" target="_blank" class="career-modal-apply-btn">
                     {{ __('career.modal.fulltime.apply_button') }}
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -394,7 +394,7 @@
             </div>
 
             <div class="career-modal-footer">
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hr@samuderabiru.net&su=Application:%20Business%20Analyst%20Internship&body=Hello%20SBI%20Team,%0D%0A%0D%0AI%20am%20interested%20in%20applying%20for%20the%20Business%20Analyst%20Internship%20position.%0D%0A%0D%0A" target="_blank" class="career-modal-apply-btn">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=careers@samuderabiru.net&su=Application:%20Business%20Analyst%20Internship&body=Hello%20SBI%20Team,%0D%0A%0D%0AI%20am%20interested%20in%20applying%20for%20the%20Business%20Analyst%20Internship%20position.%0D%0A%0D%0A" target="_blank" class="career-modal-apply-btn">
                     {{ __('career.modal.internship.apply_button') }}
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

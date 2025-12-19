@@ -2,7 +2,7 @@
 
 return [
     'hero' => [
-        'badge' => 'Strategic Business Intelligence',
+        'badge' => 'Industry 4.0',
         'title' => 'Transform Today. ',
         'title_highlight' => 'Lead Tomorrow.',
         'description' => 'SBI (Samudera Biru Internasional) helps organizations modernize operations, strengthen digital capabilities, and compete with confidence—through practical transformation, integrated systems, and data-driven intelligence.',

@@ -36,7 +36,7 @@ return [
     'milestone' => [
         'title' => 'A Decade of Transformation',
         'subtitle' => 'Building the future, one solution at a time',
-        'intro_text' => 'Since our founding in 2014, we\'ve been on a mission to modernize operations and unlock intelligent workflows for businesses across Indonesia.',
+        'intro_text' => 'Since our founding in 2015, we\'ve been on a mission to modernize operations and unlock intelligent workflows for businesses across Indonesia.',
         'promise_statement' => 'We don\'t just implement systems. We rebuild how companies operate, decide, and scale—with clarity, precision, and lasting impact.',
     ],
 

@@ -171,7 +171,7 @@ return [
         'title' => 'Cara Melamar',
         'subtitle' => 'Siap berkembang bersama kami?',
         'text' => 'Kirim CV, portofolio (jika ada), atau perkenalan Anda ke:',
-        'email' => 'hr@samuderabiru.net',
+        'email' => 'careers@samuderabiru.net',
         'include_title' => 'Harap sertakan:',
         'include_items' => [
             'Nama Anda',

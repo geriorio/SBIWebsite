@@ -2561,11 +2561,16 @@
 }
 
 .team-card-modern:nth-child(3) .team-image {
-    object-position: center 35%;
+    object-position: center 30%;
+    transform: scale(1.08);
 }
 
 .team-card-modern:hover .team-image {
     transform: scale(1.05);
+}
+
+.team-card-modern:nth-child(3):hover .team-image {
+    transform: scale(1.13);
 }
 
 .team-overlay {
